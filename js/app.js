@@ -37,7 +37,7 @@ async function initHomePage(categories) {
   categories.forEach(cat => {
     const tile = document.createElement('a');
     tile.className = 'category-tile';
-    tile.href = `/pages/${cat.id}.html`;
+    tile.href = `pages/${cat.id}.html`;
 
     tile.innerHTML = `
       <div class="category-tile__icon">${cat.icon || ''}</div>

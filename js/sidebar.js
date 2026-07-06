@@ -12,6 +12,10 @@ const Sidebar = {
     const nav = document.getElementById('sidebar-nav');
     if (!nav) return;
 
+    // Determine prefix: from /pages/ subdirectory need ../ to go up one level
+    const isInPages = window.location.pathname.includes('/pages/');
+    const prefix = isInPages ? '../' : '';
+
     nav.innerHTML = '';
 
     categories.forEach(cat => {
@@ -23,7 +27,7 @@ const Sidebar = {
       if (cat.id === activeCat) {
         a.classList.add('sidebar-nav__link--active');
       }
-      a.href = `/pages/${cat.id}.html`;
+      a.href = `${prefix}pages/${cat.id}.html`;
 
       const icon = document.createElement('span');
       icon.className = 'sidebar-nav__icon';
