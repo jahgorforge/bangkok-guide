@@ -20,6 +20,25 @@ const Sidebar = {
 
     nav.innerHTML = '';
 
+    // Home entry
+    const homeLi = document.createElement('li');
+    homeLi.className = 'sidebar-nav__item';
+
+    const homeA = document.createElement('a');
+    homeA.className = 'sidebar-nav__link';
+    if (activeCat === null) {
+      homeA.classList.add('sidebar-nav__link--active');
+    }
+    homeA.href = isInPages ? '../index.html' : 'index.html';
+
+    const homeIcon = Icons.create('home') || document.createTextNode('•');
+    homeIcon.classList.add('sidebar-nav__icon');
+
+    homeA.appendChild(homeIcon);
+    homeA.appendChild(document.createTextNode('首页'));
+    homeLi.appendChild(homeA);
+    nav.appendChild(homeLi);
+
     categories.forEach(cat => {
       const li = document.createElement('li');
       li.className = 'sidebar-nav__item';

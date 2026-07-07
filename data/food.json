@@ -7,6 +7,7 @@
     "tags": ["街头", "米其林", "蟹肉蛋卷"],
     "rating": 4.5,
     "notes": "曼谷唯一保有米其林星的街头小吃，蟹肉蛋卷是必点，排队需2-3小时。",
+    "priceRange": "$$$",
     "links": {
       "googleMaps": "https://maps.google.com/?q=Jay+Fai+Bangkok",
       "phone": "+6622239384"

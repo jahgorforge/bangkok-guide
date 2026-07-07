@@ -74,7 +74,7 @@ const Filter = {
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
       const name = (card.dataset.name || '');
-      const tags = (card.dataset.tags || '').split(' ');
+      const tags = (card.dataset.tags || '').split('|');
 
       // Text search: match against name
       const matchesSearch = !this.searchText || name.includes(this.searchText);

@@ -80,6 +80,13 @@ const Icons = (() => {
         <polyline points="14 2 14 8 20 8"/>
         <line x1="9" y1="13" x2="15" y2="13"/>
         <line x1="9" y1="17" x2="13" y2="17"/>
+      </svg>`,
+
+    home:
+      `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 12 12 3l9 9"/>
+        <path d="M5 10v9h14v-9"/>
+        <rect x="10" y="15" width="4" height="4"/>
       </svg>`
   };
 

@@ -52,7 +52,7 @@ Track the project development timeline, milestones, and future enhancement plans
 
 ## Future Enhancements
 
-- Multi-city expansion
+- Independent city guide repositories (Tokyo, Seoul, etc.)
 - Offline support (PWA)
 - Dark mode
 - Print-friendly itinerary view

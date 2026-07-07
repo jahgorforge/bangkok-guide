@@ -31,14 +31,14 @@
   },
   {
     "id": "cafes",
-    "label": "咖啡馆",
+    "label": "咖啡",
     "icon": "cafe",
     "description": "适合办公、拍照或品尝特色饮品的好去处"
   },
   {
     "id": "massage",
-    "label": "按摩",
+    "label": "水疗",
     "icon": "wellness",
-    "description": "按摩与SPA店名、价格段与环境"
+    "description": "按摩与水疗店名、价格段与环境"
   }
 ]

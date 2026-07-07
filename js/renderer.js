@@ -42,7 +42,7 @@ const Renderer = {
     const card = document.createElement('div');
     card.className = 'card';
     card.dataset.id = item.id || '';
-    card.dataset.tags = (item.tags || []).join(' ');
+    card.dataset.tags = (item.tags || []).join('|');
     card.dataset.name = (item.name || '').toLowerCase();
 
     // Name

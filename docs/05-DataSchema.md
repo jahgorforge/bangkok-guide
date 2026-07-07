@@ -46,6 +46,25 @@ All items MUST follow this structure:
 }
 ```
 
+### Optional Extended Fields
+
+```json id="optional_fields"
+{
+  "coordinates": {
+    "lat": 13.7563,
+    "lng": 100.5018
+  },
+  "priceRange": "$$",
+  "visitDate": "2025-12-01"
+}
+```
+
+- `coordinates.lat` / `coordinates.lng` — Decimal coordinates for map display
+- `priceRange` — Price level indicator ($/$$/$$$)
+- `visitDate` — ISO date string for visit tracking
+
+All extended fields are optional. If absent, the card renders without error (no empty UI). Existing files with only the base schema remain fully valid.
+
 ---
 
 ## 4. Category Structure
@@ -161,18 +180,9 @@ Keep it flat and predictable.
 
 ---
 
-## 10. Multi-City Future Rule
+## 10. Single-City Design
 
-Future cities MUST reuse the same schema:
-
-```text id="future_cities"
-/data/
-  bangkok/
-  tokyo/
-  hongkong/
-```
-
-No schema changes required for new cities.
+This project focuses on Bangkok only. Future city guides (Tokyo, Seoul, Chiang Mai, etc.) will be independent repositories using the same architecture rather than extensions of this project.
 
 ---
 

@@ -91,6 +91,12 @@ async function initCategoryPage(categories, dataBase) {
   Sidebar.renderNav(categories, catId);
   Sidebar.initMobileMenu();
 
+  // Update sidebar header to show ← Category (wayfinding)
+  const headerLink = document.querySelector('.sidebar__header-link');
+  if (headerLink) {
+    headerLink.innerHTML = `<span class="sidebar__title--zh">〈 ${catMeta.label}</span>`;
+  }
+
   // Fetch and render data
   const items = await Loader.fetchJSON(dataBase + catId + '.json');
   const grid = document.getElementById('card-grid');

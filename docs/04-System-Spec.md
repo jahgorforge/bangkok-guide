@@ -223,10 +223,9 @@ This flow is identical regardless of category — the same loader/renderer code 
 |---|---|
 | A new **place** | Add one object to the relevant category's JSON file |
 | A new **category** | Add an entry to `categories.json` + create its JSON data file. No HTML or JS changes. |
-| A new **city** (e.g. Tokyo) | Duplicate the `/data` folder under a city namespace (e.g. `/data/tokyo/`) and add a city selector at the top of the sidebar. Page templates and rendering logic stay identical. |
 | A new **card field** (e.g. "price range") | Add the field to the JSON schema; update the card renderer once to conditionally display it. All existing cards remain valid since the field is optional. |
 
-This works because the renderer never assumes a fixed set of categories or a fixed set of cities — it only assumes the *item schema* (id, name, category, location, tags, rating, notes, links), which is stable and generic enough to describe a place in any city.
+This project is intentionally a single-city knowledge base. Future city guides (Tokyo, Seoul, Chiang Mai, etc.) will be developed as independent repositories using the same project architecture, not as extensions of this repository.
 
 ---
 
