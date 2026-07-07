@@ -16,13 +16,16 @@
   --color-text-light: #6b6b6b;
   --color-card-bg: #ffffff;
   --color-border: #e8e6e3;
-  --color-accent: #b8a07a;
-  --color-accent-hover: #a69064;
-  --color-accent-light: #f0eeeb;
-  --color-sidebar-hover: #f0eeeb;
+  --color-accent: #C5A35A;
+  --color-accent-hover: #b8924a;
+  --color-accent-soft: #EEE2C6;
+  --color-accent-light: #EEE2C6;
+  --color-sidebar-hover: #EEE2C6;
   --color-topbar-bg: #ffffff;
-  --color-star: #d4a853;
+  --color-star: #C5A35A;
   --color-shadow: rgba(0, 0, 0, 0.06);
+  --color-btn-border: #CFC7B8;
+  --color-btn-text: #555555;
 
   --sidebar-width: 240px;
   --sidebar-width-tablet: 200px;
@@ -228,7 +231,7 @@ input:focus-visible,
 .filter-bar__search:focus {
   outline: none;
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(184, 160, 122, 0.1);
+  box-shadow: 0 0 0 3px rgba(197, 163, 90, 0.12);
 }
 
 .filter-bar__tags {
@@ -254,8 +257,8 @@ input:focus-visible,
 }
 
 .filter-bar__tag--active {
-  background: var(--color-accent);
-  color: #fff;
+  background: var(--color-accent-soft);
+  color: var(--color-text);
   border-color: var(--color-accent);
 }
 
@@ -280,7 +283,7 @@ input:focus-visible,
 
 /* Skeleton loading */
 .skeleton {
-  background: linear-gradient(90deg, var(--color-bg) 25%, #edeae6 50%, var(--color-bg) 75%);
+  background: linear-gradient(90deg, var(--color-bg) 25%, var(--color-accent-soft) 50%, var(--color-bg) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
   border-radius: var(--radius);
