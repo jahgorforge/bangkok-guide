@@ -1,54 +1,2570 @@
 [
   {
-    "id": "bangkok-food-1",
-    "name": "Jay Fai",
+    "id": "bangkok-food-001",
+    "name": {
+      "en": "Jay Fai",
+      "local": "เจ๊ไฝ",
+      "zh": "痣姐"
+    },
+    "type": "street-food",
     "category": "food",
-    "location": "Samran Rat, Phra Nakhon",
-    "tags": ["街头", "米其林", "蟹肉蛋卷"],
-    "rating": 4.5,
-    "notes": "曼谷唯一保有米其林星的街头小吃，蟹肉蛋卷是必点，排队需2-3小时。",
-    "priceRange": "$$$",
+    "area": "Samran Rat",
+    "location": {
+      "district": "Phra Nakhon",
+      "address": "327 Maha Chai Road, Samran Rat",
+      "coordinates": {
+        "lat": null,
+        "lng": null
+      }
+    },
+    "tags": {
+      "style": [
+        "street-food",
+        "michelin"
+      ],
+      "food": [
+        "crab-omelette",
+        "seafood"
+      ],
+      "experience": [
+        "queue",
+        "famous",
+        "bucket-list"
+      ],
+      "audience": [
+        "food-lover"
+      ],
+      "budget": [
+        "expensive"
+      ]
+    },
+    "experience": {
+      "summary": "曼谷唯一保有米其林星的街头小吃，蟹肉蛋卷是必点招牌。",
+      "bestFor": [
+        "bucket-list",
+        "food-lover"
+      ],
+      "highlights": [
+        "蟹肉蛋卷",
+        "米其林星级街头小吃",
+        "炭火现炒"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$$",
+      "openingHours": "",
+      "reservation": "不接受预订，需现场排队",
+      "transport": ""
+    },
+    "rating": {
+      "overall": 4.5,
+      "source": "personal"
+    },
     "links": {
       "googleMaps": "https://maps.google.com/?q=Jay+Fai+Bangkok",
-      "phone": "+6622239384"
+      "website": "",
+      "social": ""
+    },
+    "recommendation": {
+      "bestTime": "14:00-18:00（避开午高峰）",
+      "visitDuration": "1-2小时（含排队）",
+      "nearby": [
+        "Wat Saket",
+        "Khao San Road",
+        "Democracy Monument"
+      ],
+      "priority": "must-visit"
+    },
+    "notes": "排队需2-3小时",
+    "verification": {
+      "status": "verified",
+      "issues": []
     }
   },
   {
-    "id": "bangkok-food-2",
-    "name": "Thip Samai Pad Thai",
+    "id": "bangkok-food-002",
+    "name": {
+      "en": "Thip Samai Pad Thai",
+      "local": "ทิพย์สมาย",
+      "zh": "泰式炒面"
+    },
+    "type": "street-food",
     "category": "food",
-    "location": "Phra Nakhon",
-    "tags": ["泰式炒面", "老字号", "夜市"],
-    "rating": 4.3,
-    "notes": "曼谷排名第一的Pad Thai，炭火炒面锅气十足，橙汁虾仁是招牌。",
+    "area": "Phra Nakhon",
+    "location": {
+      "district": "Phra Nakhon",
+      "address": "313 Maha Chai Road, Samran Rat",
+      "coordinates": {
+        "lat": null,
+        "lng": null
+      }
+    },
+    "tags": {
+      "style": [
+        "street-food",
+        "heritage"
+      ],
+      "food": [
+        "pad-thai",
+        "noodle"
+      ],
+      "experience": [
+        "queue",
+        "famous"
+      ],
+      "audience": [
+        "solo",
+        "couple",
+        "food-lover"
+      ],
+      "budget": [
+        "mid-range"
+      ]
+    },
+    "experience": {
+      "summary": "曼谷排名第一的Pad Thai，炭火炒面锅气十足，橙汁虾仁是招牌。",
+      "bestFor": [
+        "first-time",
+        "food-lover"
+      ],
+      "highlights": [
+        "橙汁虾仁Pad Thai",
+        "炭火炒面",
+        "老字号"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$",
+      "openingHours": "17:00-02:00",
+      "reservation": "不接受预订",
+      "transport": ""
+    },
+    "rating": {
+      "overall": 4.3,
+      "source": "personal"
+    },
     "links": {
       "googleMaps": "https://maps.google.com/?q=Thip+Samai+Bangkok",
-      "phone": "+6622262323"
+      "website": "",
+      "social": ""
+    },
+    "recommendation": {
+      "bestTime": "17:00-19:00",
+      "visitDuration": "45分钟-1小时",
+      "nearby": [
+        "Jay Fai",
+        "Wat Saket",
+        "Khao San Road"
+      ],
+      "priority": "must-visit"
+    },
+    "notes": "",
+    "verification": {
+      "status": "verified",
+      "issues": []
     }
   },
   {
-    "id": "bangkok-food-3",
-    "name": "Sorn",
+    "id": "bangkok-food-003",
+    "name": {
+      "en": "Sorn",
+      "local": "ศรณ์",
+      "zh": "Sorn"
+    },
+    "type": "restaurant",
     "category": "food",
-    "location": "Khlong Tan Nuea, Watthana",
-    "tags": ["fine dining", "米其林二星", "南部泰餐"],
-    "rating": 5.0,
-    "notes": "亚洲最佳50餐厅之一，南部泰菜天花板。需提前数月预订， tasting menu约4000泰铢。",
+    "area": "Khlong Tan Nuea",
+    "location": {
+      "district": "Watthana",
+      "address": "48 Soi Sukhumvit 49",
+      "coordinates": {
+        "lat": null,
+        "lng": null
+      }
+    },
+    "tags": {
+      "style": [
+        "fine-dining",
+        "michelin"
+      ],
+      "food": [
+        "southern-thai",
+        "seafood"
+      ],
+      "experience": [
+        "reservation-hard",
+        "famous",
+        "special-occasion"
+      ],
+      "audience": [
+        "food-lover",
+        "couple"
+      ],
+      "budget": [
+        "premium"
+      ]
+    },
+    "experience": {
+      "summary": "亚洲最佳50餐厅之一，南部泰菜天花板。需提前数月预订。",
+      "bestFor": [
+        "special-occasion",
+        "food-lover",
+        "date-night"
+      ],
+      "highlights": [
+        "南部泰式料理",
+        "tasting menu",
+        "米其林二星"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$$$",
+      "openingHours": "",
+      "reservation": "需提前数月预订",
+      "transport": "BTS Thong Lo站步行15分钟"
+    },
+    "rating": {
+      "overall": 5.0,
+      "source": "personal"
+    },
     "links": {
       "googleMaps": "https://maps.google.com/?q=Sorn+Bangkok",
-      "phone": "+6621285088"
+      "website": "",
+      "social": ""
+    },
+    "recommendation": {
+      "bestTime": "晚餐时段",
+      "visitDuration": "2-3小时（tasting menu）",
+      "nearby": [
+        "Thong Lo",
+        "Ekkamai",
+        "Sukhumvit 49"
+      ],
+      "priority": "must-visit"
+    },
+    "notes": "tasting menu约4000泰铢，需提前数月预订",
+    "verification": {
+      "status": "verified",
+      "issues": []
     }
   },
   {
-    "id": "bangkok-food-4",
-    "name": "Yaowarat Road (唐人街)",
+    "id": "bangkok-food-004",
+    "name": {
+      "en": "Yaowarat Road (Chinatown)",
+      "local": "ถนนเยาวราช",
+      "zh": "唐人街"
+    },
+    "type": "food-area",
     "category": "food",
-    "location": "Yaowarat, Samphanthawong",
-    "tags": ["夜市", "街头小吃", "海鲜"],
-    "rating": 4.6,
-    "notes": "晚上7点后整条街变成露天美食广场，烤海鲜、芒果糯米饭、鱼翅羹应有尽有。",
+    "area": "Yaowarat",
+    "location": {
+      "district": "Samphanthawong",
+      "address": "Yaowarat Road",
+      "coordinates": {
+        "lat": null,
+        "lng": null
+      }
+    },
+    "tags": {
+      "style": [
+        "street-food",
+        "food-area"
+      ],
+      "food": [
+        "seafood",
+        "chinese-thai",
+        "dessert",
+        "variety"
+      ],
+      "experience": [
+        "bustling",
+        "famous",
+        "night-market"
+      ],
+      "audience": [
+        "solo",
+        "couple",
+        "family",
+        "group"
+      ],
+      "budget": [
+        "mid-range"
+      ]
+    },
+    "experience": {
+      "summary": "晚上7点后整条街变成露天美食广场，烤海鲜、芒果糯米饭应有尽有。",
+      "bestFor": [
+        "night-out",
+        "food-lover",
+        "group-gathering",
+        "first-time"
+      ],
+      "highlights": [
+        "烤海鲜",
+        "芒果糯米饭",
+        "鱼翅羹",
+        "街头氛围"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$",
+      "openingHours": "18:00-00:00",
+      "reservation": "不需要",
+      "transport": "MRT Wat Mangkon站步行3分钟"
+    },
+    "rating": {
+      "overall": 4.6,
+      "source": "personal"
+    },
     "links": {
-      "googleMaps": "https://maps.google.com/?q=Yaowarat+Road+Bangkok"
+      "googleMaps": "https://maps.google.com/?q=Yaowarat+Road+Bangkok",
+      "website": "",
+      "social": ""
+    },
+    "recommendation": {
+      "bestTime": "19:00-22:00",
+      "visitDuration": "1-3小时",
+      "nearby": [
+        "Wat Mangkon",
+        "Talat Noi",
+        "River City"
+      ],
+      "priority": "must-visit"
+    },
+    "notes": "",
+    "verification": {
+      "status": "verified",
+      "issues": []
     }
+  },
+  {
+    "id": "bangkok-food-005",
+    "name": {
+      "en": "Copper Beyond Buffet",
+      "local": "คอปเปอร์ บียอนด์ บุฟเฟต์",
+      "zh": "Copper Beyond自助餐"
+    },
+    "type": "buffet",
+    "category": "food",
+    "area": "Pinklao",
+    "location": {
+      "district": "Bangkok Noi",
+      "address": "The Sense Pinklao, 2nd Floor",
+      "coordinates": {
+        "lat": 13.7798151,
+        "lng": 100.4750035
+      }
+    },
+    "tags": {
+      "style": [
+        "buffet",
+        "premium"
+      ],
+      "food": [
+        "seafood",
+        "wagyu",
+        "international"
+      ],
+      "experience": [
+        "reservation-required",
+        "special-occasion",
+        "famous"
+      ],
+      "audience": [
+        "couple",
+        "food-lover",
+        "group"
+      ],
+      "budget": [
+        "premium"
+      ]
+    },
+    "experience": {
+      "summary": "曼谷顶级自助餐之一，现点现做的和牛、松露、生蚝高级食材。",
+      "bestFor": [
+        "special-occasion",
+        "food-lover",
+        "date-night"
+      ],
+      "highlights": [
+        "和牛船面",
+        "黑松露浓汤配可颂",
+        "生蚝",
+        "烤河虾"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$$$",
+      "openingHours": "11:00-22:00",
+      "reservation": "强烈建议提前预订（一位难求）",
+      "transport": ""
+    },
+    "rating": {
+      "overall": 4.6,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=Copper+Beyond+Buffet+Pinklao+Bangkok",
+      "website": "",
+      "social": "",
+      "phone": "+66 92 281 1818"
+    },
+    "recommendation": {
+      "bestTime": "午餐或晚餐时段（需预订）",
+      "visitDuration": "2小时（用餐限时）",
+      "nearby": [
+        "Wang Lang Market",
+        "Chang Chui Night Market"
+      ],
+      "priority": "if-in-area"
+    },
+    "notes": "泰国有名自助餐，市中心Gaysorn Amarin还有一间分店",
+    "verification": {
+      "status": "verified",
+      "issues": []
+    }
+  },
+  {
+    "id": "bangkok-food-006",
+    "name": {
+      "en": "Thonburi Market Place",
+      "local": "ตลาดสดธนบุรี",
+      "zh": "吞武里市场"
+    },
+    "type": "market",
+    "category": "food",
+    "area": "Thawi Watthana",
+    "location": {
+      "district": "Thawi Watthana",
+      "address": "",
+      "coordinates": {
+        "lat": 13.7847965,
+        "lng": 100.3971688
+      }
+    },
+    "tags": {
+      "style": [
+        "market",
+        "fresh-food"
+      ],
+      "food": [
+        "seafood",
+        "variety"
+      ],
+      "experience": [
+        "local",
+        "bustling",
+        "family"
+      ],
+      "audience": [
+        "family",
+        "food-lover",
+        "group"
+      ],
+      "budget": [
+        "mid-range"
+      ]
+    },
+    "experience": {
+      "summary": "曼谷最大海鲜市场之一，超过500家商户，现买现做摊贩免费代客加工。",
+      "bestFor": [
+        "seafood-lover",
+        "family",
+        "local-experience",
+        "group"
+      ],
+      "highlights": [
+        "活龙虾现烤",
+        "现买现做",
+        "干净整洁环境"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "openingHours": "07:00-20:00",
+      "reservation": "不需要",
+      "transport": "距离市中心约20分钟车程"
+    },
+    "rating": {
+      "overall": 4.4,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=Thonburi+Market+Place+Bangkok",
+      "website": "",
+      "social": "",
+      "phone": "+66 92 989 5088"
+    },
+    "recommendation": {
+      "bestTime": "09:00-12:00",
+      "visitDuration": "1-2小时",
+      "nearby": [
+        "Chang Chui Night Market",
+        "Phutthamonthon Park"
+      ],
+      "priority": "if-in-area"
+    },
+    "notes": "可以称海鲜例如龙虾，帮烤熟",
+    "verification": {
+      "status": "verified",
+      "issues": []
+    }
+  },
+  {
+    "id": "bangkok-food-007",
+    "name": {
+      "en": "Save One Go Market Yaek Kor Por Aor",
+      "local": "ตลาดเซฟวันโก แยก คปอ.",
+      "zh": "Save One Go市场"
+    },
+    "type": "night-market",
+    "category": "food",
+    "area": "Sai Mai",
+    "location": {
+      "district": "Don Mueang",
+      "address": "BTS Yaek Kor Por Aor站 4号出口",
+      "coordinates": {
+        "lat": 13.9270411,
+        "lng": 100.6274388
+      }
+    },
+    "tags": {
+      "style": [
+        "night-market",
+        "street-food"
+      ],
+      "food": [
+        "variety",
+        "seafood"
+      ],
+      "experience": [
+        "local",
+        "budget-friendly",
+        "bts-access"
+      ],
+      "audience": [
+        "solo",
+        "friends",
+        "group"
+      ],
+      "budget": [
+        "cheap"
+      ]
+    },
+    "experience": {
+      "summary": "BTS直达终点站的便宜夜市，价格极其便宜炸生蚝仅25泰铢。",
+      "bestFor": [
+        "night-out",
+        "budget-travel",
+        "local-experience"
+      ],
+      "highlights": [
+        "炸生蚝25泰铢",
+        "各类泰式街头小吃",
+        "BTS直达"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$",
+      "openingHours": "16:00-22:00",
+      "reservation": "不需要",
+      "transport": "BTS浅绿线 Yaek Kor Por Aor站（N23）4号出口"
+    },
+    "rating": {
+      "overall": 4.3,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=Save+One+Go+Market+Bangkok",
+      "website": "",
+      "social": "",
+      "phone": "+66 2 466 9037"
+    },
+    "recommendation": {
+      "bestTime": "17:00-20:00",
+      "visitDuration": "1-2小时",
+      "nearby": [
+        "廊曼机场（打车13分钟）",
+        "Royal Thai Air Force Museum"
+      ],
+      "priority": "if-in-area"
+    },
+    "notes": "N23 ~4號出口～ 出來下樓梯左後方直走。打车去廊曼机场大约13分钟",
+    "verification": {
+      "status": "verified",
+      "issues": []
+    }
+  },
+  {
+    "id": "bangkok-food-008",
+    "name": {
+      "en": "Pad Thai Mae Thong Bai",
+      "local": "ผัดไทยแม่ทองใบ",
+      "zh": "Mae Thong Bai蟹肉饭"
+    },
+    "type": "restaurant",
+    "category": "food",
+    "area": "Pathum Wan",
+    "location": {
+      "district": "Siam Square",
+      "address": "Siam Square Soi 5",
+      "coordinates": {
+        "lat": 13.7440671,
+        "lng": 100.5329694
+      }
+    },
+    "tags": {
+      "style": [
+        "restaurant",
+        "casual"
+      ],
+      "food": [
+        "crab",
+        "thai",
+        "rice"
+      ],
+      "experience": [
+        "local",
+        "central-location"
+      ],
+      "audience": [
+        "solo",
+        "couple",
+        "food-lover"
+      ],
+      "budget": [
+        "mid-range"
+      ]
+    },
+    "experience": {
+      "summary": "蟹肉料理专门店，蟹肉新鲜大颗，辣蟹肉打抛饭是招牌。",
+      "bestFor": [
+        "lunch",
+        "quick-meal",
+        "crab-lover"
+      ],
+      "highlights": [
+        "辣蟹肉打抛饭",
+        "蟹肉蛋饭",
+        "蟹肉春卷"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$",
+      "openingHours": "10:00-21:00",
+      "reservation": "不需要",
+      "transport": "BTS Siam站步行5分钟"
+    },
+    "rating": {
+      "overall": 4.1,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=Pad+Thai+Mae+Thong+Bai+Bangkok",
+      "website": "",
+      "social": ""
+    },
+    "recommendation": {
+      "bestTime": "11:00-14:00",
+      "visitDuration": "30分钟-1小时",
+      "nearby": [
+        "Siam Paragon",
+        "CentralWorld",
+        "Siam Square"
+      ],
+      "priority": "if-in-area"
+    },
+    "notes": "蟹肉饭，很多蟹肉",
+    "verification": {
+      "status": "verified",
+      "issues": []
+    }
+  },
+  {
+    "id": "bangkok-food-009",
+    "name": {
+      "en": "Mungkorn Seafood Buffet & Fish Market",
+      "local": "มังกรซีฟู้ดส์ บุฟเฟต์ทะเลเผา",
+      "zh": "龙海鲜自助餐厅"
+    },
+    "type": "buffet",
+    "category": "food",
+    "area": "Rat Burana",
+    "location": {
+      "district": "Rat Burana",
+      "address": "",
+      "coordinates": {
+        "lat": 13.6774611,
+        "lng": 100.5026159
+      }
+    },
+    "tags": {
+      "style": [
+        "buffet",
+        "diy-grill"
+      ],
+      "food": [
+        "seafood",
+        "grill"
+      ],
+      "experience": [
+        "local",
+        "hands-on",
+        "budget-friendly"
+      ],
+      "audience": [
+        "friends",
+        "group",
+        "food-lover"
+      ],
+      "budget": [
+        "cheap"
+      ]
+    },
+    "experience": {
+      "summary": "499泰铢起海鲜自助，自己捕捞活大头虾直接烤，性价比超高。",
+      "bestFor": [
+        "group-gathering",
+        "seafood-lover",
+        "budget-travel"
+      ],
+      "highlights": [
+        "活大头虾自助捕捞",
+        "炭火烧烤",
+        "无时间限制"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$",
+      "openingHours": "16:00-23:30",
+      "reservation": "建议早点到",
+      "transport": "距离市中心较远，建议打车"
+    },
+    "rating": {
+      "overall": 4.1,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=Mungkorn+Seafood+Buffet+Bangkok",
+      "website": "",
+      "social": "",
+      "phone": "+66 95 996 6226"
+    },
+    "recommendation": {
+      "bestTime": "17:00-19:00",
+      "visitDuration": "1.5-2.5小时",
+      "nearby": [
+        "Asiatique The Riverfront",
+        "Rama IX Bridge"
+      ],
+      "priority": "if-in-area"
+    },
+    "notes": "加100THB可以入空调房",
+    "verification": {
+      "status": "needs-review",
+      "issues": [
+        "与Mae Mungkorn Seafood Buffet可能为同一家店，名称相似需确认"
+      ]
+    }
+  },
+  {
+    "id": "bangkok-food-010",
+    "name": {
+      "en": "IT Square Lak Si",
+      "local": "ไอทีสแควร์ หลักสี่",
+      "zh": "IT广场"
+    },
+    "type": "food-court",
+    "category": "food",
+    "area": "Lak Si",
+    "location": {
+      "district": "Lak Si",
+      "address": "",
+      "coordinates": {
+        "lat": 13.8863181,
+        "lng": 100.5811858
+      }
+    },
+    "tags": {
+      "style": [
+        "food-court",
+        "mall"
+      ],
+      "food": [
+        "variety",
+        "thai"
+      ],
+      "experience": [
+        "local",
+        "budget-friendly"
+      ],
+      "audience": [
+        "solo",
+        "family",
+        "group"
+      ],
+      "budget": [
+        "cheap"
+      ]
+    },
+    "experience": {
+      "summary": "Lak Si区本地购物中心，一楼美食广场大量本地小吃摊位，价格亲民。",
+      "bestFor": [
+        "quick-meal",
+        "budget-travel",
+        "local-experience"
+      ],
+      "highlights": [
+        "美食广场",
+        "电子产品购物",
+        "24小时超市"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "openingHours": "10:00-21:00",
+      "reservation": "不需要",
+      "transport": ""
+    },
+    "rating": {
+      "overall": 4.0,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=IT+Square+Lak+Si+Bangkok",
+      "website": "",
+      "social": "",
+      "phone": "+66 2 576 0123"
+    },
+    "recommendation": {
+      "bestTime": "",
+      "visitDuration": "",
+      "nearby": [
+        "Miracle Grand Hotel"
+      ],
+      "priority": "optional"
+    },
+    "notes": "电子产品商场 美食广场",
+    "verification": {
+      "status": "verified",
+      "issues": []
+    }
+  },
+  {
+    "id": "bangkok-food-011",
+    "name": {
+      "en": "First One Night Market Talat Phlu",
+      "local": "ตลาดเฟิร์สวัน ตลาดพลู",
+      "zh": "First One夜市"
+    },
+    "type": "night-market",
+    "category": "food",
+    "area": "Talat Phlu",
+    "location": {
+      "district": "Thon Buri",
+      "address": "Ratchadaphisek Road, near BTS Talat Phlu",
+      "coordinates": {
+        "lat": 13.71821,
+        "lng": 100.4774967
+      }
+    },
+    "tags": {
+      "style": [
+        "night-market",
+        "street-food"
+      ],
+      "food": [
+        "variety",
+        "thai",
+        "korean"
+      ],
+      "experience": [
+        "local",
+        "bustling",
+        "instagrammable"
+      ],
+      "audience": [
+        "solo",
+        "couple",
+        "friends",
+        "family"
+      ],
+      "budget": [
+        "cheap"
+      ]
+    },
+    "experience": {
+      "summary": "BTS Talat Phlu站旁的本地夜市，美食种类丰富，有现场音乐和拍照打卡点。",
+      "bestFor": [
+        "night-out",
+        "local-experience",
+        "budget-travel"
+      ],
+      "highlights": [
+        "霓虹灯拍照区",
+        "现场音乐",
+        "泰式韩式麻辣烫"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "openingHours": "16:00-00:00",
+      "reservation": "不需要",
+      "transport": "BTS Talat Phlu站2号出口步行几分钟"
+    },
+    "rating": {
+      "overall": 4.2,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=First+One+Night+Market+Talat+Phlu+Bangkok",
+      "website": "",
+      "social": "",
+      "phone": "+66 62 654 4466"
+    },
+    "recommendation": {
+      "bestTime": "18:00-21:00",
+      "visitDuration": "1-2小时",
+      "nearby": [
+        "Talat Phlu火车站",
+        "百年手打肉丸粉",
+        "Ni-Ang冰淇淋"
+      ],
+      "priority": "if-in-area"
+    },
+    "notes": "",
+    "verification": {
+      "status": "verified",
+      "issues": []
+    }
+  },
+  {
+    "id": "bangkok-food-012",
+    "name": {
+      "en": "Bangkapi Fruit Stall",
+      "local": "",
+      "zh": "便宜水果摊"
+    },
+    "type": "market",
+    "category": "food",
+    "area": "Bang Kapi",
+    "location": {
+      "district": "Lat Phrao",
+      "address": "7-11门口, Lat Phrao Road, Bang Kapi",
+      "coordinates": {
+        "lat": 13.7663185,
+        "lng": 100.6463239
+      }
+    },
+    "tags": {
+      "style": [
+        "street-stall",
+        "market"
+      ],
+      "food": [
+        "fruit",
+        "durian",
+        "mangosteen"
+      ],
+      "experience": [
+        "local",
+        "budget-friendly",
+        "wholesale"
+      ],
+      "audience": [
+        "solo",
+        "family"
+      ],
+      "budget": [
+        "cheap"
+      ]
+    },
+    "experience": {
+      "summary": "Bang Kapi区街边水果摊，榴莲每颗100泰铢起，山竹旺季每公斤15-30泰铢。",
+      "bestFor": [
+        "fruit-lover",
+        "budget-travel",
+        "local-experience"
+      ],
+      "highlights": [
+        "超便宜榴莲",
+        "新鲜热带水果",
+        "水果批发市场在后面"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "openingHours": "白天至21:00",
+      "reservation": "不需要",
+      "transport": "BTS黄线 Bang Kapi站附近"
+    },
+    "rating": {
+      "overall": null,
+      "source": ""
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=Bangkapi+Fruit+Stall+Bangkok",
+      "website": "",
+      "social": ""
+    },
+    "recommendation": {
+      "bestTime": "上午时段（最新鲜）",
+      "visitDuration": "15-30分钟",
+      "nearby": [
+        "Bang Kapi Market",
+        "The Mall Lifestore Bangkapi"
+      ],
+      "priority": "if-in-area"
+    },
+    "notes": "前面水果摊很便宜，有便宜榴莲，后面是水果批发市场",
+    "verification": {
+      "status": "verified",
+      "issues": []
+    }
+  },
+  {
+    "id": "bangkok-food-013",
+    "name": {
+      "en": "BBB House - Bangkok Best Buffet House",
+      "local": "",
+      "zh": "BBB曼谷最佳自助餐"
+    },
+    "type": "buffet",
+    "category": "food",
+    "area": "Bang Kapi",
+    "location": {
+      "district": "Bang Kapi",
+      "address": "The Mall Lifestore Bangkapi",
+      "coordinates": {
+        "lat": 13.7673726,
+        "lng": 100.641846
+      }
+    },
+    "tags": {
+      "style": [
+        "buffet",
+        "restaurant"
+      ],
+      "food": [
+        "international",
+        "japanese",
+        "seafood"
+      ],
+      "experience": [
+        "air-conditioned",
+        "family"
+      ],
+      "audience": [
+        "family",
+        "friends",
+        "group"
+      ],
+      "budget": [
+        "expensive"
+      ]
+    },
+    "experience": {
+      "summary": "The Mall Lifestore Bangkapi内的国际自助餐厅，四国料理自助约999泰铢。",
+      "bestFor": [
+        "family",
+        "group-gathering",
+        "food-lover"
+      ],
+      "highlights": [
+        "松露汤配吐司条",
+        "三文鱼刺身",
+        "脆皮五花肉"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$$$$",
+      "openingHours": "10:00-22:00",
+      "reservation": "建议提前查询优惠",
+      "transport": "BTS黄线 Bang Kapi站"
+    },
+    "rating": {
+      "overall": 4.1,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=BBB+House+Bangkok+Best+Buffet+Bangkok",
+      "website": "",
+      "social": "",
+      "phone": "+66 2 690 2555 (客服热线)"
+    },
+    "recommendation": {
+      "bestTime": "午餐时段（可能更优惠）",
+      "visitDuration": "1.5-2小时",
+      "nearby": [
+        "Bang Kapi Market",
+        "Laemcharoen Seafood"
+      ],
+      "priority": "if-in-area"
+    },
+    "notes": "",
+    "verification": {
+      "status": "verified",
+      "issues": []
+    }
+  },
+  {
+    "id": "bangkok-food-014",
+    "name": {
+      "en": "Laemcharoen Seafood (The Mall Bangkapi)",
+      "local": "แลมเจริญซีฟู้ด",
+      "zh": "蓝嘉隆海鲜"
+    },
+    "type": "restaurant",
+    "category": "food",
+    "area": "Bang Kapi",
+    "location": {
+      "district": "Bang Kapi",
+      "address": "The Mall Lifestore Bangkapi",
+      "coordinates": {
+        "lat": 13.7677991,
+        "lng": 100.6427616
+      }
+    },
+    "tags": {
+      "style": [
+        "restaurant",
+        "chain"
+      ],
+      "food": [
+        "seafood",
+        "thai"
+      ],
+      "experience": [
+        "air-conditioned",
+        "family",
+        "quality"
+      ],
+      "audience": [
+        "family",
+        "food-lover",
+        "group"
+      ],
+      "budget": [
+        "mid-range"
+      ]
+    },
+    "experience": {
+      "summary": "超过40年历史的泰式海鲜连锁品牌，鱼露炸鱼是招牌必点，食材新鲜可现场挑选。",
+      "bestFor": [
+        "family",
+        "seafood-lover",
+        "group"
+      ],
+      "highlights": [
+        "鱼露炸鱼",
+        "蟹虾炒饭",
+        "青柠蒸鱿鱼"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$",
+      "openingHours": "11:00-21:00",
+      "reservation": "可接受预订",
+      "transport": "BTS黄线 Bang Kapi站"
+    },
+    "rating": {
+      "overall": 4.2,
+      "source": "personal"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=Laemcharoen+Seafood+The+Mall+Bangkapi+Bangkok",
+      "website": "",
+      "social": ""
+    },
+    "recommendation": {
+      "bestTime": "11:30-13:00",
+      "visitDuration": "1-1.5小时",
+      "nearby": [
+        "BBB House（同商场）",
+        "Bang Kapi Market"
+      ],
+      "priority": "if-in-area"
+    },
+    "notes": "",
+    "verification": {
+      "status": "verified",
+      "issues": []
+    }
+  },
+  {
+    "id": "bangkok-food-015",
+    "name": {
+      "en": "Sushiro Central Bangrak",
+      "local": "สushiro สาขาเซ็นทรัลบางรัก",
+      "zh": "壽司郎 Central Bangrak"
+    },
+    "type": "restaurant",
+    "category": "food",
+    "area": "Bangrak",
+    "location": {
+      "district": "Pathumwan",
+      "address": "CentralWorld 7楼",
+      "coordinates": {
+        "lat": 13.7200602,
+        "lng": 100.5150623
+      }
+    },
+    "tags": {
+      "style": [
+        "restaurant",
+        "chain",
+        "conveyor-belt"
+      ],
+      "food": [
+        "sushi",
+        "japanese",
+        "sashimi"
+      ],
+      "experience": [
+        "air-conditioned",
+        "casual",
+        "efficient"
+      ],
+      "audience": [
+        "solo",
+        "couple",
+        "family"
+      ],
+      "budget": [
+        "mid-range"
+      ]
+    },
+    "experience": {
+      "summary": "日本最大回转寿司连锁品牌，每盘40-120泰铢按盘色定价。",
+      "bestFor": [
+        "quick-meal",
+        "solo",
+        "family"
+      ],
+      "highlights": [
+        "回转寿司",
+        "自动点餐系统",
+        "泰国风味特色寿司"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$",
+      "openingHours": "10:00-22:00",
+      "reservation": "周末晚餐较忙",
+      "transport": "BTS Chit Lom站 / Siam站"
+    },
+    "rating": {
+      "overall": 4.0,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=Sushiro+Central+Bangrak+Bangkok",
+      "website": "",
+      "social": "",
+      "phone": "+66 2 004 0599"
+    },
+    "recommendation": {
+      "bestTime": "11:00-13:00 或 14:00-16:00（避峰）",
+      "visitDuration": "30分钟-1小时",
+      "nearby": [
+        "CentralWorld",
+        "Siam Paragon",
+        "Siam Square"
+      ],
+      "priority": "if-in-area"
+    },
+    "notes": "",
+    "verification": {
+      "status": "verified",
+      "issues": []
+    }
+  },
+  {
+    "id": "bangkok-food-016",
+    "name": {
+      "en": "GYUMA Japanese BBQ Buffet",
+      "local": "GYUMA บาร์บีคิวบุฟเฟต์",
+      "zh": "GYUMA日式烧肉自助"
+    },
+    "type": "buffet",
+    "category": "food",
+    "area": "Thong Lo",
+    "location": {
+      "district": "Watthana",
+      "address": "Thong Lo area",
+      "coordinates": {
+        "lat": 13.7810394,
+        "lng": 100.6082376
+      }
+    },
+    "tags": {
+      "style": [
+        "buffet",
+        "japanese-bbq"
+      ],
+      "food": [
+        "beef",
+        "pork",
+        "seafood",
+        "grill"
+      ],
+      "experience": [
+        "air-conditioned",
+        "quality"
+      ],
+      "audience": [
+        "friends",
+        "couple",
+        "food-lover"
+      ],
+      "budget": [
+        "mid-range"
+      ]
+    },
+    "experience": {
+      "summary": "日式烧肉自助餐555泰铢含饮料和甜点，牛肉品质好，定期更换烤网。",
+      "bestFor": [
+        "dinner",
+        "date-night",
+        "group-gathering"
+      ],
+      "highlights": [
+        "和牛烧肉",
+        "自助饮料和甜点",
+        "日式装修服务"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$",
+      "openingHours": "18:00-22:00",
+      "reservation": "可预约",
+      "transport": "BTS Thong Lo站"
+    },
+    "rating": {
+      "overall": null,
+      "source": ""
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=GYUMA+BBQ+BUFFET+Bangkok",
+      "website": "",
+      "social": ""
+    },
+    "recommendation": {
+      "bestTime": "18:00-20:00",
+      "visitDuration": "2小时",
+      "nearby": [
+        "Thong Lo商圈",
+        "Ekkamai区"
+      ],
+      "priority": "if-in-area"
+    },
+    "notes": "",
+    "verification": {
+      "status": "needs-review",
+      "issues": [
+        "仅限现金支付，需确认"
+      ]
+    }
+  },
+  {
+    "id": "bangkok-food-017",
+    "name": {
+      "en": "Mae Mungkorn Seafood Buffet @Ladprao 87",
+      "local": "แม่มังกร บุฟเฟต์ซีฟู้ด",
+      "zh": "Mae Mungkorn海鲜自助"
+    },
+    "type": "buffet",
+    "category": "food",
+    "area": "Ladprao",
+    "location": {
+      "district": "Wang Thonglang",
+      "address": "Ladprao 87巷",
+      "coordinates": {
+        "lat": 13.7932442,
+        "lng": 100.6184853
+      }
+    },
+    "tags": {
+      "style": [
+        "buffet",
+        "seafood-grill"
+      ],
+      "food": [
+        "seafood",
+        "crab",
+        "shrimp",
+        "grill"
+      ],
+      "experience": [
+        "hands-on",
+        "local",
+        "fun"
+      ],
+      "audience": [
+        "friends",
+        "family",
+        "group",
+        "food-lover"
+      ],
+      "budget": [
+        "mid-range"
+      ]
+    },
+    "experience": {
+      "summary": "499++泰铢海鲜自助，自己捕捞活虾活蟹现蒸现烤，超高性价比。",
+      "bestFor": [
+        "group-gathering",
+        "seafood-lover",
+        "budget-travel"
+      ],
+      "highlights": [
+        "活虾活蟹自己捞",
+        "芝士焗龙虾",
+        "芒果糯米饭"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$",
+      "openingHours": "11:30-21:00",
+      "reservation": "建议预订尤其是周末",
+      "transport": "MRT Ladphrao站 / BTS Ha Yaek Ladphrao站"
+    },
+    "rating": {
+      "overall": 4.2,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=Mae+Mungkorn+Seafood+Buffet+Ladprao+Bangkok",
+      "website": "",
+      "social": "",
+      "phone": "+66 95 996 6226"
+    },
+    "recommendation": {
+      "bestTime": "11:30-14:00 或 17:00-19:00",
+      "visitDuration": "1.5-2小时",
+      "nearby": [
+        "乍都乍周末市场",
+        "Ladprao区"
+      ],
+      "priority": "if-in-area"
+    },
+    "notes": "加100THB可以入空调房",
+    "verification": {
+      "status": "needs-review",
+      "issues": [
+        "与Mungkorn Seafood Buffet名称相似，可能是同一品牌的不同分店，需确认是否重复"
+      ]
+    }
+  },
+  {
+    "id": "bangkok-food-018",
+    "name": {
+      "en": "MiVana Organic Forest Coffee",
+      "local": "MiVana ออร์แกนิค ฟอเรสท์ คอฟฟี่",
+      "zh": "MiVana有机森林咖啡"
+    },
+    "type": "cafe",
+    "category": "cafes",
+    "area": "Prawet",
+    "location": {
+      "district": "Srinagarindra",
+      "address": "Srinagarindra Road",
+      "coordinates": {
+        "lat": 13.6858866,
+        "lng": 100.6473291
+      }
+    },
+    "tags": {
+      "style": [
+        "cafe",
+        "specialty-coffee"
+      ],
+      "food": [
+        "coffee",
+        "pastry",
+        "thai-food"
+      ],
+      "experience": [
+        "instagrammable",
+        "peaceful",
+        "work-friendly"
+      ],
+      "audience": [
+        "solo",
+        "couple",
+        "friends"
+      ],
+      "budget": [
+        "mid-range"
+      ]
+    },
+    "experience": {
+      "summary": "玻璃屋森林系咖啡店，100%有机遮荫种植咖啡，温暖木质设计绿树环绕。",
+      "bestFor": [
+        "work",
+        "relax",
+        "photo"
+      ],
+      "highlights": [
+        "玻璃屋森林环境",
+        "有机单品咖啡",
+        "荔枝特调"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$",
+      "openingHours": "07:30-17:30",
+      "reservation": "不需要",
+      "transport": "MRT黄线 Suan Luang Rama 9站"
+    },
+    "rating": {
+      "overall": 4.6,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=MiVana+Organic+Forest+Coffee+Bangkok",
+      "website": "",
+      "social": "",
+      "phone": "+66 2 301 1662"
+    },
+    "recommendation": {
+      "bestTime": "09:00-11:00",
+      "visitDuration": "1-2小时",
+      "nearby": [
+        "Seacon Square",
+        "Train Night Market Srinagarindra"
+      ],
+      "priority": "if-in-area"
+    },
+    "notes": "",
+    "verification": {
+      "status": "verified",
+      "issues": []
+    }
+  },
+  {
+    "id": "bangkok-food-019",
+    "name": {
+      "en": "Train Night Market Srinagarindra",
+      "local": "ตลาดนัดรถไฟ ศรีนครินทร์",
+      "zh": "席娜卡琳火车夜市"
+    },
+    "type": "night-market",
+    "category": "food",
+    "area": "Prawet",
+    "location": {
+      "district": "Prawet",
+      "address": "Seacon Square后",
+      "coordinates": {
+        "lat": 13.6938923,
+        "lng": 100.6511801
+      }
+    },
+    "tags": {
+      "style": [
+        "night-market",
+        "vintage"
+      ],
+      "food": [
+        "variety",
+        "seafood",
+        "thai"
+      ],
+      "experience": [
+        "local",
+        "vintage-shopping",
+        "weekend-only"
+      ],
+      "audience": [
+        "couple",
+        "friends",
+        "family"
+      ],
+      "budget": [
+        "mid-range"
+      ]
+    },
+    "experience": {
+      "summary": "曼谷第一个火车夜市，泰国本地人最爱夜市排名第一。四大区域：小吃、服装、二手古董、酒吧。",
+      "bestFor": [
+        "night-out",
+        "vintage-shopping",
+        "local-experience",
+        "group"
+      ],
+      "highlights": [
+        "大量古董和二手藏品",
+        "复古怀旧氛围",
+        "美食区"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "openingHours": "周四至周日 17:00-01:00",
+      "reservation": "不需要",
+      "transport": "BRT到Suan Luang Rama 9"
+    },
+    "rating": {
+      "overall": 4.5,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=Train+Night+Market+Srinagarindra+Bangkok",
+      "website": "",
+      "social": "",
+      "phone": "+66 81 827 5885"
+    },
+    "recommendation": {
+      "bestTime": "18:00-21:00",
+      "visitDuration": "2-3小时",
+      "nearby": [
+        "Seacon Square",
+        "MiVana Organic Forest Coffee"
+      ],
+      "priority": "if-in-area"
+    },
+    "notes": "仅周四至周日营业",
+    "verification": {
+      "status": "verified",
+      "issues": []
+    }
+  },
+  {
+    "id": "bangkok-food-020",
+    "name": {
+      "en": "Ramkhamhaeng Night Market",
+      "local": "ตลาดนัดรามคำแหง",
+      "zh": "拉加曼加拉夜市"
+    },
+    "type": "night-market",
+    "category": "food",
+    "area": "Bang Kapi",
+    "location": {
+      "district": "Bang Kapi",
+      "address": "拉加曼加拉体育场边",
+      "coordinates": {
+        "lat": 13.7600826,
+        "lng": 100.6234867
+      }
+    },
+    "tags": {
+      "style": [
+        "night-market",
+        "local-market"
+      ],
+      "food": [
+        "variety",
+        "thai",
+        "halal"
+      ],
+      "experience": [
+        "local",
+        "budget-friendly",
+        "authentic"
+      ],
+      "audience": [
+        "solo",
+        "friends",
+        "family"
+      ],
+      "budget": [
+        "cheap"
+      ]
+    },
+    "experience": {
+      "summary": "曼谷最大本地夜市之一，游客极少物价最便宜，位于体育场边上有人工湖和草坪。",
+      "bestFor": [
+        "budget-travel",
+        "local-experience",
+        "night-out"
+      ],
+      "highlights": [
+        "人工湖和草坪用餐",
+        "清真食品丰富",
+        "体育场旁"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "openingHours": "每日16:00-00:00",
+      "reservation": "不需要",
+      "transport": "靠近Ramkhamhaeng大学"
+    },
+    "rating": {
+      "overall": 4.1,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=Ramkhamhaeng+Night+Market+Bangkok",
+      "website": "",
+      "social": ""
+    },
+    "recommendation": {
+      "bestTime": "17:00-20:00",
+      "visitDuration": "1-2小时",
+      "nearby": [
+        "拉加曼加拉体育场",
+        "Bang Kapi Market"
+      ],
+      "priority": "optional"
+    },
+    "notes": "",
+    "verification": {
+      "status": "verified",
+      "issues": []
+    }
+  },
+  {
+    "id": "bangkok-food-021",
+    "name": {
+      "en": "Bang Kapi Market",
+      "local": "ตลาดบางกะปิ",
+      "zh": "邦卡皮市场"
+    },
+    "type": "market",
+    "category": "food",
+    "area": "Bang Kapi",
+    "location": {
+      "district": "Bang Kapi",
+      "address": "",
+      "coordinates": {
+        "lat": 13.7672294,
+        "lng": 100.6462916
+      }
+    },
+    "tags": {
+      "style": [
+        "market",
+        "fresh-food"
+      ],
+      "food": [
+        "vegetables",
+        "fruits",
+        "meat",
+        "seafood"
+      ],
+      "experience": [
+        "local",
+        "budget-friendly",
+        "authentic"
+      ],
+      "audience": [
+        "solo",
+        "family"
+      ],
+      "budget": [
+        "cheap"
+      ]
+    },
+    "experience": {
+      "summary": "曼谷最大本地传统市场之一，24小时营业，价格比市区便宜，食材极其新鲜。",
+      "bestFor": [
+        "cooking-enthusiast",
+        "local-experience",
+        "budget-travel"
+      ],
+      "highlights": [
+        "24小时营业",
+        "新鲜本地食材",
+        "纯本地体验"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "openingHours": "24小时营业",
+      "reservation": "不需要",
+      "transport": "BTS黄线 Bang Kapi站"
+    },
+    "rating": {
+      "overall": 4.0,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=Bang+Kapi+Market+Bangkok",
+      "website": "",
+      "social": ""
+    },
+    "recommendation": {
+      "bestTime": "清晨（最新鲜繁忙）",
+      "visitDuration": "30分钟-1小时",
+      "nearby": [
+        "The Mall Lifestore Bangkapi",
+        "便宜水果摊",
+        "Happyland Center"
+      ],
+      "priority": "if-in-area"
+    },
+    "notes": "",
+    "verification": {
+      "status": "verified",
+      "issues": []
+    }
+  },
+  {
+    "id": "bangkok-food-022",
+    "name": {
+      "en": "Happyland Center Food Court",
+      "local": "ศูนย์การค้าแฮปปี้แลนด์ เซ็นเตอร์",
+      "zh": "Happyland中心美食广场"
+    },
+    "type": "food-court",
+    "category": "food",
+    "area": "Bang Kapi",
+    "location": {
+      "district": "Bang Kapi",
+      "address": "Lat Phrao Road",
+      "coordinates": {
+        "lat": 13.7699245,
+        "lng": 100.6423854
+      }
+    },
+    "tags": {
+      "style": [
+        "food-court",
+        "mall"
+      ],
+      "food": [
+        "variety",
+        "thai",
+        "japanese"
+      ],
+      "experience": [
+        "local",
+        "casual",
+        "family"
+      ],
+      "audience": [
+        "solo",
+        "family",
+        "friends"
+      ],
+      "budget": [
+        "cheap"
+      ]
+    },
+    "experience": {
+      "summary": "大型本地美食广场早上6点开始营业，从泰式到日式选择丰富，价格便宜。",
+      "bestFor": [
+        "breakfast",
+        "quick-meal",
+        "budget-travel"
+      ],
+      "highlights": [
+        "早6点开始营业",
+        "本地人为主",
+        "舒适座位区"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "openingHours": "06:00-21:30",
+      "reservation": "不需要",
+      "transport": "BTS黄线 Bang Kapi站附近"
+    },
+    "rating": {
+      "overall": 3.9,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=Happyland+Center+Food+Court+Bangkok",
+      "website": "",
+      "social": ""
+    },
+    "recommendation": {
+      "bestTime": "07:00-09:00（早餐）",
+      "visitDuration": "30分钟-1小时",
+      "nearby": [
+        "Bang Kapi Market",
+        "The Mall Lifestore Bangkapi"
+      ],
+      "priority": "optional"
+    },
+    "notes": "",
+    "verification": {
+      "status": "verified",
+      "issues": []
+    }
+  },
+  {
+    "id": "bangkok-food-023",
+    "name": {
+      "en": "Pork Meatball Noodle Talat Phlu",
+      "local": "ก๋วยเตี๋ยวลูกชิ้นหมู ตลาดพลู",
+      "zh": "百年手打肉丸粉"
+    },
+    "type": "street-food",
+    "category": "food",
+    "area": "Talat Phlu",
+    "location": {
+      "district": "Thon Buri",
+      "address": "Talat Phlu火车站前",
+      "coordinates": {
+        "lat": 13.720548,
+        "lng": 100.4777655
+      }
+    },
+    "tags": {
+      "style": [
+        "street-food",
+        "heritage"
+      ],
+      "food": [
+        "noodle",
+        "pork-meatball"
+      ],
+      "experience": [
+        "local",
+        "heritage"
+      ],
+      "audience": [
+        "solo",
+        "food-lover"
+      ],
+      "budget": [
+        "cheap"
+      ]
+    },
+    "experience": {
+      "summary": "超过60年老店家族传承，手打猪肉丸口感弹牙，地道泰式粿条约45-55泰铢。",
+      "bestFor": [
+        "breakfast",
+        "lunch",
+        "local-experience"
+      ],
+      "highlights": [
+        "手打猪肉丸",
+        "60年老店",
+        "地道粿条"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "openingHours": "建议上午至下午前往",
+      "reservation": "不需要",
+      "transport": "BTS Talat Phlu站 / Talat Phlu火车站"
+    },
+    "rating": {
+      "overall": 4.2,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=Talat+Phlu+Pork+Meatball+Noodle+Bangkok",
+      "website": "",
+      "social": ""
+    },
+    "recommendation": {
+      "bestTime": "09:00-14:00",
+      "visitDuration": "20-30分钟",
+      "nearby": [
+        "First One Night Market",
+        "Ni-Ang冰淇淋",
+        "Tek Heng符德兴"
+      ],
+      "priority": "if-in-area"
+    },
+    "notes": "",
+    "verification": {
+      "status": "needs-review",
+      "issues": [
+        "具体营业时间不详"
+      ]
+    }
+  },
+  {
+    "id": "bangkok-food-024",
+    "name": {
+      "en": "Khanom Wan Talat Phlu",
+      "local": "ขนมหวาน ตลาดพลู",
+      "zh": "百年泰式甜品店"
+    },
+    "type": "dessert",
+    "category": "food",
+    "area": "Talat Phlu",
+    "location": {
+      "district": "Thon Buri",
+      "address": "Talat Phlu市场",
+      "coordinates": {
+        "lat": 13.7207931,
+        "lng": 100.4775211
+      }
+    },
+    "tags": {
+      "style": [
+        "dessert",
+        "street-food"
+      ],
+      "food": [
+        "thai-dessert",
+        "sweet"
+      ],
+      "experience": [
+        "heritage",
+        "local",
+        "budget-friendly"
+      ],
+      "audience": [
+        "solo",
+        "couple",
+        "food-lover"
+      ],
+      "budget": [
+        "cheap"
+      ]
+    },
+    "experience": {
+      "summary": "自1989年营业的传统泰式甜品店，蛋黄甜点每块仅6泰铢起，甜品陈列壮观。",
+      "bestFor": [
+        "dessert-lover",
+        "local-experience",
+        "budget-travel"
+      ],
+      "highlights": [
+        "金丝Foi Thong",
+        "金蛋Thong Yip",
+        "多层椰奶糕"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "openingHours": "建议白天前往",
+      "reservation": "不需要",
+      "transport": "BTS Talat Phlu站"
+    },
+    "rating": {
+      "overall": 4.4,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=Khanom+Wan+Talat+Phlu+Bangkok",
+      "website": "",
+      "social": "",
+      "phone": "+66 2 466 9332"
+    },
+    "recommendation": {
+      "bestTime": "10:00-16:00",
+      "visitDuration": "15-30分钟",
+      "nearby": [
+        "Talat Phlu市场",
+        "Tek Heng符德兴",
+        "Ni-Ang冰淇淋"
+      ],
+      "priority": "if-in-area"
+    },
+    "notes": "百年泰式甜品店",
+    "verification": {
+      "status": "needs-review",
+      "issues": [
+        "具体营业时间不详"
+      ]
+    }
+  },
+  {
+    "id": "bangkok-food-025",
+    "name": {
+      "en": "Kodtalay The Riverfront Seafood Buffet",
+      "local": "โคตรทะเล ซีฟู้ด บุฟเฟ่ต์",
+      "zh": "Kodtalay河畔海鲜自助"
+    },
+    "type": "buffet",
+    "category": "food",
+    "area": "Sathon",
+    "location": {
+      "district": "Charoen Krung",
+      "address": "昭拍耶河畔",
+      "coordinates": {
+        "lat": 13.7143961,
+        "lng": 100.5110752
+      }
+    },
+    "tags": {
+      "style": [
+        "buffet",
+        "seafood-grill"
+      ],
+      "food": [
+        "seafood",
+        "grill",
+        "hotpot"
+      ],
+      "experience": [
+        "river-view",
+        "casual",
+        "value"
+      ],
+      "audience": [
+        "couple",
+        "friends",
+        "family",
+        "group"
+      ],
+      "budget": [
+        "mid-range"
+      ]
+    },
+    "experience": {
+      "summary": "昭拍耶河畔海鲜自助，599-694泰铢无时间限制，活虾活蟹现捞烧烤+火锅双模式。",
+      "bestFor": [
+        "date-night",
+        "group-gathering",
+        "seafood-lover"
+      ],
+      "highlights": [
+        "河景用餐",
+        "活虾活蟹现捞",
+        "烧烤火锅双模式",
+        "无时间限制"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$",
+      "openingHours": "14:00-23:00",
+      "reservation": "强烈建议通过Line预订",
+      "transport": "BTS Saphan Taksin站步行15分钟"
+    },
+    "rating": {
+      "overall": 4.0,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=Kodtalay+The+Riverfront+Seafood+Buffet+Bangkok",
+      "website": "",
+      "social": "",
+      "phone": "+66 96 951 6444"
+    },
+    "recommendation": {
+      "bestTime": "17:00-19:00（看日落）",
+      "visitDuration": "1.5-2.5小时",
+      "nearby": [
+        "ICONSIAM",
+        "Asiatique",
+        "Saphan Taksin"
+      ],
+      "priority": "if-in-area"
+    },
+    "notes": "",
+    "verification": {
+      "status": "verified",
+      "issues": []
+    }
+  },
+  {
+    "id": "bangkok-food-026",
+    "name": {
+      "en": "Tek Heng (Mee Krob Jeen Lee)",
+      "local": "เต็กเฮง (หมี่กรอบจีนหลี)",
+      "zh": "符德興"
+    },
+    "type": "restaurant",
+    "category": "food",
+    "area": "Talat Phlu",
+    "location": {
+      "district": "Thon Buri",
+      "address": "Talat Phlu码头边",
+      "coordinates": {
+        "lat": 13.7221525,
+        "lng": 100.4773152
+      }
+    },
+    "tags": {
+      "style": [
+        "restaurant",
+        "heritage"
+      ],
+      "food": [
+        "thai-chinese",
+        "crispy-noodle",
+        "seafood"
+      ],
+      "experience": [
+        "heritage",
+        "michelin",
+        "famous"
+      ],
+      "audience": [
+        "family",
+        "food-lover",
+        "couple"
+      ],
+      "budget": [
+        "mid-range"
+      ]
+    },
+    "experience": {
+      "summary": "超过130年历史的泰式中餐老店，五世皇曾光顾，米其林推荐，招牌脆面Mee Krob。",
+      "bestFor": [
+        "food-lover",
+        "heritage-dining",
+        "family"
+      ],
+      "highlights": [
+        "脆面Mee Krob",
+        "煎蠔餅",
+        "米其林推荐"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$",
+      "openingHours": "建议午餐时段",
+      "reservation": "建议预订",
+      "transport": "BTS Talat Phlu站 / Talat Phlu码头"
+    },
+    "rating": {
+      "overall": 4.4,
+      "source": "personal"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=Tek+Heng+Talat+Phlu+Bangkok",
+      "website": "",
+      "social": ""
+    },
+    "recommendation": {
+      "bestTime": "11:00-14:00",
+      "visitDuration": "1-1.5小时",
+      "nearby": [
+        "Talat Phlu市场",
+        "First One Night Market",
+        "Ni-Ang冰淇淋"
+      ],
+      "priority": "must-visit"
+    },
+    "notes": "炸米粉和煎蠔餅，有冷气",
+    "verification": {
+      "status": "verified",
+      "issues": []
+    }
+  },
+  {
+    "id": "bangkok-food-027",
+    "name": {
+      "en": "Ni-Ang Shaved Ice Cream",
+      "local": "นิ-อ่าง น้ำแข็งไส ไอศครีม",
+      "zh": "Ni-Ang刨冰冰淇淋"
+    },
+    "type": "dessert",
+    "category": "food",
+    "area": "Talat Phlu",
+    "location": {
+      "district": "Thon Buri",
+      "address": "Talat Phlu火车站旁",
+      "coordinates": {
+        "lat": 13.720495,
+        "lng": 100.4775066
+      }
+    },
+    "tags": {
+      "style": [
+        "dessert",
+        "street-food"
+      ],
+      "food": [
+        "ice-cream",
+        "sweet"
+      ],
+      "experience": [
+        "legendary",
+        "local",
+        "unique",
+        "queue"
+      ],
+      "audience": [
+        "solo",
+        "couple",
+        "friends",
+        "food-lover"
+      ],
+      "budget": [
+        "cheap"
+      ]
+    },
+    "experience": {
+      "summary": "Talat Phlu传奇冰淇淋店，招牌生鸡蛋冰淇淋配椰奶，每碗50-120泰铢，可边吃边看火车。",
+      "bestFor": [
+        "dessert-lover",
+        "local-experience",
+        "unique-experience"
+      ],
+      "highlights": [
+        "生鸡蛋冰淇淋",
+        "椰奶冰淇淋配蛋黄",
+        "看火车经过"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "openingHours": "17:00-02:00",
+      "reservation": "不需要",
+      "transport": "BTS Talat Phlu站 / Talat Phlu火车站"
+    },
+    "rating": {
+      "overall": 4.2,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=Ni+Ang+Shaved+Ice+Cream+Talat+Phlu+Bangkok",
+      "website": "",
+      "social": "",
+      "phone": "+66 81 920 6611"
+    },
+    "recommendation": {
+      "bestTime": "18:00-21:00",
+      "visitDuration": "15-30分钟",
+      "nearby": [
+        "Talat Phlu火车站",
+        "First One Night Market",
+        "Tek Heng符德兴"
+      ],
+      "priority": "must-visit"
+    },
+    "notes": "生鸡蛋冰淇淋",
+    "verification": {
+      "status": "verified",
+      "issues": []
+    }
+  },
+  {
+    "id": "bangkok-food-028",
+    "name": {
+      "en": "Tia Yentafo (Talat Phlu)",
+      "local": "ตี๋เย็นตาโฟ",
+      "zh": "Tia酿豆腐粉"
+    },
+    "type": "street-food",
+    "category": "food",
+    "area": "Talat Phlu",
+    "location": {
+      "district": "Thon Buri",
+      "address": "Talat Phlu火车站旁",
+      "coordinates": {
+        "lat": 13.7208067,
+        "lng": 100.4778325
+      }
+    },
+    "tags": {
+      "style": [
+        "street-food",
+        "noodle"
+      ],
+      "food": [
+        "yentafo",
+        "noodle",
+        "seafood"
+      ],
+      "experience": [
+        "local",
+        "queue-worthy",
+        "authentic"
+      ],
+      "audience": [
+        "solo",
+        "food-lover"
+      ],
+      "budget": [
+        "cheap"
+      ]
+    },
+    "experience": {
+      "summary": "Talat Phlu排队名店，招牌粉红汤头酿豆腐面酸辣甜一次到位，45泰铢起。",
+      "bestFor": [
+        "lunch",
+        "local-experience",
+        "budget-travel"
+      ],
+      "highlights": [
+        "粉红汤头Yentafo",
+        "酸辣甜三重口感",
+        "45泰铢起"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "openingHours": "建议午餐时段（可能只营业到下午）",
+      "reservation": "不需要",
+      "transport": "BTS Talat Phlu站 / Talat Phlu火车站"
+    },
+    "rating": {
+      "overall": 4.1,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=Tia+Yentafo+Talat+Phlu+Bangkok",
+      "website": "",
+      "social": "",
+      "phone": "+66 84 073 6616"
+    },
+    "recommendation": {
+      "bestTime": "11:00-14:00",
+      "visitDuration": "20-30分钟",
+      "nearby": [
+        "Talat Phlu火车站",
+        "Ni-Ang冰淇淋",
+        "Tek Heng符德兴"
+      ],
+      "priority": "if-in-area"
+    },
+    "notes": "Talat Phlu火车站的红汤米粉",
+    "verification": {
+      "status": "needs-review",
+      "issues": [
+        "具体营业时间不详"
+      ]
+    }
+  },
+  {
+    "id": "bangkok-food-029",
+    "name": {
+      "en": "Flow Restaurant and Bar",
+      "local": "Flow Restaurant and Bar",
+      "zh": "Flow餐厅与酒吧"
+    },
+    "type": "restaurant",
+    "category": "food",
+    "area": "Sathon",
+    "location": {
+      "district": "Sathon / Phaya Thai",
+      "address": "",
+      "coordinates": {
+        "lat": 13.7861856,
+        "lng": 100.54552
+      }
+    },
+    "tags": {
+      "style": [
+        "bar",
+        "restaurant"
+      ],
+      "food": [
+        "international",
+        "thai"
+      ],
+      "experience": [
+        "river-view",
+        "casual",
+        "night-out"
+      ],
+      "audience": [
+        "couple",
+        "friends"
+      ],
+      "budget": [
+        "mid-range"
+      ]
+    },
+    "experience": {
+      "summary": "曼谷一家餐厅与酒吧，环境不错，部分分店可欣赏湄南河景。",
+      "bestFor": [
+        "drinks",
+        "date-night",
+        "night-out"
+      ],
+      "highlights": [
+        "湄南河景",
+        "泳池酒吧",
+        "国际自助餐"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$$$$",
+      "openingHours": "",
+      "reservation": "建议预订",
+      "transport": ""
+    },
+    "rating": {
+      "overall": 4.3,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "https://maps.google.com/?q=Flow+Restaurant+Bar+Bangkok",
+      "website": "",
+      "social": "",
+      "phone": "+66 2 278 1412"
+    },
+    "recommendation": {
+      "bestTime": "18:00-22:00",
+      "visitDuration": "",
+      "nearby": [
+        "湄南河"
+      ],
+      "priority": "optional"
+    },
+    "notes": "和志行去吃过，还不错，有点像酒吧",
+    "verification": {
+      "status": "uncertain",
+      "issues": [
+        "可能指代多个不同地点（千禧希尔顿或察殿公寓酒店），需确认具体是哪一家"
+      ]
+    }
+  },
+  {
+    "id": "food-002",
+    "name": {
+      "en": "Sareena Mareena",
+      "local": "ซารีนา มารีนา",
+      "zh": ""
+    },
+    "type": "restaurant",
+    "category": "food",
+    "location": {
+      "district": "Lat Phrao",
+      "address": "285 Lat Phrao Wang Hin Rd, Lat Phrao, Bangkok 10230, Thailand",
+      "coordinates": {
+        "lat": 13.7945792,
+        "lng": 100.594616
+      }
+    },
+    "tags": {
+      "style": [
+        "restaurant"
+      ],
+      "experience": [
+        "Halal food seekers",
+        "Food lovers",
+        "Families"
+      ],
+      "features": []
+    },
+    "experience": {
+      "summary": "Lat Phrao区正宗泰式清真料理",
+      "bestFor": [
+        "Halal food seekers",
+        "Food lovers",
+        "Families"
+      ],
+      "highlights": [
+        "Authentic Thai-Muslim (Halal) cuisine",
+        "Famous for Khao Soi and Beef Noodles",
+        "Local neighborhood atmosphere",
+        "Reasonable prices"
+      ]
+    },
+    "practical": {
+      "priceRange": "Free (Food is paid)",
+      "openingHours": "10:30 – 21:00",
+      "reservation": "",
+      "transport": "MRT: Yellow Line (Chok Chai 4 Station + Taxi/Motorbike); Taxi: Best way to navigate Lat Phrao Wang Hin area"
+    },
+    "rating": {
+      "overall": 4.2,
+      "reviewCount": 120,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/5X5X5X5X5X5X5X5A](https://maps.app.goo.gl/f3C1jZ4n2S8G4v8M7)",
+      "phone": "+66 81 401 5816",
+      "website": "[https://www.facebook.com/sareenamareenafood/](https://www.facebook.com/sareenamareenafood/)"
+    },
+    "recommendation": {
+      "bestTime": "Lunch or early dinner",
+      "visitDuration": "1 hour",
+      "nearby": [
+        "Chok Chai 4 Market",
+        "Wat Lat Phrao"
+      ]
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "A well-regarded Halal restaurant in the Lat Phrao area. It is known for its consistent quality and authentic Thai-Muslim flavors. It provides a great alternative to the typical street food in Chok Chai 4 for those looking for certified Halal options in a comfortable setting."
   }
 ]

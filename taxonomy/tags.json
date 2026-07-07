@@ -1,0 +1,518 @@
+{
+  "air-conditioned": {
+    "zh": "有空调"
+  },
+  "apartment": {
+    "zh": "公寓"
+  },
+  "apartment hotel": {
+    "zh": "apartment hotel"
+  },
+  "architecture enthusiasts": {
+    "zh": "architecture enthusiasts"
+  },
+  "architecture lovers": {
+    "zh": "architecture lovers"
+  },
+  "authentic": {
+    "zh": "地道"
+  },
+  "bar": {
+    "zh": "酒吧"
+  },
+  "barber": {
+    "zh": "理发"
+  },
+  "beef": {
+    "zh": "牛肉"
+  },
+  "boutique": {
+    "zh": "精品"
+  },
+  "bts-access": {
+    "zh": "bts access"
+  },
+  "bts旁": {
+    "zh": "bts旁"
+  },
+  "bucket-list": {
+    "zh": "此生必去"
+  },
+  "budget": {
+    "zh": "平价"
+  },
+  "budget-friendly": {
+    "zh": "实惠"
+  },
+  "buffet": {
+    "zh": "自助餐"
+  },
+  "bustling": {
+    "zh": "热闹"
+  },
+  "cafe": {
+    "zh": "咖啡馆"
+  },
+  "casual": {
+    "zh": "休闲"
+  },
+  "central-location": {
+    "zh": "位置中心"
+  },
+  "chain": {
+    "zh": "连锁"
+  },
+  "cheap": {
+    "zh": "便宜"
+  },
+  "chinese-thai": {
+    "zh": "chinese thai"
+  },
+  "coffee": {
+    "zh": "咖啡"
+  },
+  "coffee lovers": {
+    "zh": "coffee lovers"
+  },
+  "concert goers": {
+    "zh": "concert goers"
+  },
+  "conveyor-belt": {
+    "zh": "conveyor belt"
+  },
+  "couple": {
+    "zh": "情侣"
+  },
+  "couples": {
+    "zh": "couples"
+  },
+  "crab": {
+    "zh": "蟹肉"
+  },
+  "crab-omelette": {
+    "zh": "crab omelette"
+  },
+  "crispy-noodle": {
+    "zh": "crispy noodle"
+  },
+  "cultural travelers": {
+    "zh": "cultural travelers"
+  },
+  "dessert": {
+    "zh": "甜品"
+  },
+  "diy-grill": {
+    "zh": "diy grill"
+  },
+  "durian": {
+    "zh": "榴莲"
+  },
+  "efficient": {
+    "zh": "efficient"
+  },
+  "event attendees": {
+    "zh": "event attendees"
+  },
+  "expensive": {
+    "zh": "高价"
+  },
+  "families": {
+    "zh": "适合家庭"
+  },
+  "family": {
+    "zh": "家庭"
+  },
+  "famous": {
+    "zh": "知名"
+  },
+  "fine-dining": {
+    "zh": "fine dining"
+  },
+  "first-time visitors": {
+    "zh": "first time visitors"
+  },
+  "food lovers": {
+    "zh": "food lovers"
+  },
+  "food-area": {
+    "zh": "美食区"
+  },
+  "food-court": {
+    "zh": "美食广场"
+  },
+  "food-lover": {
+    "zh": "美食爱好者"
+  },
+  "fresh-food": {
+    "zh": "fresh food"
+  },
+  "friends": {
+    "zh": "朋友"
+  },
+  "fruit": {
+    "zh": "水果"
+  },
+  "fruits": {
+    "zh": "水果"
+  },
+  "fun": {
+    "zh": "有趣"
+  },
+  "grill": {
+    "zh": "烧烤"
+  },
+  "group": {
+    "zh": "团体"
+  },
+  "halal": {
+    "zh": "halal"
+  },
+  "halal food seekers": {
+    "zh": "halal food seekers"
+  },
+  "hands-on": {
+    "zh": "hands on"
+  },
+  "heritage": {
+    "zh": "老字号"
+  },
+  "history lovers": {
+    "zh": "history lovers"
+  },
+  "hostel": {
+    "zh": "青年旅舍"
+  },
+  "hotpot": {
+    "zh": "火锅"
+  },
+  "ice-cream": {
+    "zh": "冰淇淋"
+  },
+  "instagrammable": {
+    "zh": "网红打卡"
+  },
+  "international": {
+    "zh": "国际料理"
+  },
+  "japanese": {
+    "zh": "日式"
+  },
+  "japanese-bbq": {
+    "zh": "japanese bbq"
+  },
+  "joggers": {
+    "zh": "joggers"
+  },
+  "korean": {
+    "zh": "韩式"
+  },
+  "landmark": {
+    "zh": "地标"
+  },
+  "legendary": {
+    "zh": "传奇"
+  },
+  "local": {
+    "zh": "本地"
+  },
+  "local experience seekers": {
+    "zh": "local experience seekers"
+  },
+  "local-market": {
+    "zh": "本地市场"
+  },
+  "locals": {
+    "zh": "locals"
+  },
+  "luxury travelers": {
+    "zh": "luxury travelers"
+  },
+  "mall": {
+    "zh": "商场"
+  },
+  "mangosteen": {
+    "zh": "山竹"
+  },
+  "market": {
+    "zh": "市集"
+  },
+  "meat": {
+    "zh": "meat"
+  },
+  "michelin": {
+    "zh": "米其林"
+  },
+  "mid-range": {
+    "zh": "中等"
+  },
+  "museum": {
+    "zh": "博物馆"
+  },
+  "nature lovers": {
+    "zh": "nature lovers"
+  },
+  "neighborhood": {
+    "zh": "街区"
+  },
+  "night-market": {
+    "zh": "夜市"
+  },
+  "night-out": {
+    "zh": "夜晚好去处"
+  },
+  "noodle": {
+    "zh": "面食"
+  },
+  "pad-thai": {
+    "zh": "pad thai"
+  },
+  "park": {
+    "zh": "公园"
+  },
+  "pastry": {
+    "zh": "pastry"
+  },
+  "peaceful": {
+    "zh": "宁静"
+  },
+  "photography": {
+    "zh": "摄影"
+  },
+  "pork": {
+    "zh": "猪肉"
+  },
+  "pork-meatball": {
+    "zh": "pork meatball"
+  },
+  "premium": {
+    "zh": "高端"
+  },
+  "quality": {
+    "zh": "品质"
+  },
+  "queue": {
+    "zh": "排队"
+  },
+  "queue-worthy": {
+    "zh": "queue worthy"
+  },
+  "reservation-hard": {
+    "zh": "reservation hard"
+  },
+  "reservation-required": {
+    "zh": "reservation required"
+  },
+  "restaurant": {
+    "zh": "餐厅"
+  },
+  "rice": {
+    "zh": "rice"
+  },
+  "river-view": {
+    "zh": "河景"
+  },
+  "sashimi": {
+    "zh": "sashimi"
+  },
+  "seafood": {
+    "zh": "海鲜"
+  },
+  "seafood-grill": {
+    "zh": "seafood grill"
+  },
+  "shopping": {
+    "zh": "购物"
+  },
+  "shrimp": {
+    "zh": "虾"
+  },
+  "solo": {
+    "zh": "独自"
+  },
+  "solo travelers": {
+    "zh": "solo travelers"
+  },
+  "southern-thai": {
+    "zh": "southern thai"
+  },
+  "special-occasion": {
+    "zh": "特别场合"
+  },
+  "specialty-coffee": {
+    "zh": "specialty coffee"
+  },
+  "sports fans (volleyball, futsal)": {
+    "zh": "sports fans (volleyball, futsal)"
+  },
+  "street-food": {
+    "zh": "街头小吃"
+  },
+  "street-stall": {
+    "zh": "street stall"
+  },
+  "students and locals": {
+    "zh": "students and locals"
+  },
+  "sushi": {
+    "zh": "寿司"
+  },
+  "sweet": {
+    "zh": "甜点"
+  },
+  "thai": {
+    "zh": "泰式"
+  },
+  "thai-chinese": {
+    "zh": "thai chinese"
+  },
+  "thai-dessert": {
+    "zh": "thai dessert"
+  },
+  "thai-food": {
+    "zh": "thai food"
+  },
+  "tourists": {
+    "zh": "tourists"
+  },
+  "transit": {
+    "zh": "中转"
+  },
+  "unique": {
+    "zh": "独特"
+  },
+  "value": {
+    "zh": "value"
+  },
+  "variety": {
+    "zh": "多样选择"
+  },
+  "vegetables": {
+    "zh": "vegetables"
+  },
+  "vintage": {
+    "zh": "复古"
+  },
+  "vintage-shopping": {
+    "zh": "vintage shopping"
+  },
+  "wagyu": {
+    "zh": "wagyu"
+  },
+  "weekend-only": {
+    "zh": "weekend only"
+  },
+  "wholesale": {
+    "zh": "wholesale"
+  },
+  "work-friendly": {
+    "zh": "适合办公"
+  },
+  "yentafo": {
+    "zh": "yentafo"
+  },
+  "丝绸": {
+    "zh": "丝绸"
+  },
+  "传统": {
+    "zh": "传统"
+  },
+  "便宜": {
+    "zh": "便宜"
+  },
+  "北欧风": {
+    "zh": "北欧风"
+  },
+  "博物馆": {
+    "zh": "博物馆"
+  },
+  "历史": {
+    "zh": "历史"
+  },
+  "地铁": {
+    "zh": "地铁"
+  },
+  "复古": {
+    "zh": "复古"
+  },
+  "寺庙": {
+    "zh": "寺庙"
+  },
+  "工业风": {
+    "zh": "工业风"
+  },
+  "干净": {
+    "zh": "干净"
+  },
+  "必去": {
+    "zh": "必去"
+  },
+  "性价比": {
+    "zh": "性价比"
+  },
+  "拍照": {
+    "zh": "拍照"
+  },
+  "新线路": {
+    "zh": "新线路"
+  },
+  "方便": {
+    "zh": "方便"
+  },
+  "日落": {
+    "zh": "日落"
+  },
+  "有空调": {
+    "zh": "有空调"
+  },
+  "河畔": {
+    "zh": "河畔"
+  },
+  "泰式建筑": {
+    "zh": "泰式建筑"
+  },
+  "泰式按摩": {
+    "zh": "泰式按摩"
+  },
+  "特调饮品": {
+    "zh": "特调饮品"
+  },
+  "环境优美": {
+    "zh": "环境优美"
+  },
+  "玻璃栈道": {
+    "zh": "玻璃栈道"
+  },
+  "精品咖啡": {
+    "zh": "精品咖啡"
+  },
+  "精油按摩": {
+    "zh": "精油按摩"
+  },
+  "网约车": {
+    "zh": "网约车"
+  },
+  "观景台": {
+    "zh": "观景台"
+  },
+  "轻轨": {
+    "zh": "轻轨"
+  },
+  "连锁": {
+    "zh": "连锁"
+  },
+  "适合办公": {
+    "zh": "适合办公"
+  },
+  "需避高峰": {
+    "zh": "需避高峰"
+  },
+  "高效": {
+    "zh": "高效"
+  },
+  "高空酒吧": {
+    "zh": "高空酒吧"
+  },
+  "高端spa": {
+    "zh": "高端spa"
+  }
+}

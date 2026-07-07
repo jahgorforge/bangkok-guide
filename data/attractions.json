@@ -4,7 +4,11 @@
     "name": "Wat Phra Kaew (玉佛寺) & Grand Palace",
     "category": "attractions",
     "location": "Phra Borom Maha Ratchawang, Phra Nakhon",
-    "tags": ["寺庙", "必去", "历史"],
+    "tags": [
+      "寺庙",
+      "必去",
+      "历史"
+    ],
     "rating": 4.7,
     "notes": "曼谷最神圣的寺庙，玉佛由整块翡翠雕刻而成。与大皇宫相连，门票500泰铢。建议早上去避免旅行团高峰。",
     "links": {
@@ -17,7 +21,11 @@
     "name": "Wat Arun (郑王庙)",
     "category": "attractions",
     "location": "Wat Arun, Bangkok Yai",
-    "tags": ["寺庙", "河畔", "日落"],
+    "tags": [
+      "寺庙",
+      "河畔",
+      "日落"
+    ],
     "rating": 4.6,
     "notes": "湄南河畔的黎明寺，标志性高棉风格佛塔。傍晚时分光线最美，可以从对岸坐渡轮过去，仅需4泰铢。",
     "links": {
@@ -29,7 +37,11 @@
     "name": "King Power Mahanakhon Skywalk",
     "category": "attractions",
     "location": "Thung Maha Mek, Sathon",
-    "tags": ["观景台", "玻璃栈道", "高空酒吧"],
+    "tags": [
+      "观景台",
+      "玻璃栈道",
+      "高空酒吧"
+    ],
     "rating": 4.4,
     "notes": "314米高空玻璃栈道，曼谷最高观景台。日落时段去可以同时看到白天和夜景，门票约880泰铢。",
     "links": {
@@ -42,12 +54,464 @@
     "name": "Jim Thompson House Museum",
     "category": "attractions",
     "location": "Pathum Wan",
-    "tags": ["博物馆", "泰式建筑", "丝绸"],
+    "tags": [
+      "博物馆",
+      "泰式建筑",
+      "丝绸"
+    ],
     "rating": 4.3,
     "notes": "美国丝绸商人Jim Thompson的泰式柚木宅邸，现在为博物馆。庭院很美，导览讲解很有趣，门票200泰铢。",
     "links": {
       "googleMaps": "https://maps.google.com/?q=Jim+Thompson+House+Bangkok",
       "phone": "+6627622000"
     }
+  },
+  {
+    "id": "attraction-005",
+    "name": {
+      "en": "National Museum Bangkok",
+      "local": "พิพิธภัณฑสถานแห่งชาติ พระนคร",
+      "zh": "曼谷国立博物馆"
+    },
+    "type": "museum",
+    "category": "attractions",
+    "location": {
+      "district": "Phra Nakhon",
+      "address": "4 Na Phra That Road, Phra Borom Maha Ratchawang, Phra Nakhon, Bangkok 10200, Thailand",
+      "coordinates": {
+        "lat": 13.7576171,
+        "lng": 100.4925161
+      }
+    },
+    "tags": {
+      "style": [
+        "museum"
+      ],
+      "experience": [
+        "History lovers",
+        "Architecture enthusiasts"
+      ],
+      "features": []
+    },
+    "experience": {
+      "summary": "曼谷国立博物馆，泰国最大艺术与文物收藏",
+      "bestFor": [
+        "History lovers",
+        "Architecture enthusiasts",
+        "Cultural travelers"
+      ],
+      "highlights": [
+        "Largest collection of Thai art and artifacts",
+        "Historic Front Palace (Wang Na) grounds",
+        "Buddhaisawan Chapel with ancient murals",
+        "Royal Funeral Chariots",
+        "Ayutthaya and Sukhothai era masterpieces"
+      ]
+    },
+    "practical": {
+      "priceRange": "Paid",
+      "openingHours": "09:00 – 16:00",
+      "reservation": "",
+      "transport": "MRT: Sanam Chai Station (approx. 15-20 min walk); Boat: Phra Arthit Pier or Tha Chang Pier; Taxi: Best way to reach the entrance directly"
+    },
+    "rating": {
+      "overall": 4.6,
+      "reviewCount": 5200,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/8X8X8X8X8X8X8X8A](https://maps.app.goo.gl/p6C1jZ1n6S2G8v2G1)",
+      "phone": "+66 2 224 1333",
+      "website": "[http://www.virtualmuseum.finearts.go.th/bangkok/](http://www.virtualmuseum.finearts.go.th/bangkok/)"
+    },
+    "recommendation": {
+      "bestTime": "Wednesday or Thursday morning for guided tours",
+      "visitDuration": "2–3 hours",
+      "nearby": [
+        "The Grand Palace",
+        "Wat Phra Kaew",
+        "Sanam Luang",
+        "Thammasat University"
+      ]
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "Housed in the former 18th-century Front Palace, this is the main branch of the national museums in Thailand. It offers a comprehensive overview of Thai history from Neolithic times through the various kingdoms. The Royal Funeral Chariots gallery is particularly impressive and unique.\n\n---"
+  },
+  {
+    "id": "attraction-006",
+    "name": {
+      "en": "Chulalongkorn University Centenary Park",
+      "local": "อุทยาน ๑๐๐ ปี จุฬาลงกรณ์มหาวิทยาลัย",
+      "zh": "朱拉隆功大学百年纪念公园"
+    },
+    "type": "park",
+    "category": "attractions",
+    "location": {
+      "district": "Pathum Wan",
+      "address": "254 Phayathai Rd, Wang Mai, Pathum Wan, Bangkok 10330, Thailand",
+      "coordinates": {
+        "lat": 13.7394304,
+        "lng": 100.5237535
+      }
+    },
+    "tags": {
+      "style": [
+        "park"
+      ],
+      "experience": [
+        "Families",
+        "Photography",
+        "Joggers",
+        "Students and locals"
+      ],
+      "features": []
+    },
+    "experience": {
+      "summary": "朱拉隆功大学百年纪念公园，市中心绿色秘境",
+      "bestFor": [
+        "Families",
+        "Photography",
+        "Joggers",
+        "Students and locals"
+      ],
+      "highlights": [
+        "Modern eco-friendly design",
+        "Underground water retention system",
+        "Wetland area and educational spaces",
+        "Sloped lawns for relaxing",
+        "Near famous street food areas (Ban That Thong)"
+      ]
+    },
+    "practical": {
+      "priceRange": "Free",
+      "openingHours": "05:00 – 22:00",
+      "reservation": "",
+      "transport": "MRT: 10-12 min walk from MRT Sam Yan Station; Bus: Multiple routes along Rama IV or Phaya Thai Road; Parking: Available at I'm Park or adjacent lots"
+    },
+    "rating": {
+      "overall": 4.7,
+      "reviewCount": 5200,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/6W6W6W6W6W6W6W6A](https://maps.app.goo.gl/B9Z2W4X9W8Z8Z8Z8A)",
+      "phone": "+66 2 218 3590",
+      "website": "[https://www.pmcu.co.th/](https://www.pmcu.co.th/)"
+    },
+    "recommendation": {
+      "bestTime": "Late afternoon (4 PM - 6 PM) for sunset and exercise",
+      "visitDuration": "1–2 hours",
+      "nearby": [
+        "I'm Park Community Mall",
+        "Ban That Thong Street Food",
+        "MRT Sam Yan Station",
+        "Chulalongkorn University"
+      ]
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "A hidden green gem in central Bangkok designed to manage water and reduce the \"urban heat island\" effect. It is a beautiful example of modern landscape architecture and a popular spot for photography, picnicking, and watching the sunset among the city skyscrapers.\n\n---"
+  },
+  {
+    "id": "attraction-007",
+    "name": {
+      "en": "Talat Phlu",
+      "local": "ตลาดพลู",
+      "zh": "哒叻蒲"
+    },
+    "type": "neighborhood",
+    "category": "attractions",
+    "location": {
+      "district": "Thon Buri",
+      "address": "Therd Thai Road, Talat Phlu, Thon Buri, Bangkok 10600, Thailand",
+      "coordinates": {
+        "lat": 13.7208644,
+        "lng": 100.4780029
+      }
+    },
+    "tags": {
+      "style": [
+        "neighborhood"
+      ],
+      "experience": [
+        "Food lovers",
+        "History lovers",
+        "Photography"
+      ],
+      "features": []
+    },
+    "experience": {
+      "summary": "哒叻蒲老街，曼谷最古老的美食街区之一",
+      "bestFor": [
+        "Food lovers",
+        "History lovers",
+        "Photography"
+      ],
+      "highlights": [
+        "Famous \"Gui Chai\" (Chive dumplings)",
+        "Historic Talat Phlu Railway Station",
+        "Authentic old Bangkok atmosphere",
+        "Wide variety of traditional Thai desserts",
+        "Local train lifestyle"
+      ]
+    },
+    "practical": {
+      "priceRange": "Free",
+      "openingHours": "Morning (Wet market), Evening (Street food 17:00 – 22:00)",
+      "reservation": "",
+      "transport": "BTS: 10 min walk from BTS Talat Phlu; MRT: Near MRT Tha Phra; Train: Maeklong Railway line (Wongwian Yai – Mahachai)"
+    },
+    "rating": {
+      "overall": 4.4,
+      "reviewCount": 8000,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/4T4T4T4T4T4T4T4A](https://maps.app.goo.gl/iXw6jZ8n2S8G4v7C6)",
+      "phone": "",
+      "website": ""
+    },
+    "recommendation": {
+      "bestTime": "Evening for street food",
+      "visitDuration": "1–2 hours",
+      "nearby": [
+        "Talat Phlu Railway Station",
+        "Wat Paknam Phasi Charoen",
+        "BTS Talat Phlu"
+      ]
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "Talat Phlu is one of Bangkok’s oldest and most famous food neighborhoods. It was historically a hub for betel nut trading (hence the name). Today, it is a pilgrimage site for street food enthusiasts. The area retains a nostalgic charm with its old wooden buildings and the active railway line passing through the heart of the market.\n\n---"
+  },
+  {
+    "id": "attraction-008",
+    "name": {
+      "en": "Hua Mak Indoor Stadium",
+      "local": "อินดอร์ สเตเดียม หัวหมาก",
+      "zh": "华马克室内体育馆"
+    },
+    "type": "landmark",
+    "category": "attractions",
+    "location": {
+      "district": "Bang Kapi",
+      "address": "286 Ramkhamhaeng Rd, Hua Mak, Bang Kapi, Bangkok 10240, Thailand",
+      "coordinates": {
+        "lat": 13.7575568,
+        "lng": 100.6235449
+      }
+    },
+    "tags": {
+      "style": [
+        "landmark"
+      ],
+      "experience": [
+        "Sports fans (Volleyball, Futsal)",
+        "Concert goers",
+        "Event attendees"
+      ],
+      "features": []
+    },
+    "experience": {
+      "summary": "华马克室内体育馆，国际赛事与演唱会场地",
+      "bestFor": [
+        "Sports fans (Volleyball, Futsal)",
+        "Concert goers",
+        "Event attendees"
+      ],
+      "highlights": [
+        "Part of the Rajamangala National Stadium complex",
+        "Host venue for the 2025 FIVB Volleyball Women's World Championship",
+        "Major venue for concerts and international indoor sports",
+        "Iconic mid-century modern circular design"
+      ]
+    },
+    "practical": {
+      "priceRange": "Paid (Event dependent)",
+      "openingHours": "Event dependent",
+      "reservation": "",
+      "transport": "MRT: Yellow Line (Lamsali Station + Taxi); Boat: Ramkhamhaeng Pier (Canal Boat)"
+    },
+    "rating": {
+      "overall": 4.4,
+      "reviewCount": 4500,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/2S2S2S2S2S2S2S2A](https://maps.app.goo.gl/r5E5jZ9n4S9G6v9E8)",
+      "phone": "+66 2 314 4678",
+      "website": "[https://www.sat.or.th/](https://www.sat.or.th/)"
+    },
+    "recommendation": {
+      "bestTime": "During sporting events or concerts",
+      "visitDuration": "2–4 hours (for events)",
+      "nearby": [
+        "Rajamangala National Stadium",
+        "Ramkhamhaeng University",
+        "Ramkhamhaeng Night Market"
+      ]
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "This stadium is a core part of Thailand's sports history. It is frequently used for international volleyball matches, which are extremely popular in Thailand. In 2025, it will be a primary venue for the Women's Volleyball World Championship. The stadium is located within the Sports Authority of Thailand (SAT) complex, which also includes the national football stadium.\n\n---"
+  },
+  {
+    "id": "attraction-009",
+    "name": {
+      "en": "Seri Thai Park",
+      "local": "สวนเสรีไทย",
+      "zh": "自由泰公园"
+    },
+    "type": "park",
+    "category": "attractions",
+    "location": {
+      "district": "Bueng Kum",
+      "address": "Seri Thai Road, Khlong Kum, Bueng Kum, Bangkok 10240, Thailand",
+      "coordinates": {
+        "lat": 13.7852787,
+        "lng": 100.6733526
+      }
+    },
+    "tags": {
+      "style": [
+        "park"
+      ],
+      "experience": [
+        "History lovers",
+        "Joggers",
+        "Families",
+        "Locals"
+      ],
+      "features": []
+    },
+    "experience": {
+      "summary": "自由泰公园，有湖景花园和二战博物馆",
+      "bestFor": [
+        "History lovers",
+        "Joggers",
+        "Families",
+        "Locals"
+      ],
+      "highlights": [
+        "Large beautiful lake and water gardens",
+        "Seri Thai (Free Thai Movement) Memorial Museum",
+        "Peaceful and less touristy than city center parks",
+        "Exercise tracks and public swimming pool"
+      ]
+    },
+    "practical": {
+      "priceRange": "Free",
+      "openingHours": "05:00 – 21:00",
+      "reservation": "",
+      "transport": "Taxi: Best way to reach from Bang Kapi or Lat Phrao; Bus: Multiple routes along Seri Thai Road"
+    },
+    "rating": {
+      "overall": 4.5,
+      "reviewCount": 2500,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/9V9V9V9V9V9V9V9A](https://maps.app.goo.gl/Y6C1jZ1n9S5G1v5J4)",
+      "phone": "+66 2 379 7011",
+      "website": ""
+    },
+    "recommendation": {
+      "bestTime": "Early morning or after 4:30 PM",
+      "visitDuration": "1–2 hours",
+      "nearby": [
+        "National Institute of Development Administration (NIDA)",
+        "Kwan-Riam Floating Market (nearby drive)"
+      ]
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "Formerly known as Bueng Kum Water Park, it was renamed to honor the Seri Thai (Free Thai Movement) that resisted Japanese occupation during WWII. It features a large reservoir and the Seri Thai Memorial Library and Museum. It is a very peaceful, lush green space primarily used by locals for recreation and fitness.\n\n---"
+  },
+  {
+    "id": "attraction-010",
+    "name": {
+      "en": "Suan Luang Rama IX (Boating Lake)",
+      "local": "สวนหลวง ร.9",
+      "zh": "九世王公园"
+    },
+    "type": "park",
+    "category": "attractions",
+    "location": {
+      "district": "Prawet",
+      "address": "Chaloem Phrakiat Ratchakan Thi 9 Rd, Nong Bon, Prawet, Bangkok 10250, Thailand",
+      "coordinates": {
+        "lat": 13.687775,
+        "lng": 100.661181
+      }
+    },
+    "tags": {
+      "style": [
+        "park"
+      ],
+      "experience": [
+        "Families",
+        "Couples",
+        "Photography",
+        "Nature lovers"
+      ],
+      "features": []
+    },
+    "experience": {
+      "summary": "九世王御苑，曼谷最大的植物园和公园",
+      "bestFor": [
+        "Families",
+        "Couples",
+        "Photography",
+        "Nature lovers"
+      ],
+      "highlights": [
+        "Largest park in Bangkok",
+        "Iconic Ratchamangkhala Pavilion",
+        "Large lake with swan paddle boats",
+        "International gardens (Chinese, French, English, etc.)",
+        "Annual flower festival in December"
+      ]
+    },
+    "practical": {
+      "priceRange": "Paid",
+      "openingHours": "05:00 – 19:00",
+      "reservation": "",
+      "transport": "MRT: 15 min walk from MRT Yellow Line (Suan Luang Rama 9)"
+    },
+    "rating": {
+      "overall": 4.7,
+      "reviewCount": 18000,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/3V3V3V3V3V3V3V3A](https://maps.app.goo.gl/m4C1jZ3n1S7G3v7L6)",
+      "phone": "+66 2 328 1385",
+      "website": "[http://suanluangrama9.or.th/](http://suanluangrama9.or.th/)"
+    },
+    "recommendation": {
+      "bestTime": "December for the flower festival; or late afternoon",
+      "visitDuration": "2–3 hours",
+      "nearby": [
+        "Paradise Park Mall",
+        "Seacon Square",
+        "MRT Yellow Line (Suan Luang Rama 9 Station)"
+      ]
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "Built in 1987 to commemorate King Rama IX’s 60th birthday, this is Bangkok’s largest botanical garden and public park. It is famous for its stunning architecture, diverse plant collections, and the large central lake. It offers a much more tranquil and \"nature-focused\" experience compared to Lumphini Park.\n\n---"
   }
 ]

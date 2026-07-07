@@ -100,7 +100,7 @@ async function initCategoryPage(categories, dataBase) {
   // Fetch and render data
   const items = await Loader.fetchJSON(dataBase + catId + '.json');
   const grid = document.getElementById('card-grid');
-  Renderer.renderCards(items, grid);
+  await Renderer.renderCards(items, grid);
 
   // Update entry count
   document.getElementById('page-count').textContent =
@@ -108,6 +108,6 @@ async function initCategoryPage(categories, dataBase) {
 
   // Initialize search and tag filters
   if (items && items.length > 0) {
-    Filter.init(items);
+    await Filter.init(items);
   }
 }

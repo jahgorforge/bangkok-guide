@@ -4,7 +4,11 @@
     "name": "Rocket Coffee Bar (Sathorn)",
     "category": "cafes",
     "location": "Sathon",
-    "tags": ["适合办公", "精品咖啡", "北欧风"],
+    "tags": [
+      "适合办公",
+      "精品咖啡",
+      "北欧风"
+    ],
     "rating": 4.2,
     "notes": "北欧极简风格，空间宽敞，插座充足。Cold brew和brunch都很不错，适合午后办公。",
     "links": {
@@ -16,7 +20,11 @@
     "name": "Featherstone Bistro",
     "category": "cafes",
     "location": "Ekkamai",
-    "tags": ["拍照", "复古", "特调饮品"],
+    "tags": [
+      "拍照",
+      "复古",
+      "特调饮品"
+    ],
     "rating": 4.3,
     "notes": "复古魔法风格，每个角落都适合拍照。招牌sparkling饮品颜值极高，还有水晶球占卜周边小店。",
     "links": {
@@ -29,12 +37,89 @@
     "name": "Factory Coffee",
     "category": "cafes",
     "location": "Phayathai",
-    "tags": ["精品咖啡", "工业风", "BTS旁"],
+    "tags": [
+      "精品咖啡",
+      "工业风",
+      "BTS旁"
+    ],
     "rating": 4.6,
     "notes": "曼谷精品咖啡天花板，Phayathai BTS站旁。Supreme咖啡师冠军坐镇，White Cold Brew是招牌。",
     "links": {
       "googleMaps": "https://maps.google.com/?q=Factory+Coffee+Bangkok",
       "phone": "+6626656354"
     }
+  },
+  {
+    "id": "cafe-001",
+    "name": {
+      "en": "At Talat Phlu",
+      "local": "แอท ตลาดพลู",
+      "zh": ""
+    },
+    "type": "cafe",
+    "category": "cafes",
+    "location": {
+      "district": "Thon Buri",
+      "address": "1101 Therd Thai Rd, Talat Phlu, Thon Buri, Bangkok 10600, Thailand",
+      "coordinates": {
+        "lat": 13.7200629,
+        "lng": 100.4738082
+      }
+    },
+    "tags": {
+      "style": [
+        "cafe"
+      ],
+      "experience": [
+        "Photography",
+        "Coffee lovers",
+        "Solo travelers"
+      ],
+      "features": []
+    },
+    "experience": {
+      "summary": "哒叻蒲顶楼咖啡馆，可欣赏巨型金佛美景",
+      "bestFor": [
+        "Photography",
+        "Coffee lovers",
+        "Solo travelers"
+      ],
+      "highlights": [
+        "Rooftop terrace with clear view of the Big Buddha (Wat Paknam)",
+        "Historic shophouse renovation",
+        "Specialty coffee and local snacks",
+        "Quiet atmosphere in a busy food district"
+      ]
+    },
+    "practical": {
+      "priceRange": "Free (Requires purchase of food/drink)",
+      "openingHours": "09:00 – 18:00",
+      "reservation": "",
+      "transport": "Walk to BTS: 15 min from BTS Talat Phlu; Walk to MRT: 10 min from MRT Tha Phra"
+    },
+    "rating": {
+      "overall": 4.2,
+      "reviewCount": 150,
+      "source": "Google Maps"
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/3A3A3A3A3A3A3A3A](https://maps.app.goo.gl/YV5VjZ7n3S7G5v8D7)",
+      "phone": "+66 94 456 5544",
+      "website": "[https://www.facebook.com/attalatphlu/](https://www.facebook.com/attalatphlu/)"
+    },
+    "recommendation": {
+      "bestTime": "Afternoon for coffee with a view",
+      "visitDuration": "1 hour",
+      "nearby": [
+        "Talat Phlu Market",
+        "Wat Paknam Phasi Charoen",
+        "Thon Buri Canals"
+      ]
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "A charming boutique cafe located in an old shophouse. It has gained popularity on social media due to its rooftop, which offers one of the best unobstructed views of the giant golden Buddha at Wat Paknam Phasi Charoen. It’s a perfect place to rest and take photos after exploring the Talat Phlu street food scene.\n\n---"
   }
 ]

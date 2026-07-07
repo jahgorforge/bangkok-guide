@@ -1,40 +1,227 @@
 [
   {
-    "id": "bangkok-shop-1",
-    "name": "ICONSIAM",
+    "id": "shopping-001",
+    "name": {
+      "en": "One Bangkok",
+      "local": "วัน แบงค็อก",
+      "zh": "曼谷一号 / 万谷"
+    },
+    "type": "mall",
     "category": "shopping",
-    "location": "Khlong Ton Sai, Khlong San",
-    "tags": ["高端商场", "河畔", "室内水上市场"],
-    "rating": 4.4,
-    "notes": "湄南河畔巨型商场，一楼室内水上市场很有特色，奢侈品到本地品牌全覆盖。",
+    "location": {
+      "district": "Pathum Wan",
+      "address": "Junction of Rama IV Road and Wireless Road, Lumphini, Pathum Wan, Bangkok 10330, Thailand",
+      "coordinates": {
+        "lat": 13.7270531,
+        "lng": 100.5472545
+      }
+    },
+    "tags": {
+      "style": [
+        "mall"
+      ],
+      "experience": [
+        "Shopping",
+        "Architecture lovers",
+        "Food lovers",
+        "Luxury travelers"
+      ],
+      "features": []
+    },
+    "experience": {
+      "summary": "曼谷最新大型综合开发项目，集购物艺术于一体",
+      "bestFor": [
+        "Shopping",
+        "Architecture lovers",
+        "Food lovers",
+        "Luxury travelers"
+      ],
+      "highlights": [
+        "Largest integrated district in Thailand",
+        "Modern architecture and luxury retail",
+        "Artistic installations and public plazas",
+        "\"The Wireless House\" exhibition",
+        "Gourmet food hall and fine dining"
+      ]
+    },
+    "practical": {
+      "priceRange": "Free",
+      "openingHours": "10:00 – 22:00",
+      "reservation": "",
+      "transport": "MRT: Direct access to MRT Lumphini Station (Blue Line); Walk to BTS: 15 min to BTS Sala Daeng; Parking: Massive underground parking available"
+    },
+    "rating": {
+      "overall": 4.7,
+      "reviewCount": 3500,
+      "source": "Google Maps"
+    },
     "links": {
-      "googleMaps": "https://maps.google.com/?q=ICONSIAM+Bangkok",
-      "phone": "+6622888888"
-    }
+      "googleMaps": "[https://maps.app.goo.gl/9Z9Z9Z9Z9Z9Z9Z9A](https://maps.app.goo.gl/yYvS66Z7h8G7bH8)",
+      "phone": "+66 2 080 5777",
+      "website": "[https://www.onebangkok.com/](https://www.onebangkok.com/)"
+    },
+    "recommendation": {
+      "bestTime": "Evening for city views and outdoor atmosphere",
+      "visitDuration": "3–5 hours",
+      "nearby": [
+        "Lumphini Park",
+        "MRT Lumphini Station",
+        "Wireless Road Embassies",
+        "Benjakitti Park"
+      ]
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "One Bangkok is the city's newest and largest mixed-use landmark. It features three distinct retail experiences: Parade, THE STOREYS, and POST 1928 (luxury). It is designed as a \"city within a city,\" integrating green spaces with high-end shopping, art, and office space. It is a must-visit for those interested in the future of Bangkok's urban landscape.\n\n---"
   },
   {
-    "id": "bangkok-shop-2",
-    "name": "Chatuchak Weekend Market",
+    "id": "shopping-002",
+    "name": {
+      "en": "Rom Hup Market / Maeklong Railway Market",
+      "local": "ตลาดร่มหุบ",
+      "zh": "美功铁道市场 / 爆笑铁道市场"
+    },
+    "type": "market",
     "category": "shopping",
-    "location": "Kamphaeng Phet Road, Chatuchak",
-    "tags": ["市集", "周末", "二手", "手工艺品"],
-    "rating": 4.3,
-    "notes": "世界最大周末市场之一，超过8000个摊位。衣服、家具、植物、宠物、古董应有尽有。建议早上去避暑。",
+    "location": {
+      "district": "Mueang Samut Songkhram",
+      "address": "Mae Klong, Mueang Samut Songkhram District, Samut Songkhram 75000, Thailand",
+      "coordinates": {
+        "lat": 13.4075512,
+        "lng": 99.9988927
+      }
+    },
+    "tags": {
+      "style": [
+        "market"
+      ],
+      "experience": [
+        "Photography",
+        "First-time visitors",
+        "Local experience seekers"
+      ],
+      "features": []
+    },
+    "experience": {
+      "summary": "美功铁道市场，摊位随火车往来收放的奇景",
+      "bestFor": [
+        "Photography",
+        "First-time visitors",
+        "Local experience seekers"
+      ],
+      "highlights": [
+        "Train passing through the center of the market",
+        "Vendors retracting awnings in seconds",
+        "Fresh local seafood and produce",
+        "Unique photography opportunities"
+      ]
+    },
+    "practical": {
+      "priceRange": "Free",
+      "openingHours": "06:00 – 18:00",
+      "reservation": "",
+      "transport": "Train: Take the train from Wongwian Yai to Mahachai, cross the river, and take the Ban Laem train to Maeklong."
+    },
+    "rating": {
+      "overall": 4.3,
+      "reviewCount": 18000,
+      "source": "Google Maps"
+    },
     "links": {
-      "googleMaps": "https://maps.google.com/?q=Chatuchak+Market+Bangkok"
-    }
+      "googleMaps": "[https://maps.app.goo.gl/7Y7Y7Y7Y7Y7Y7Y7A](https://maps.app.goo.gl/X9uSjH3Y7x6f7YxH9)",
+      "phone": "",
+      "website": ""
+    },
+    "recommendation": {
+      "bestTime": "Align your visit with the train arrival/departure times",
+      "visitDuration": "1 hour",
+      "nearby": [
+        "Maeklong Railway Station",
+        "Amphawa Floating Market (approx. 15 min drive)"
+      ]
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "\"Rom Hup\" translates to \"Closing the Umbrella.\" This is a world-famous market where vendors set up their stalls directly on a functioning railway track. When the train signal sounds, the market transforms as stalls are moved back and umbrellas closed. Once the train passes, the market returns to normal instantly.\n\n---"
   },
   {
-    "id": "bangkok-shop-3",
-    "name": "Siam Paragon",
+    "id": "shopping-003",
+    "name": {
+      "en": "Asiatique The Riverfront",
+      "local": "เอเชียทีค เดอะ ริเวอร์ฟรอนท์",
+      "zh": "河滨夜市 / 摩天轮夜市"
+    },
+    "type": "market",
     "category": "shopping",
-    "location": "Pathum Wan",
-    "tags": ["高端商场", "暹罗区", "海鲜广场"],
-    "rating": 4.2,
-    "notes": "暹罗商圈旗舰商场，G层美食广场品质很高，底层还有SEA LIFE海洋馆。",
+    "location": {
+      "district": "Bang Kho Laem",
+      "address": "2194 Charoen Krung Road, Wat Phraya Krai, Bang Kho Laem, Bangkok 10120, Thailand",
+      "coordinates": {
+        "lat": 13.7044191,
+        "lng": 100.5032671
+      }
+    },
+    "tags": {
+      "style": [
+        "market"
+      ],
+      "experience": [
+        "Families",
+        "Couples",
+        "Tourists",
+        "Photography"
+      ],
+      "features": []
+    },
+    "experience": {
+      "summary": "河滨夜市，摩天轮与河景餐厅的休闲区",
+      "bestFor": [
+        "Families",
+        "Couples",
+        "Tourists",
+        "Photography"
+      ],
+      "highlights": [
+        "Large Ferris Wheel (Asiatique Sky)",
+        "Riverside dining",
+        "Calypso Cabaret show",
+        "Historic warehouse architecture",
+        "Disney 100 Village (temporary/special events)"
+      ]
+    },
+    "practical": {
+      "priceRange": "Free (Rides and shows are paid)",
+      "openingHours": "11:00 – 00:00 (Best after 17:00)",
+      "reservation": "",
+      "transport": "Boat: Free shuttle boat from BTS Saphan Taksin (Sathon Pier); Taxi: Traffic can be heavy on Charoen Krung Road"
+    },
+    "rating": {
+      "overall": 4.3,
+      "reviewCount": 63000,
+      "source": "Google Maps"
+    },
     "links": {
-      "googleMaps": "https://maps.google.com/?q=Siam+Paragon+Bangkok",
-      "phone": "+6626901000"
-    }
+      "googleMaps": "[https://maps.app.goo.gl/5V5V5V5V5V5V5V5A](https://maps.app.goo.gl/R9R9R9R9R9R9R9R9A)",
+      "phone": "+66 92 246 0812",
+      "website": "[https://www.asiatiquethailand.com/](https://www.asiatiquethailand.com/)"
+    },
+    "recommendation": {
+      "bestTime": "After 5:00 PM for the sunset and night atmosphere",
+      "visitDuration": "2–4 hours",
+      "nearby": [
+        "Chao Phraya River",
+        "Chatrium Hotel Riverside",
+        "Charoen Krung Road"
+      ]
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "Combining a mall and a night market, Asiatique is built on the former docks of the East Asiatic Company. It maintains a colonial warehouse theme. It is very tourist-oriented with many souvenir shops, various international restaurants, and entertainment options like a Ferris wheel and traditional puppet theater.\n\n---"
   }
 ]

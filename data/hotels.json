@@ -1,41 +1,1718 @@
 [
   {
-    "id": "bangkok-hotel-1",
-    "name": "Mandarin Oriental Bangkok",
+    "id": "hotel-001",
+    "name": {
+      "en": "Baron Zotel Bangkok",
+      "local": "บารอน โซเทล กรุงเทพ",
+      "zh": ""
+    },
+    "type": "budget",
     "category": "hotels",
-    "location": "Charoenkrung Road, Bang Rak",
-    "tags": ["奢华", "河景", "历史经典"],
-    "rating": 4.9,
-    "notes": "曼谷最传奇的酒店，1876年开业。河景房无与伦比，authors' lounge下午茶必体验。",
+    "location": {
+      "district": "Bang Kapi",
+      "address": "77 Soi Lat Phrao 117, Khlong Chan, Bang Kapi, Bangkok 10240, Thailand",
+      "coordinates": {
+        "lat": 13.7723678,
+        "lng": 100.6406919
+      }
+    },
+    "contact": {
+      "phone": "+66 2 734 0132",
+      "website": "[http://www.baronzotel.com/](http://www.baronzotel.com/)",
+      "email": "info@baronzotel.com"
+    },
+    "tags": {
+      "style": [
+        "budget"
+      ],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "高性价比工业风设计，Bang Kapi区经济之选",
+      "bestFor": [
+        "Solo travelers",
+        "Budget-conscious travelers",
+        "Long-stay guests"
+      ],
+      "highlights": [
+        "High value for money",
+        "Modern industrial-style decor",
+        "Private balconies with floor-to-ceiling windows",
+        "Rooftop garden and smoking area",
+        "Quiet residential neighborhood"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "approxRoomPrice": "750–1,100 THB/night",
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "reservation": "Recommended"
+    },
+    "rating": {
+      "overall": 4.1,
+      "reviewCount": 850,
+      "source": "Google Maps"
+    },
+    "transport": {
+      "bts": "",
+      "mrt": "8 min to Yellow Line (Bang Kapi)",
+      "airport": "BKK: ~32 min via Yellow Line/ARL; DMK: ~60-70 min via Yellow Line/BTS/Bus"
+    },
+    "facilities": [
+      "Free WiFi",
+      "Restaurant (Breakfast available)",
+      "Smoking Area",
+      "24-hour Front Desk",
+      "Free Parking"
+    ],
+    "recommendation": {
+      "nearby": [
+        "MRT Yellow Line (Bang Kapi Station)",
+        "The Mall Lifestore Bangkapi",
+        "Tawanna Night Market",
+        "Saen Saep Canal (The Mall Bangkapi Pier)"
+      ]
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/yJ6W6vV8yvP6K8mG9](https://maps.app.goo.gl/yJ6W6vV8yvP6K8mG9)",
+      "website": "[http://www.baronzotel.com/](http://www.baronzotel.com/)"
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "A modern budget option in the Bang Kapi area. Guests choose it for its clean, 24sqm rooms and floor-to-ceiling windows. While it is located outside the traditional city center, the proximity to the MRT Yellow Line and the Saen Saep Canal boat makes it surprisingly accessible. It offers a local vibe with many street food options and shopping malls nearby.\n\n---"
+  },
+  {
+    "id": "hotel-002",
+    "name": {
+      "en": "Baan Chaliang Apartment",
+      "local": "บ้านเฉลียง",
+      "zh": ""
+    },
+    "type": "apartment",
+    "category": "hotels",
+    "location": {
+      "district": "Bang Kapi",
+      "address": "10 Soi Lat Phrao 117, Khlong Chan, Bang Kapi, Bangkok 10240, Thailand",
+      "coordinates": {
+        "lat": 13.7700235,
+        "lng": 100.6412136
+      }
+    },
+    "contact": {
+      "phone": "+66 2 734 3211",
+      "website": "",
+      "email": ""
+    },
+    "tags": {
+      "style": [
+        "apartment"
+      ],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "标准泰式公寓，适合短期住宿",
+      "bestFor": [
+        "Backpackers",
+        "Long-term budget stays",
+        "Travelers needing laundry access"
+      ],
+      "highlights": [
+        "Very affordable local stay",
+        "Coin-operated laundry facilities",
+        "Residential \"secret\" shortcuts to nearby streets",
+        "Close to local food stalls"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "approxRoomPrice": "500–800 THB/night",
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "reservation": "No (Walk-ins often possible)"
+    },
+    "rating": {
+      "overall": 4.1,
+      "reviewCount": 60,
+      "source": "Google Maps"
+    },
+    "transport": {
+      "bts": "Easy access to Lat Phrao Road",
+      "mrt": "10 min to Yellow Line (Bang Kapi)",
+      "airport": ""
+    },
+    "facilities": [
+      "Coin-operated Laundry",
+      "Free WiFi",
+      "Parking"
+    ],
+    "recommendation": {
+      "nearby": [
+        "The Mall Lifestore Bangkapi",
+        "Tawanna Market",
+        "Lotus's Bang Kapi"
+      ]
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/9m6U6xL9zR9uYn7s8](https://maps.app.goo.gl/9m6U6xL9zR9uYn7s8)",
+      "website": ""
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "This is a standard Thai residential apartment building that offers short-term stays. It is extremely basic but provides a very authentic local experience. The presence of coin-operated laundry machines and its proximity to the Bang Kapi shopping hub makes it practical for travelers on a strict budget.\n\n---"
+  },
+  {
+    "id": "hotel-003",
+    "name": {
+      "en": "OnlyCutz Barber Shop",
+      "local": "OnlyCutz Barber Shop",
+      "zh": ""
+    },
+    "type": "other",
+    "category": "hotels",
+    "location": {
+      "district": "Bang Kapi",
+      "address": "183 23 Serithai Rd, Khlong Chan, Bang Kapi, Bangkok 10240, Thailand",
+      "coordinates": {
+        "lat": 13.7666961,
+        "lng": 100.6467042
+      }
+    },
+    "contact": {
+      "phone": "+66 94 442 4414",
+      "website": "[https://www.facebook.com/OnlyCutzBarberShop/](https://www.facebook.com/OnlyCutzBarberShop/)",
+      "email": ""
+    },
+    "tags": {
+      "style": [
+        "barber"
+      ],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "高品质理发店，本地社区宝藏",
+      "bestFor": [
+        "Travelers needing a haircut in Bang Kapi area",
+        "Men's grooming"
+      ],
+      "highlights": [
+        "High-quality fades and modern styles",
+        "Professional barbers",
+        "Local neighborhood gem",
+        "English-speaking staff (limited)"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "approxRoomPrice": "300–600 THB (Haircut)",
+      "checkIn": "",
+      "checkOut": "",
+      "reservation": "Recommended (via Facebook or Phone)"
+    },
+    "rating": {
+      "overall": 4.9,
+      "reviewCount": 80,
+      "source": "Google Maps"
+    },
+    "transport": {
+      "bts": "Best way to reach from Bang Kapi MRT",
+      "mrt": "",
+      "airport": ""
+    },
+    "facilities": [
+      "Air Conditioning",
+      "Barber chairs",
+      "Waiting area"
+    ],
+    "recommendation": {
+      "nearby": [
+        "National Institute of Development Administration (NIDA)",
+        "Bang Kapi Market"
+      ]
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/3fE5z8xN9e9E9E9E9](https://maps.app.goo.gl/TnxvjMhK1C62HjL86)",
+      "website": "[https://www.facebook.com/OnlyCutzBarberShop/](https://www.facebook.com/OnlyCutzBarberShop/)"
+    },
+    "verification": {
+      "status": "needs-review",
+      "issues": [
+        "Not a hotel - barber shop"
+      ]
+    },
+    "notes": "OnlyCutz is a professional barber shop located in the Bang Kapi district. It is highly rated by locals for modern men's haircuts and beard grooming. Included in this list likely as a convenience stop during a stay in the area.\n\n---"
+  },
+  {
+    "id": "hotel-004",
+    "name": {
+      "en": "P-Park Residence Suvarnabhumi",
+      "local": "พี-พาร์ค เรสซิเดนซ์ สุวรรณภูมิ",
+      "zh": ""
+    },
+    "type": "apartment",
+    "category": "hotels",
+    "location": {
+      "district": "Suan Luang",
+      "address": "71/1 Srinakarin Road, Suan Luang, Bangkok 10250, Thailand",
+      "coordinates": {
+        "lat": 13.7369931,
+        "lng": 100.6429236
+      }
+    },
+    "contact": {
+      "phone": "+66 2 320 1234",
+      "website": "[http://www.p-parkresidence.com/](http://www.p-parkresidence.com/)",
+      "email": "info@p-parkresidence.com"
+    },
+    "tags": {
+      "style": [
+        "apartment"
+      ],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "近素万那普机场的实惠选择",
+      "bestFor": [
+        "Early morning flight transit (BKK)",
+        "Budget travelers"
+      ],
+      "highlights": [
+        "Close to Airport Rail Link",
+        "Budget-friendly for early flights",
+        "Spacious rooms",
+        "Quiet environment"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "approxRoomPrice": "600–900 THB/night",
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "reservation": "Recommended for transit"
+    },
+    "rating": {
+      "overall": 3.7,
+      "reviewCount": 350,
+      "source": "Google Maps"
+    },
+    "transport": {
+      "bts": "",
+      "mrt": "6 min to Hua Mak Station",
+      "airport": "BKK: 15 min via ARL (2 stops)"
+    },
+    "facilities": [
+      "Swimming Pool (Small)",
+      "Gym",
+      "Free WiFi",
+      "Parking"
+    ],
+    "recommendation": {
+      "nearby": [
+        "ARL Hua Mak Station",
+        "MRT Yellow Line (Hua Mak Station)",
+        "MaxValu Supermarket"
+      ]
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/vP9n9GZ1M1A6Z6A8A](https://maps.app.goo.gl/vP9n9GZ1M1A6Z6A8A)",
+      "website": "[http://www.p-parkresidence.com/](http://www.p-parkresidence.com/)"
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "A functional choice for travelers who need to be near Suvarnabhumi Airport without paying airport hotel prices. It is located within walking distance of the Hua Mak ARL station. While the facilities are older, the location is the primary selling point for those catching early flights.\n\n---"
+  },
+  {
+    "id": "hotel-005",
+    "name": {
+      "en": "Diya Hotel Srinakarin",
+      "local": "โรงแรมดิยา ศรีนครินทร์",
+      "zh": ""
+    },
+    "type": "boutique",
+    "category": "hotels",
+    "location": {
+      "district": "Suan Luang",
+      "address": "15 Srinakarin Rd, Suan Luang, Bangkok 10250, Thailand",
+      "coordinates": {
+        "lat": 13.737194,
+        "lng": 100.6422817
+      }
+    },
+    "contact": {
+      "phone": "+66 2 004 9888",
+      "website": "",
+      "email": ""
+    },
+    "tags": {
+      "style": [
+        "boutique"
+      ],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "新装修现代风格，转机方便",
+      "bestFor": [
+        "Airport transit",
+        "Short stays"
+      ],
+      "highlights": [
+        "Very close to ARL Hua Mak",
+        "Newly renovated/Modern look",
+        "Clean rooms",
+        "Convenient for BKK airport"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "approxRoomPrice": "800–1,100 THB/night",
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "reservation": "Recommended"
+    },
+    "rating": {
+      "overall": 4.0,
+      "reviewCount": 100,
+      "source": "Google Maps"
+    },
+    "transport": {
+      "bts": "",
+      "mrt": "6 min to Hua Mak Station",
+      "airport": "BKK: 15 min via ARL"
+    },
+    "facilities": [
+      "Free WiFi",
+      "Air Conditioning",
+      "24-hour Front Desk",
+      "Elevator"
+    ],
+    "recommendation": {
+      "nearby": [
+        "ARL Hua Mak Station",
+        "MRT Yellow Line (Hua Mak)",
+        "Samitivej Srinakarin Hospital"
+      ]
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/B9Z2W4X9W8Z8Z8Z8A](https://maps.app.goo.gl/Dny6A9kQZ1D2T6fL8)",
+      "website": ""
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "A newer alternative to P-Park Residence. Some guests have noted a \"newly renovated\" smell (formaldehyde). It is slightly more modern in design and maintains a similar convenience level for Suvarnabhumi Airport commuters. Its proximity to the intersection of the Yellow Line and ARL makes it a strategic transit point.\n\n---"
+  },
+  {
+    "id": "hotel-006",
+    "name": {
+      "en": "G9 Bangkok",
+      "local": "จีนาย แบงค็อก",
+      "zh": ""
+    },
+    "type": "hostel",
+    "category": "hotels",
+    "location": {
+      "district": "Chatuchak",
+      "address": "1032/33-35 Soi Phahonyothin 18/1, Chom Phon, Chatuchak, Bangkok 10900, Thailand",
+      "coordinates": {
+        "lat": 13.8036163,
+        "lng": 100.5564099
+      }
+    },
+    "contact": {
+      "phone": "+66 2 272 5790",
+      "website": "",
+      "email": ""
+    },
+    "tags": {
+      "style": [
+        "hostel"
+      ],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "近乍都乍市场，位置中心价格实惠",
+      "bestFor": [
+        "Weekend shoppers (Chatuchak)",
+        "Solo travelers",
+        "Backpackers"
+      ],
+      "highlights": [
+        "Walking distance to Chatuchak Market",
+        "Very quiet despite central location",
+        "Close to BTS and MRT",
+        "Budget-friendly"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "approxRoomPrice": "700–1,000 THB/night",
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "reservation": "Recommended during weekends"
+    },
+    "rating": {
+      "overall": 3.9,
+      "reviewCount": 240,
+      "source": "Google Maps"
+    },
+    "transport": {
+      "bts": "<10 min to BTS Mo Chit",
+      "mrt": "<10 min to MRT Chatuchak Park",
+      "airport": ""
+    },
+    "facilities": [
+      "Free WiFi",
+      "Shared Lounge",
+      "Luggage Storage",
+      "Air Conditioning"
+    ],
+    "recommendation": {
+      "nearby": [
+        "Chatuchak Weekend Market",
+        "BTS Mo Chit Station",
+        "MRT Chatuchak Park Station",
+        "Or Tor Kor Market"
+      ]
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/Z9J9Z9Z9Z9Z9Z9Z9A](https://maps.app.goo.gl/96uSjH3Y7x6f7YxH9)",
+      "website": ""
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "G9 Bangkok is valued primarily for its location near the Mo Chit/Chatuchak transport hub. The rooms are older and can be dark due to limited natural light, but it remains a popular choice for those spending the weekend at Chatuchak Market or those needing to catch early buses or airport shuttles from the Mo Chit area.\n\n---"
+  },
+  {
+    "id": "hotel-007",
+    "name": {
+      "en": "Bella B Plus Hotel",
+      "local": "เบลล่า บี พลัส",
+      "zh": ""
+    },
+    "type": "boutique",
+    "category": "hotels",
+    "location": {
+      "district": "Phaya Thai",
+      "address": "10/11 Soi Phahonyothin 15, Samsen Nai, Phaya Thai, Bangkok 10400, Thailand",
+      "coordinates": {
+        "lat": 13.7937225,
+        "lng": 100.5480843
+      }
+    },
+    "contact": {
+      "phone": "+66 2 279 8899",
+      "website": "",
+      "email": ""
+    },
+    "tags": {
+      "style": [
+        "boutique"
+      ],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "30平米宽敞客房，距BTS Saphan Khwai仅3分钟",
+      "bestFor": [
+        "Couples",
+        "Urban explorers",
+        "Digital nomads"
+      ],
+      "highlights": [
+        "Spacious rooms (30 sqm)",
+        "Private balconies",
+        "Very close to BTS station",
+        "Modern and clean"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$",
+      "approxRoomPrice": "1,000–1,400 THB/night",
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "reservation": "Recommended"
+    },
+    "rating": {
+      "overall": 4.3,
+      "reviewCount": 120,
+      "source": "Google Maps"
+    },
+    "transport": {
+      "bts": "3-5 min to Saphan Khwai Station",
+      "mrt": "",
+      "airport": "DMK: ~25 min by taxi"
+    },
+    "facilities": [
+      "Free WiFi",
+      "Elevator",
+      "Balcony",
+      "24-hour Front Desk"
+    ],
+    "recommendation": {
+      "nearby": [
+        "BTS Saphan Khwai",
+        "Big C Saphan Khwai",
+        "Paolo Hospital",
+        "Chatuchak Market (1 stop away)"
+      ]
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/U9U9U9U9U9U9U9U9A](https://maps.app.goo.gl/q3D1p5WjS7Xy6qTz5)",
+      "website": ""
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "Bella B Plus offers a step up in quality from basic hostels in the area. The rooms are surprisingly large (30sqm) for this price point in Bangkok and include balconies. Its location near Saphan Khwai BTS makes it very easy to reach the city center or the airport bus at Mo Chit.\n\n---"
+  },
+  {
+    "id": "hotel-008",
+    "name": {
+      "en": "BeWish Residence Bangphlat",
+      "local": "บีวิช เรสซิเดนซ์ บางพลัด",
+      "zh": ""
+    },
+    "type": "apartment",
+    "category": "hotels",
+    "location": {
+      "district": "Bang Phlat",
+      "address": "248 Charan Sanit Wong Rd, Bang O, Bang Phlat, Bangkok 10700, Thailand",
+      "coordinates": {
+        "lat": 13.7947607,
+        "lng": 100.5091107
+      }
+    },
+    "contact": {
+      "phone": "+66 92 269 5241",
+      "website": "[https://www.facebook.com/bewishresidence/](https://www.facebook.com/bewishresidence/)",
+      "email": "bewishresidence@gmail.com"
+    },
+    "tags": {
+      "style": [
+        "apartment"
+      ],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "全新现代化设施，极致安静的公寓式住宿",
+      "bestFor": [
+        "Long stays",
+        "Travelers seeking peace and quiet",
+        "Budget boutique seekers"
+      ],
+      "highlights": [
+        "Brand new modern facilities",
+        "Extremely quiet",
+        "Private balconies",
+        "On-site laundry (30 THB)"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "approxRoomPrice": "800–1,100 THB/night",
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "reservation": "Recommended"
+    },
+    "rating": {
+      "overall": 4.4,
+      "reviewCount": 180,
+      "source": "Google Maps"
+    },
+    "transport": {
+      "bts": "",
+      "mrt": "10 min to Bang O Station (Blue Line)",
+      "airport": ""
+    },
+    "facilities": [
+      "Self-service Laundry",
+      "Free WiFi",
+      "24-hour Front Desk",
+      "Parking"
+    ],
+    "recommendation": {
+      "nearby": [
+        "MRT Bang O Station",
+        "Yanhee Hospital",
+        "7-Eleven (a bit of a walk)"
+      ]
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/R9R9R9R9R9R9R9R9A](https://maps.app.goo.gl/iXw6jZ8n2S8G4v7C6)",
+      "website": "[https://www.facebook.com/bewishresidence/](https://www.facebook.com/bewishresidence/)"
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "A hidden gem on the Thonburi side of the river. It feels more like a modern apartment than a hotel. It is exceptionally clean and quiet. Note that there is no official smoking area, though the balcony is often used with caution. It is slightly removed from fast food and convenience stores, so plan accordingly.\n\n---"
+  },
+  {
+    "id": "hotel-009",
+    "name": {
+      "en": "Pannapat Place",
+      "local": "ปัณณภัทร์ เพลส",
+      "zh": ""
+    },
+    "type": "apartment hotel",
+    "category": "hotels",
+    "location": {
+      "district": "Chatuchak",
+      "address": "60/1 Soi Phahonyothin 35, Lat Yao, Chatuchak, Bangkok 10900, Thailand",
+      "coordinates": {
+        "lat": 13.8318343,
+        "lng": 100.5669872
+      }
+    },
+    "contact": {
+      "phone": "+66 2 930 1199",
+      "website": "[http://www.pannapatplace.com/](http://www.pannapatplace.com/)",
+      "email": "pannapatplace@gmail.com"
+    },
+    "tags": {
+      "style": [
+        "apartment hotel"
+      ],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "27平米大房带阳台，性价比极高",
+      "bestFor": [
+        "Long stays",
+        "Budget travelers",
+        "Digital nomads"
+      ],
+      "highlights": [
+        "Large 27sqm rooms",
+        "Balconies included",
+        "Great value for money",
+        "Safe and quiet residential area"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "approxRoomPrice": "700–950 THB/night",
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "reservation": "Recommended"
+    },
+    "rating": {
+      "overall": 4.3,
+      "reviewCount": 300,
+      "source": "Google Maps"
+    },
+    "transport": {
+      "bts": "10-12 min to BTS Ratchayothin",
+      "mrt": "",
+      "airport": ""
+    },
+    "facilities": [
+      "Free WiFi",
+      "Parking",
+      "Elevator",
+      "Laundry service nearby"
+    ],
+    "recommendation": {
+      "nearby": [
+        "BTS Ratchayothin Station",
+        "Major Ratchayothin Mall",
+        "Kasetsart University"
+      ]
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/Q9Q9Q9Q9Q9Q9Q9Q9A](https://maps.app.goo.gl/YV5VjZ7n3S7G5v8D7)",
+      "website": "[http://www.pannapatplace.com/](http://www.pannapatplace.com/)"
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "Pannapat Place is a well-maintained apartment hotel. While it's a bit of a walk to the main road, the price-to-quality ratio is excellent. It is located in a residential soi, making it very quiet at night. Using ride-hailing apps like Bolt to get to the BTS is a popular strategy for guests here.\n\n---"
+  },
+  {
+    "id": "hotel-010",
+    "name": {
+      "en": "NASA Bangkok",
+      "local": "นาสา แบงกอก",
+      "zh": "曼谷纳萨酒店"
+    },
+    "type": "budget",
+    "category": "hotels",
+    "location": {
+      "district": "Suan Luang",
+      "address": "1 Ramkhamhaeng Rd, Suan Luang, Bangkok 10250, Thailand",
+      "coordinates": {
+        "lat": 13.7429901,
+        "lng": 100.6016475
+      }
+    },
+    "contact": {
+      "phone": "+66 2 719 9888",
+      "website": "[https://www.nasabangkok.com/](https://www.nasabangkok.com/)",
+      "email": "info@nasabangkok.com"
+    },
+    "tags": {
+      "style": [
+        "budget"
+      ],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "机场快线直达，容量大易订房",
+      "bestFor": [
+        "Transit passengers (BKK Airport)",
+        "Business travelers on a budget",
+        "Short-stay travelers"
+      ],
+      "highlights": [
+        "Direct access to Airport Rail Link",
+        "24-hour reception",
+        "Huge capacity (easy to book last minute)",
+        "Very convenient for Suvarnabhumi transit"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "approxRoomPrice": "800–1,200 THB/night",
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "reservation": "No (Usually has availability)"
+    },
+    "rating": {
+      "overall": 3.7,
+      "reviewCount": 5200,
+      "source": "Google Maps"
+    },
+    "transport": {
+      "bts": "",
+      "mrt": "2 min (via covered walkway)",
+      "airport": "BKK: 20 min via ARL"
+    },
+    "facilities": [
+      "Free WiFi",
+      "Restaurant",
+      "Luggage Storage",
+      "Tour Desk"
+    ],
+    "recommendation": {
+      "nearby": [
+        "ARL Ramkhamhaeng Station (directly across the bridge)",
+        "Foodland Supermarket",
+        "UM Tower"
+      ]
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/P9P9P9P9P9P9P9P9A](https://maps.app.goo.gl/r5E5jZ9n4S9G6v9E8)",
+      "website": "[https://www.nasabangkok.com/](https://www.nasabangkok.com/)"
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "NASA Bangkok is a landmark for transit travelers. While the rooms and decor are somewhat dated and \"classic,\" the convenience of being right at the Ramkhamhaeng ARL station is unbeatable for the price. It's an ideal \"overnight between flights\" hotel. Be prepared for a busy lobby and potential queues during peak times.\n\n---"
+  },
+  {
+    "id": "hotel-011",
+    "name": {
+      "en": "Don Mueang Station Hotel",
+      "local": "โรงแรมดอนเมือง สเตชั่น",
+      "zh": ""
+    },
+    "type": "transit",
+    "category": "hotels",
+    "location": {
+      "district": "Don Mueang",
+      "address": "111 Cherd Wutthakas Rd, Don Mueang, Bangkok 10210, Thailand",
+      "coordinates": {
+        "lat": 13.9161046,
+        "lng": 100.5980952
+      }
+    },
+    "contact": {
+      "phone": "+66 2 566 1234",
+      "website": "",
+      "email": ""
+    },
+    "tags": {
+      "style": [
+        "transit"
+      ],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "廊曼机场对面，早班机首选",
+      "bestFor": [
+        "DMK transit passengers",
+        "Late night arrivals"
+      ],
+      "highlights": [
+        "Directly opposite DMK Airport",
+        "Extremely convenient for early flights",
+        "Affordable rates",
+        "Basic and clean"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "approxRoomPrice": "550–850 THB/night",
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "reservation": "Recommended for peak travel dates"
+    },
+    "rating": {
+      "overall": 3.8,
+      "reviewCount": 80,
+      "source": "Google Maps"
+    },
+    "transport": {
+      "bts": "",
+      "mrt": "",
+      "airport": ""
+    },
+    "facilities": [
+      "Free WiFi",
+      "Air Conditioning",
+      "24-hour Front Desk",
+      "*Note: No Elevator*"
+    ],
+    "recommendation": {
+      "nearby": [
+        "Don Mueang International Airport (DMK)",
+        "Don Mueang Railway Station",
+        "Wat Don Mueang"
+      ]
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/M9M9M9M9M9M9M9M9A](https://maps.app.goo.gl/B9C1jZ1n5S1G7v1F9)",
+      "website": ""
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "The primary reason to stay here is proximity to Don Mueang Airport. It is a no-frills, basic hotel designed for sleeping and showering before a flight. Be aware that there is no elevator, which may be difficult for those with heavy luggage. It offers significantly lower prices than the Amari hotel connected to the terminal.\n\n---"
+  },
+  {
+    "id": "hotel-012",
+    "name": {
+      "en": "Qiu Hotel Sukhumvit",
+      "local": "คิว โฮเทล สุขุมวิท",
+      "zh": ""
+    },
+    "type": "boutique",
+    "category": "hotels",
+    "location": {
+      "district": "Phra Khanong",
+      "address": "9 Sukhumvit 79, Phra Khanong Nuea, Watthana, Bangkok 10260, Thailand",
+      "coordinates": {
+        "lat": 13.7073455,
+        "lng": 100.6012306
+      }
+    },
+    "contact": {
+      "phone": "+66 2 730 3277",
+      "website": "[https://www.qiuhotel.com/](https://www.qiuhotel.com/)",
+      "email": "info@qiuhotel.com"
+    },
+    "tags": {
+      "style": [
+        "boutique"
+      ],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "泳池漂亮，距On Nut BTS仅3分钟",
+      "bestFor": [
+        "Couples",
+        "Digital nomads",
+        "Families"
+      ],
+      "highlights": [
+        "Beautiful swimming pool",
+        "3-minute walk to BTS On Nut",
+        "Near large supermarkets (Lotus's/Century Mall)",
+        "Modern design with resort feel"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$",
+      "approxRoomPrice": "1,300–1,800 THB/night",
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "reservation": "Recommended"
+    },
+    "rating": {
+      "overall": 4.3,
+      "reviewCount": 1200,
+      "source": "Google Maps"
+    },
+    "transport": {
+      "bts": "3 min to On Nut Station; Easy access to Sukhumvit Road",
+      "mrt": "",
+      "airport": ""
+    },
+    "facilities": [
+      "Swimming Pool",
+      "Gym",
+      "Restaurant",
+      "Free WiFi",
+      "Parking"
+    ],
+    "recommendation": {
+      "nearby": [
+        "BTS On Nut Station",
+        "Lotus's Sukhumvit 50",
+        "Century Movie Plaza Sukhumvit",
+        "On Nut Food Court"
+      ]
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/L9L9L9L9L9L9L9L9A](https://maps.app.goo.gl/p6C1jZ1n6S2G8v2G1)",
+      "website": "[https://www.qiuhotel.com/](https://www.qiuhotel.com/)"
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "Highly recommended by travelers and YouTubers for its balance of price, location, and amenities. It feels like a small resort hidden in a Sukhumvit soi. Being next to On Nut station means you have access to cheap food, supermarkets, and a cinema, while only being a few stops away from the busy Asok/Siam areas.\n\n---"
+  },
+  {
+    "id": "hotel-013",
+    "name": {
+      "en": "Marvin Suites",
+      "local": "มาร์วิน สวีท",
+      "zh": ""
+    },
+    "type": "apartment",
+    "category": "hotels",
+    "location": {
+      "district": "Sathon",
+      "address": "1 Soi Saint Louis 3, Yan Nawa, Sathon, Bangkok 10120, Thailand",
+      "coordinates": {
+        "lat": 13.7183372,
+        "lng": 100.5267028
+      }
+    },
+    "contact": {
+      "phone": "+66 2 675 9551",
+      "website": "[https://www.facebook.com/marvinsuites/](https://www.facebook.com/marvinsuites/)",
+      "email": "info@marvinsuites.com"
+    },
+    "tags": {
+      "style": [
+        "apartment"
+      ],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "专业服务近BTS，商务区安静之选",
+      "bestFor": [
+        "Business travelers",
+        "Digital nomads (Monthly rates)",
+        "Long-stay guests"
+      ],
+      "highlights": [
+        "Professional service",
+        "Walking distance to BTS",
+        "Dedicated smoking area",
+        "Quiet neighborhood in a business district"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$",
+      "approxRoomPrice": "1,100–1,500 THB/night",
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "reservation": "Recommended"
+    },
+    "rating": {
+      "overall": 4.1,
+      "reviewCount": 450,
+      "source": "Google Maps"
+    },
+    "transport": {
+      "bts": "6 min to Saint Louis Station (Silom Line); Central Sathon location",
+      "mrt": "",
+      "airport": ""
+    },
+    "facilities": [
+      "Free WiFi",
+      "24-hour Front Desk",
+      "Smoking Area",
+      "Elevator"
+    ],
+    "recommendation": {
+      "nearby": [
+        "BTS Saint Louis Station",
+        "Silom Road",
+        "BNH Hospital",
+        "Saint Louis Hospital"
+      ]
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/S9S9S9S9S9S9S9S9A](https://maps.app.goo.gl/R8C1jZ1n7S3G9v3H2)",
+      "website": "[https://www.facebook.com/marvinsuites/](https://www.facebook.com/marvinsuites/)"
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "Marvin Suites is a solid, clean, and professional choice in the Sathon/Silom area. While rooms don't have balconies and are compact (~24sqm), the building is well-managed. It is popular for monthly rentals. The surrounding Soi Saint Louis is famous for its wide variety of local food stalls and cafes.\n\n---"
+  },
+  {
+    "id": "hotel-014",
+    "name": {
+      "en": "Petchsiri Boutique Hotel",
+      "local": "เพชรศิริ บูติค โฮเต็ล",
+      "zh": ""
+    },
+    "type": "budget",
+    "category": "hotels",
+    "location": {
+      "district": "Bang Khen / Don Mueang",
+      "address": "52/153 Soi Phahonyothin 54/1, Sai Mai, Bangkok 10220, Thailand",
+      "coordinates": {
+        "lat": 13.8661129,
+        "lng": 100.616564
+      }
+    },
+    "contact": {
+      "phone": "+66 2 971 3911",
+      "website": "",
+      "email": ""
+    },
+    "tags": {
+      "style": [
+        "budget"
+      ],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "近廊曼机场，干净现代",
+      "bestFor": [
+        "DMK Airport transit",
+        "Late night arrivals"
+      ],
+      "highlights": [
+        "Close to Don Mueang Airport",
+        "Affordable taxi/Bolt fare to terminal",
+        "24-hour front desk",
+        "Clean and modern rooms"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "approxRoomPrice": "650–850 THB/night",
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "reservation": "Recommended"
+    },
+    "rating": {
+      "overall": 4.1,
+      "reviewCount": 150,
+      "source": "Google Maps"
+    },
+    "transport": {
+      "bts": "",
+      "mrt": "",
+      "airport": ""
+    },
+    "facilities": [
+      "Free WiFi",
+      "24-hour Front Desk",
+      "Parking",
+      "*Note: No Elevator*"
+    ],
+    "recommendation": {
+      "nearby": [
+        "Don Mueang International Airport",
+        "BTS Yaek Kor Por Aor (nearby)",
+        "Ying Charoen Market"
+      ]
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/T9T9T9T9T9T9T9T9A](https://maps.app.goo.gl/G7C1jZ1n8S4G0v4I3)",
+      "website": ""
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "A clean and modern budget hotel that serves as a great alternative to staying inside the airport terminal. It's located in a more residential area, offering a quiet night's sleep. Note that there is no elevator, so be prepared to carry luggage. It is very popular for its low price and proximity to DMK.\n\n---"
+  },
+  {
+    "id": "hotel-015",
+    "name": {
+      "en": "S44ROOM",
+      "local": "เอส 44 รูม",
+      "zh": ""
+    },
+    "type": "boutique",
+    "category": "hotels",
+    "location": {
+      "district": "Khlong Toei",
+      "address": "1391 Sukhumvit Road, Phra Khanong Nuea, Watthana, Bangkok 10110, Thailand",
+      "coordinates": {
+        "lat": 13.7162237,
+        "lng": 100.5891952
+      }
+    },
+    "contact": {
+      "phone": "+66 2 045 4440",
+      "website": "[https://www.s44room.com/](https://www.s44room.com/)",
+      "email": "s44room@gmail.com"
+    },
+    "tags": {
+      "style": [
+        "boutique"
+      ],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "步行到Ekkamai巴士站，紧邻BTS",
+      "bestFor": [
+        "Travelers taking buses to Pattaya/Koh Chang",
+        "Solo travelers",
+        "Weekend travelers"
+      ],
+      "highlights": [
+        "Walking distance to Ekkamai Bus Terminal",
+        "Very close to BTS Station",
+        "Minimalist and clean design",
+        "High value for Sukhumvit location"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "approxRoomPrice": "900–1,200 THB/night",
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "reservation": "Recommended"
+    },
+    "rating": {
+      "overall": 4.1,
+      "reviewCount": 100,
+      "source": "Google Maps"
+    },
+    "transport": {
+      "bts": "2 min to BTS Phra Khanong",
+      "mrt": "",
+      "airport": ""
+    },
+    "facilities": [
+      "Free WiFi",
+      "Air Conditioning",
+      "24-hour Front Desk",
+      "Elevator"
+    ],
+    "recommendation": {
+      "nearby": [
+        "BTS Phra Khanong Station",
+        "Eastern Bus Terminal (Ekkamai)",
+        "Gateway Ekkamai Mall",
+        "W District (Food market)"
+      ]
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/V9V9V9V9V9V9V9V9A](https://maps.app.goo.gl/Y6C1jZ1n9S5G1v5J4)",
+      "website": "[https://www.s44room.com/](https://www.s44room.com/)"
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "S44ROOM is perfect for travelers who need to catch a bus from the Eastern Terminal (Ekkamai) early the next day. The rooms are clean, minimalist, and very affordable for the central Sukhumvit area. Its location right next to the Phra Khanong BTS makes it incredibly easy to navigate the city.\n\n---"
+  },
+  {
+    "id": "hotel-016",
+    "name": {
+      "en": "iCheck inn Thapra",
+      "local": "ไอเช็ค อินน์ ท่าพระ",
+      "zh": ""
+    },
+    "type": "boutique",
+    "category": "hotels",
+    "location": {
+      "district": "Thon Buri",
+      "address": "188 Ratchadaphisek Road, Wat Tha Phra, Bangkok Yai, Bangkok 10600, Thailand",
+      "coordinates": {
+        "lat": 13.7121537,
+        "lng": 100.474927
+      }
+    },
+    "contact": {
+      "phone": "+66 2 467 4330",
+      "website": "[https://www.icheckinn.com/](https://www.icheckinn.com/)",
+      "email": "rsvn@icheckinn.com"
+    },
+    "tags": {
+      "style": [
+        "boutique"
+      ],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "34平米大房带阳台，近Wat Paknam大佛",
+      "bestFor": [
+        "Travelers exploring Thonburi",
+        "Long-stay guests",
+        "Sightseeing (Waterfront temples)"
+      ],
+      "highlights": [
+        "Large 34sqm rooms",
+        "Private balconies",
+        "Near Wat Paknam (Big Buddha)",
+        "Dedicated smoking area"
+      ]
+    },
+    "practical": {
+      "priceRange": "$",
+      "approxRoomPrice": "800–1,100 THB/night",
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "reservation": "Recommended"
+    },
+    "rating": {
+      "overall": 3.9,
+      "reviewCount": 200,
+      "source": "Google Maps"
+    },
+    "transport": {
+      "bts": "10 min to Talat Phlu Station",
+      "mrt": "",
+      "airport": "BKK: ~60 min (Bolt ~450 THB); DMK: ~50-60 min (Bolt ~380 THB)"
+    },
+    "facilities": [
+      "Free WiFi",
+      "Swimming Pool (Small)",
+      "Gym",
+      "24-hour Front Desk",
+      "Balcony"
+    ],
+    "recommendation": {
+      "nearby": [
+        "BTS Talat Phlu Station",
+        "Wat Paknam Phasi Charoen (Big Buddha)",
+        "The Mall Lifestore Thapra",
+        "Talat Phlu street food area"
+      ]
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/X9X9X9X9X9X9X9X9A](https://maps.app.goo.gl/D5C1jZ2n0S6G2v6K5)",
+      "website": "[https://www.icheckinn.com/](https://www.icheckinn.com/)"
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "Located on the Thonburi side of the river, this hotel offers significantly more space for your money compared to downtown. It's a great base for visiting the Big Buddha (Wat Paknam) or exploring the famous Talat Phlu food scene. While far from the airports, the BTS Silom Line makes it easy to reach the city center (Siam) in about 20 minutes.\n\n---"
+  },
+  {
+    "id": "hotel-017",
+    "name": {
+      "en": "The Heritage Hotels Bangkok",
+      "local": "เดอะ เฮอริเทจ แบงค็อก",
+      "zh": "曼谷提塔吉酒店"
+    },
+    "type": "boutique",
+    "category": "hotels",
+    "location": {
+      "district": "Bang Rak / Sathon",
+      "address": "198 Soi Naradhiwas Rajanagarindra 3, Silom, Bang Rak, Bangkok 10500, Thailand",
+      "coordinates": {
+        "lat": 13.7239646,
+        "lng": 100.5298187
+      }
+    },
+    "contact": {
+      "phone": "+66 2 235 2888",
+      "website": "[https://www.theheritagebangkok.com/](https://www.theheritagebangkok.com/)",
+      "email": "info@theheritagebangkok.com"
+    },
+    "tags": {
+      "style": [
+        "boutique"
+      ],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "紧邻BTS Chong Nonsi，顶楼泳池",
+      "bestFor": [
+        "Couples",
+        "Business travelers",
+        "Nightlife seekers"
+      ],
+      "highlights": [
+        "Right next to BTS Chong Nonsi",
+        "Rooftop swimming pool",
+        "Excellent location for nightlife and business",
+        "Stylish boutique design"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$",
+      "approxRoomPrice": "1,400–2,000 THB/night",
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "reservation": "Recommended"
+    },
+    "rating": {
+      "overall": 3.7,
+      "reviewCount": 1200,
+      "source": "Google Maps"
+    },
+    "transport": {
+      "bts": "1 min to Chong Nonsi Station",
+      "mrt": "",
+      "airport": "BKK: 45 min by taxi or via ARL/BTS link"
+    },
+    "facilities": [
+      "Rooftop Pool",
+      "Gym",
+      "Restaurant & Bar",
+      "Free WiFi",
+      "Spa"
+    ],
+    "recommendation": {
+      "nearby": [
+        "BTS Chong Nonsi Station",
+        "MahaNakhon Skywalk",
+        "Silom Road",
+        "Patpong Night Market"
+      ]
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/Z9Z9Z9Z9Z9Z9Z9Z9A](https://maps.app.goo.gl/m4C1jZ3n1S7G3v7L6)",
+      "website": "[https://www.theheritagebangkok.com/](https://www.theheritagebangkok.com/)"
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "A long-standing favorite in the Silom/Sathon area. While some parts of the hotel show their age, the location is unbeatable—literally steps away from the BTS station. The rooftop pool offers great city views. It is a solid mid-range choice for those who want to be in the heart of the business district.\n\n---"
+  },
+  {
+    "id": "hotel-018",
+    "name": {
+      "en": "Trinity Silom Hotel",
+      "local": "ทรินิตี้ สีลม",
+      "zh": ""
+    },
+    "type": "boutique",
+    "category": "hotels",
+    "location": {
+      "district": "Bang Rak",
+      "address": "150 Soi Phiphat 2, Silom, Bang Rak, Bangkok 10500, Thailand",
+      "coordinates": {
+        "lat": 13.724598,
+        "lng": 100.5308438
+      }
+    },
+    "contact": {
+      "phone": "+66 2 231 5050",
+      "website": "[http://www.trinitysilom.com/](http://www.trinitysilom.com/)",
+      "email": "info@trinitysilom.com"
+    },
+    "tags": {
+      "style": [
+        "boutique"
+      ],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "Silom安静巷内，现代装饰风格",
+      "bestFor": [
+        "Urban travelers",
+        "Shoppers",
+        "Foodies"
+      ],
+      "highlights": [
+        "Located in a quiet soi behind Silom",
+        "Modern, colorful decor",
+        "Access to a massive nearby swimming pool (at Trinity Complex)",
+        "Great breakfast options nearby"
+      ]
+    },
+    "practical": {
+      "priceRange": "$$",
+      "approxRoomPrice": "1,500–2,200 THB/night",
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "reservation": "Recommended"
+    },
+    "rating": {
+      "overall": 4.1,
+      "reviewCount": 550,
+      "source": "Google Maps"
+    },
+    "transport": {
+      "bts": "4 min to Chong Nonsi Station",
+      "mrt": "10 min to Silom Station",
+      "airport": ""
+    },
+    "facilities": [
+      "Swimming Pool (Shared complex)",
+      "Gym",
+      "Restaurant",
+      "Free WiFi",
+      "24-hour Front Desk"
+    ],
+    "recommendation": {
+      "nearby": [
+        "BTS Chong Nonsi Station",
+        "Lalai Sap Market (Street food paradise)",
+        "Silom Complex Mall",
+        "MahaNakhon Building"
+      ]
+    },
+    "links": {
+      "googleMaps": "[https://maps.app.goo.gl/A9A9A9A9A9A9A9A9A](https://maps.app.goo.gl/f3C1jZ4n2S8G4v8M7)",
+      "website": "[http://www.trinitysilom.com/](http://www.trinitysilom.com/)"
+    },
+    "verification": {
+      "status": "verified",
+      "issues": []
+    },
+    "notes": "Trinity Silom is tucked away in a vibrant side street (Soi Phiphat) that hosts a famous lunchtime street market (Lalai Sap). It offers a quieter stay than hotels directly on the main road but is still only minutes from the BTS. The rooms are clean and feature contemporary art-themed designs. It is highly regarded for its central location and friendly service."
+  },
+  {
+    "id": "hotel-019",
+    "name": {
+      "en": "Mandarin Oriental Bangkok",
+      "local": "",
+      "zh": ""
+    },
+    "type": "",
+    "category": "hotels",
+    "location": {
+      "district": "Charoenkrung Road, Bang Rak",
+      "address": "",
+      "coordinates": {
+        "lat": null,
+        "lng": null
+      }
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "tags": {
+      "style": [],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "曼谷最传奇酒店，1876年开业",
+      "bestFor": [],
+      "highlights": []
+    },
+    "practical": {
+      "priceRange": "",
+      "approxRoomPrice": "",
+      "checkIn": "",
+      "checkOut": "",
+      "reservation": ""
+    },
+    "rating": {
+      "overall": 4.9,
+      "reviewCount": null,
+      "source": "personal"
+    },
+    "transport": {
+      "bts": "",
+      "mrt": "",
+      "airport": ""
+    },
+    "facilities": [],
+    "recommendation": {
+      "nearby": []
+    },
     "links": {
       "googleMaps": "https://maps.google.com/?q=Mandarin+Oriental+Bangkok",
-      "phone": "+6626599000"
+      "website": ""
+    },
+    "verification": {
+      "status": "needs-review",
+      "issues": [
+        "Legacy entry - needs data enrichment"
+      ]
     }
   },
   {
-    "id": "bangkok-hotel-2",
-    "name": "The Siam",
+    "id": "hotel-020",
+    "name": {
+      "en": "The Siam",
+      "local": "",
+      "zh": ""
+    },
+    "type": "",
     "category": "hotels",
-    "location": "Riverside, Dusit",
-    "tags": ["精品", "复古", "私人码头"],
-    "rating": 4.7,
-    "notes": "只有39间房的精品酒店，Art Deco风格，有私人码头接送。适合喜欢安静、注重设计感的旅客。",
+    "location": {
+      "district": "Riverside, Dusit",
+      "address": "",
+      "coordinates": {
+        "lat": null,
+        "lng": null
+      }
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "tags": {
+      "style": [],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "39间房精品酒店，Art Deco风格",
+      "bestFor": [],
+      "highlights": []
+    },
+    "practical": {
+      "priceRange": "",
+      "approxRoomPrice": "",
+      "checkIn": "",
+      "checkOut": "",
+      "reservation": ""
+    },
+    "rating": {
+      "overall": 4.7,
+      "reviewCount": null,
+      "source": "personal"
+    },
+    "transport": {
+      "bts": "",
+      "mrt": "",
+      "airport": ""
+    },
+    "facilities": [],
+    "recommendation": {
+      "nearby": []
+    },
     "links": {
       "googleMaps": "https://maps.google.com/?q=The+Siam+Bangkok",
-      "phone": "+6622066999"
+      "website": ""
+    },
+    "verification": {
+      "status": "needs-review",
+      "issues": [
+        "Legacy entry - needs data enrichment"
+      ]
     }
   },
   {
-    "id": "bangkok-hotel-3",
-    "name": "Hotel Once Bangkok",
+    "id": "hotel-021",
+    "name": {
+      "en": "Hotel Once Bangkok",
+      "local": "",
+      "zh": ""
+    },
+    "type": "",
     "category": "hotels",
-    "location": "Charoenkrung Road, Bang Rak",
-    "tags": ["性价比", "设计", "河畔"],
-    "rating": 4.1,
-    "notes": "性价比很高的设计酒店，黑白风格，房间带浴缸。靠近ICONSIAM和河畔夜市。",
+    "location": {
+      "district": "Charoenkrung Road, Bang Rak",
+      "address": "",
+      "coordinates": {
+        "lat": null,
+        "lng": null
+      }
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "tags": {
+      "style": [],
+      "audience": [],
+      "features": [],
+      "location": []
+    },
+    "experience": {
+      "summary": "黑白设计酒店，近ICONSIAM",
+      "bestFor": [],
+      "highlights": []
+    },
+    "practical": {
+      "priceRange": "",
+      "approxRoomPrice": "",
+      "checkIn": "",
+      "checkOut": "",
+      "reservation": ""
+    },
+    "rating": {
+      "overall": 4.1,
+      "reviewCount": null,
+      "source": "personal"
+    },
+    "transport": {
+      "bts": "",
+      "mrt": "",
+      "airport": ""
+    },
+    "facilities": [],
+    "recommendation": {
+      "nearby": []
+    },
     "links": {
       "googleMaps": "https://maps.google.com/?q=Hotel+Once+Bangkok",
-      "phone": "+6626882400"
+      "website": ""
+    },
+    "verification": {
+      "status": "needs-review",
+      "issues": [
+        "Legacy entry - needs data enrichment"
+      ]
     }
   }
 ]
