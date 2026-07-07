@@ -1,0 +1,167 @@
+/* ==========================================================================
+   Markdown Content — Typography for rendered Markdown
+   ==========================================================================
+   Used on the homepage (essential-guide.md) and any future content pages.
+   Designed to match the "Peaceful UI" design system.
+   ========================================================================== */
+
+.markdown-body {
+  max-width: 720px;
+  line-height: 1.8;
+  color: var(--color-text);
+  font-size: 15px;
+}
+
+/* --- Headings --- */
+
+.markdown-body h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+
+.markdown-body h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.markdown-body h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  color: var(--color-text);
+}
+
+/* --- Paragraphs --- */
+
+.markdown-body p {
+  margin-bottom: 12px;
+  line-height: 1.8;
+}
+
+/* --- Bold / Italic --- */
+
+.markdown-body strong {
+  font-weight: 700;
+}
+
+.markdown-body em {
+  font-style: italic;
+  color: var(--color-text-light);
+}
+
+/* --- Links --- */
+
+.markdown-body a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.markdown-body a:hover {
+  color: var(--color-accent-hover);
+}
+
+/* --- Lists --- */
+
+.markdown-body ul {
+  margin: 8px 0 16px;
+  padding-left: 24px;
+  list-style: disc;
+}
+
+.markdown-body li {
+  margin-bottom: 4px;
+  line-height: 1.7;
+}
+
+/* --- Horizontal Rules --- */
+
+.markdown-body hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 28px 0;
+}
+
+/* --- Tables --- */
+
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.markdown-body thead {
+  background: var(--color-accent-soft);
+}
+
+.markdown-body th {
+  font-weight: 600;
+  text-align: left;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.markdown-body td {
+  padding: 8px 14px;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.markdown-body tbody tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.markdown-body tbody tr:hover {
+  background: rgba(197, 163, 90, 0.06);
+}
+
+/* --- Images --- */
+
+.markdown-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  margin: 16px 0;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 767px) {
+  .markdown-body {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .markdown-body h1 {
+    font-size: 22px;
+  }
+
+  .markdown-body h2 {
+    font-size: 18px;
+  }
+
+  .markdown-body table {
+    font-size: 13px;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .markdown-body th,
+  .markdown-body td {
+    padding: 7px 10px;
+    white-space: nowrap;
+  }
+}

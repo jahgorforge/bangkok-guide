@@ -22,6 +22,24 @@ const Loader = {
   },
 
   /**
+   * Fetch a text file and return its content.
+   * @param {string} path - Path to the text file.
+   * @returns {Promise<string>}
+   */
+  async fetchText(path) {
+    try {
+      const response = await fetch(path);
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+      return await response.text();
+    } catch (err) {
+      console.warn(`Loader: Failed to load ${path} —`, err.message);
+      return '';
+    }
+  },
+
+  /**
    * Get a URL parameter by name.
    * @param {string} name - Parameter name.
    * @returns {string|null}

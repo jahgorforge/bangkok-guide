@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bangkok Guide</title>
+  <title>曼谷出行指南 — Bangkok Guide</title>
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/sidebar.css">
   <link rel="stylesheet" href="css/card.css">
+  <link rel="stylesheet" href="css/markdown.css">
 </head>
 <body>
 
@@ -34,13 +35,8 @@
 
   <!-- Main Content -->
   <main class="main-content">
-    <div class="main-content__header">
-      <h1 class="main-content__title"><span class="main-content__title--zh">曼谷指南</span> <span class="main-content__title--en">Bangkok Guide</span></h1>
-      <p class="main-content__description">曼谷个人旅行知识库 — 选择分类开始浏览</p>
-    </div>
-
-    <div class="category-grid" id="category-grid">
-      <!-- Populated by app.js -->
+    <div class="markdown-body" id="markdown-content">
+      <!-- Populated by app.js from content/essential-guide.md -->
     </div>
 
     <footer class="footer">
@@ -50,6 +46,7 @@
 
   <script src="js/loader.js"></script>
   <script src="js/icons.js"></script>
+  <script src="js/markdown.js"></script>
   <script src="js/renderer.js"></script>
   <script src="js/sidebar.js"></script>
   <script src="js/app.js"></script>

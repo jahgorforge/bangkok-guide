@@ -89,5 +89,53 @@ const Sidebar = {
     if (headerLink) {
       headerLink.addEventListener('click', close);
     }
+  },
+
+  /**
+   * Render the mobile top navigation bar.
+   *
+   * Creates a fixed horizontal scrollable nav from categories.
+   * The nav container (#top-nav) is created dynamically if it
+   * doesn't exist in the HTML.
+   *
+   * @param {Array} categories - Array of category objects from categories.json.
+   * @param {string|null} activeCat - ID of the currently active category (or null for home).
+   */
+  renderMobileNav(categories, activeCat) {
+    let nav = document.getElementById('top-nav');
+    if (!nav) {
+      nav = document.createElement('nav');
+      nav.className = 'top-nav';
+      nav.id = 'top-nav';
+      document.body.prepend(nav);
+    }
+
+    nav.innerHTML = '';
+
+    // Determine path prefix based on page location
+    const isInPages = window.location.pathname.includes('/pages/');
+    const prefix = isInPages ? '' : 'pages/';
+
+    // Home link
+    const homeLink = document.createElement('a');
+    homeLink.className = 'top-nav__link';
+    if (activeCat === null) {
+      homeLink.classList.add('top-nav__link--active');
+    }
+    homeLink.href = isInPages ? '../index.html' : 'index.html';
+    homeLink.textContent = '首页';
+    nav.appendChild(homeLink);
+
+    // Category links
+    categories.forEach(cat => {
+      const link = document.createElement('a');
+      link.className = 'top-nav__link';
+      if (cat.id === activeCat) {
+        link.classList.add('top-nav__link--active');
+      }
+      link.href = `${prefix}${cat.id}.html`;
+      link.textContent = cat.label;
+      nav.appendChild(link);
+    });
   }
 };

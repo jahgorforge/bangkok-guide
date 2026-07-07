@@ -2,8 +2,8 @@
  * app.js — Main application entry point.
  *
  * Flow:
- *   index.html (root)      → Load categories.json → Render tiles + sidebar
- *   pages/{cat}.html       → Extract cat from filename → Load category + data → Render cards + sidebar
+ *   index.html (root)      → Load categories.json → Render markdown (homepage) + sidebar + mobile nav
+ *   pages/{cat}.html       → Extract cat from filename → Load category + data → Render cards + sidebar + mobile nav
  */
 
 (async function main() {
@@ -25,39 +25,21 @@
 })();
 
 /**
- * Initialize the home page — render category tiles.
+ * Initialize the home page — render the Essential Guide from Markdown.
  */
 async function initHomePage(categories) {
+  // Render sidebar navigation (desktop)
   Sidebar.renderNav(categories, null);
-  Sidebar.initMobileMenu();
 
-  const grid = document.getElementById('category-grid');
-  if (!grid) return;
+  // Render mobile navigation
+  Sidebar.renderMobileNav(categories, null);
 
-  categories.forEach(cat => {
-    const tile = document.createElement('a');
-    tile.className = 'category-tile';
-    tile.href = `pages/${cat.id}.html`;
-
-    const iconDiv = document.createElement('div');
-    iconDiv.className = 'category-tile__icon';
-    const svg = Icons.create(cat.icon);
-    if (svg) iconDiv.appendChild(svg);
-
-    const nameDiv = document.createElement('div');
-    nameDiv.className = 'category-tile__name';
-    nameDiv.textContent = cat.label || cat.id;
-
-    const descDiv = document.createElement('div');
-    descDiv.className = 'category-tile__desc';
-    descDiv.textContent = cat.description || '';
-
-    tile.appendChild(iconDiv);
-    tile.appendChild(nameDiv);
-    tile.appendChild(descDiv);
-
-    grid.appendChild(tile);
-  });
+  // Load and render the Essential Guide markdown
+  const mdContent = await Loader.fetchText('content/essential-guide.md');
+  const container = document.getElementById('markdown-content');
+  if (container) {
+    container.innerHTML = Markdown.toHTML(mdContent);
+  }
 }
 
 /**
@@ -77,7 +59,7 @@ async function initCategoryPage(categories, dataBase) {
     document.getElementById('page-desc').textContent =
       `No category matches "${catId}".`;
     Sidebar.renderNav(categories, null);
-    Sidebar.initMobileMenu();
+    Sidebar.renderMobileNav(categories, null);
     return;
   }
 
@@ -87,9 +69,11 @@ async function initCategoryPage(categories, dataBase) {
   document.getElementById('page-desc').textContent = catMeta.description || '';
   document.getElementById('topbar-title').textContent = catMeta.label;
 
-  // Render sidebar with active category
+  // Render sidebar (desktop) with active category
   Sidebar.renderNav(categories, catId);
-  Sidebar.initMobileMenu();
+
+  // Render mobile navigation
+  Sidebar.renderMobileNav(categories, catId);
 
   // Update sidebar header to show ← Category (wayfinding)
   const headerLink = document.querySelector('.sidebar__header-link');
