@@ -16,15 +16,16 @@
   align-items: center;
   gap: 10px;
   padding: 10px var(--space-3);
-  color: var(--color-text);
+  color: var(--color-text-light);
   font-size: var(--font-size-body);
   text-decoration: none;
-  transition: background 0.15s;
-  border-left: 3px solid transparent;
+  transition: background 0.15s, color 0.15s;
+  border-left: 2px solid transparent;
 }
 
 .sidebar-nav__link:hover {
   background: var(--color-sidebar-hover);
+  color: var(--color-text);
   text-decoration: none;
 }
 
@@ -37,6 +38,7 @@
 
 .sidebar-nav__link--active:hover {
   background: var(--color-sidebar-hover);
+  color: var(--color-text);
 }
 
 .sidebar-nav__icon {
