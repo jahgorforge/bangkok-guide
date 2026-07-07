@@ -12,7 +12,18 @@ const Renderer = {
     container.innerHTML = '';
 
     if (!items || items.length === 0) {
-      container.innerHTML = '<div class="empty-state"><div class="empty-state__icon">📝</div><p class="empty-state__text">No entries yet.</p></div>';
+      const emptyState = document.createElement('div');
+      emptyState.className = 'empty-state';
+      const emptyIcon = document.createElement('div');
+      emptyIcon.className = 'empty-state__icon';
+      const noteSvg = Icons.create('note');
+      if (noteSvg) emptyIcon.appendChild(noteSvg);
+      emptyState.appendChild(emptyIcon);
+      const emptyText = document.createElement('p');
+      emptyText.className = 'empty-state__text';
+      emptyText.textContent = 'No entries yet.';
+      emptyState.appendChild(emptyText);
+      container.appendChild(emptyState);
       return;
     }
 
@@ -44,9 +55,8 @@ const Renderer = {
     if (item.location) {
       const loc = document.createElement('div');
       loc.className = 'card__location';
-      const icon = document.createElement('span');
-      icon.className = 'card__location-icon';
-      icon.textContent = '📍';
+      const icon = Icons.create('map-pin');
+      icon.classList.add('card__location-icon');
       loc.appendChild(icon);
       loc.appendChild(document.createTextNode(item.location));
       card.appendChild(loc);

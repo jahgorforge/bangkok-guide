@@ -31,9 +31,8 @@ const Sidebar = {
       }
       a.href = `${prefix}${cat.id}.html`;
 
-      const icon = document.createElement('span');
-      icon.className = 'sidebar-nav__icon';
-      icon.textContent = cat.icon || '•';
+      const icon = Icons.create(cat.icon) || document.createTextNode('•');
+      icon.classList.add('sidebar-nav__icon');
 
       a.appendChild(icon);
       a.appendChild(document.createTextNode(cat.label || cat.id));

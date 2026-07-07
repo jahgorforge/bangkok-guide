@@ -39,11 +39,22 @@ async function initHomePage(categories) {
     tile.className = 'category-tile';
     tile.href = `pages/${cat.id}.html`;
 
-    tile.innerHTML = `
-      <div class="category-tile__icon">${cat.icon || ''}</div>
-      <div class="category-tile__name">${cat.label || cat.id}</div>
-      <div class="category-tile__desc">${cat.description || ''}</div>
-    `;
+    const iconDiv = document.createElement('div');
+    iconDiv.className = 'category-tile__icon';
+    const svg = Icons.create(cat.icon);
+    if (svg) iconDiv.appendChild(svg);
+
+    const nameDiv = document.createElement('div');
+    nameDiv.className = 'category-tile__name';
+    nameDiv.textContent = cat.label || cat.id;
+
+    const descDiv = document.createElement('div');
+    descDiv.className = 'category-tile__desc';
+    descDiv.textContent = cat.description || '';
+
+    tile.appendChild(iconDiv);
+    tile.appendChild(nameDiv);
+    tile.appendChild(descDiv);
 
     grid.appendChild(tile);
   });

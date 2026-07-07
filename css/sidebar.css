@@ -42,9 +42,25 @@
 }
 
 .sidebar-nav__icon {
-  font-size: 18px;
-  width: 24px;
-  text-align: center;
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
-  opacity: 0.8;
+  color: var(--color-btn-text);
+}
+
+.sidebar-nav__link:hover .sidebar-nav__icon {
+  color: var(--color-text);
+}
+
+.sidebar-nav__link--active .sidebar-nav__icon {
+  color: var(--color-accent);
+}
+
+/* --- Sidebar Logo --- */
+/* --- Mobile sidebar header typography --- */
+@media (max-width: 767px) {
+  .sidebar__title--zh {
+    font-size: 24px;
+    font-weight: 700;
+  }
 }
