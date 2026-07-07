@@ -17,16 +17,21 @@
   --color-card-bg: #ffffff;
   --color-border: #e8e6e3;
   --color-accent: #b8a07a;
+  --color-accent-hover: #a69064;
   --color-accent-light: #f0eeeb;
   --color-sidebar-hover: #f0eeeb;
   --color-topbar-bg: #ffffff;
+  --color-star: #d4a853;
+  --color-shadow: rgba(0, 0, 0, 0.06);
 
   --sidebar-width: 240px;
   --sidebar-width-tablet: 200px;
   --topbar-height: 56px;
 
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-size-title: 20px;
+  --font-size-page-title: 26px;
+  --font-size-section-title: 22px;
+  --font-size-card-title: 18px;
   --font-size-body: 15px;
   --font-size-small: 13px;
 
@@ -34,8 +39,10 @@
   --space-2: 16px;
   --space-3: 24px;
   --space-4: 32px;
+  --space-5: 40px;
 
-  --radius: 4px;
+  --radius: 6px;
+  --radius-pill: 12px;
 }
 
 /* --- Base --- */
@@ -57,6 +64,27 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+
+/* --- Focus-visible (accessibility) --- */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: var(--radius);
+}
+
+/* Remove default focus for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
 }
 
 /* --- App Shell --- */
@@ -81,7 +109,7 @@ a:hover {
 }
 
 .top-bar__title {
-  font-size: var(--font-size-title);
+  font-size: var(--font-size-card-title);
   font-weight: 600;
 }
 
@@ -117,8 +145,9 @@ a:hover {
 }
 
 .sidebar__title {
-  font-size: var(--font-size-title);
+  font-size: var(--font-size-section-title);
   font-weight: 600;
+  letter-spacing: -0.01em;
   color: var(--color-text);
 }
 
@@ -141,14 +170,17 @@ a:hover {
 }
 
 .main-content__title {
-  font-size: 24px;
+  font-size: var(--font-size-page-title);
   font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
 }
 
 .main-content__description {
   font-size: var(--font-size-body);
   color: var(--color-text-light);
-  margin-top: var(--space-1);
+  margin-top: 6px;
+  line-height: 1.5;
 }
 
 .main-content__count {
@@ -178,18 +210,25 @@ a:hover {
 .filter-bar__search {
   flex: 1;
   min-width: 200px;
-  padding: var(--space-1) var(--space-2);
+  padding: 10px var(--space-2);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   font-size: var(--font-size-body);
   font-family: var(--font-sans);
   background: var(--color-card-bg);
   color: var(--color-text);
+  transition: border-color 0.15s;
+}
+
+.filter-bar__search::placeholder {
+  color: var(--color-text-light);
+  opacity: 0.7;
 }
 
 .filter-bar__search:focus {
   outline: none;
   border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(184, 160, 122, 0.1);
 }
 
 .filter-bar__tags {
@@ -223,9 +262,33 @@ a:hover {
 /* --- Empty State --- */
 .empty-state {
   text-align: center;
-  padding: var(--space-4);
+  padding: var(--space-5) var(--space-4);
   color: var(--color-text-light);
   font-size: var(--font-size-body);
+  line-height: 1.6;
+}
+
+.empty-state__icon {
+  font-size: 36px;
+  margin-bottom: var(--space-2);
+  opacity: 0.5;
+}
+
+.empty-state__text {
+  color: var(--color-text-light);
+}
+
+/* Skeleton loading */
+.skeleton {
+  background: linear-gradient(90deg, var(--color-bg) 25%, #edeae6 50%, var(--color-bg) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius);
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
 /* --- Responsive --- */

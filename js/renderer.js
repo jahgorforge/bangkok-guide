@@ -12,7 +12,7 @@ const Renderer = {
     container.innerHTML = '';
 
     if (!items || items.length === 0) {
-      container.innerHTML = '<p class="empty-state">No entries yet.</p>';
+      container.innerHTML = '<div class="empty-state"><div class="empty-state__icon">📝</div><p class="empty-state__text">No entries yet.</p></div>';
       return;
     }
 
@@ -44,7 +44,11 @@ const Renderer = {
     if (item.location) {
       const loc = document.createElement('div');
       loc.className = 'card__location';
-      loc.textContent = '📍 ' + item.location;
+      const icon = document.createElement('span');
+      icon.className = 'card__location-icon';
+      icon.textContent = '📍';
+      loc.appendChild(icon);
+      loc.appendChild(document.createTextNode(item.location));
       card.appendChild(loc);
     }
 
@@ -54,7 +58,14 @@ const Renderer = {
       rating.className = 'card__rating';
       const full = Math.round(item.rating);
       const stars = '★'.repeat(full) + '☆'.repeat(5 - full);
-      rating.innerHTML = `<span class="card__rating-stars">${stars}</span> ${item.rating.toFixed(1)}`;
+      const starSpan = document.createElement('span');
+      starSpan.className = 'card__rating-stars';
+      starSpan.textContent = stars;
+      rating.appendChild(starSpan);
+      const numSpan = document.createElement('span');
+      numSpan.className = 'card__rating-number';
+      numSpan.textContent = item.rating.toFixed(1);
+      rating.appendChild(numSpan);
       card.appendChild(rating);
     }
 
@@ -89,7 +100,7 @@ const Renderer = {
 
       if (hasMap) {
         const mapBtn = document.createElement('a');
-        mapBtn.className = 'card__btn';
+        mapBtn.className = 'card__btn card__btn--primary';
         mapBtn.href = item.links.googleMaps;
         mapBtn.target = '_blank';
         mapBtn.rel = 'noopener';
@@ -99,7 +110,7 @@ const Renderer = {
 
       if (hasPhone) {
         const callBtn = document.createElement('a');
-        callBtn.className = 'card__btn';
+        callBtn.className = 'card__btn card__btn--secondary';
         callBtn.href = 'tel:' + item.links.phone;
         callBtn.textContent = 'Call';
         actions.appendChild(callBtn);
