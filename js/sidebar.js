@@ -64,5 +64,11 @@ const Sidebar = {
 
     hamburger.addEventListener('click', open);
     overlay.addEventListener('click', close);
+
+    // Sidebar header home link closes the sidebar on mobile
+    const headerLink = document.querySelector('.sidebar__header-link');
+    if (headerLink) {
+      headerLink.addEventListener('click', close);
+    }
   }
 };
