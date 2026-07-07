@@ -178,8 +178,10 @@ input:focus-visible,
 }
 
 .top-nav__link--active {
-  color: var(--color-accent);
-  border-bottom-color: var(--color-accent);
+  color: var(--color-text);
+  background: var(--color-accent-soft);
+  border-radius: var(--radius);
+  border-bottom-color: transparent;
   font-weight: 600;
 }
 
