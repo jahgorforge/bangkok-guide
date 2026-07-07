@@ -2,21 +2,46 @@
 
 ## Overview
 
-This document defines the standardized content schema for the Bangkok Guide project.
+This document defines the standardized content schema for city guide projects.
 
-The schema is designed to be **reusable across city guide projects** (Bangkok, Tokyo, Manila, etc.).
-
-Each city guide creates its own data files following this exact schema so that the frontend rendering pipeline can remain identical.
+Each city is an independent repository sharing the same schema so that:
+- The frontend rendering pipeline is identical across cities
+- Data files are interchangeable
+- New cities can be created by cloning + replacing data
 
 ---
 
 ## Principles
 
-- Every field is optional unless marked **REQUIRED**
-- Missing fields render as `""` or `null` — never produce empty UI
-- Content is separated from presentation (no HTML in JSON)
-- Tags use English for cross-city consistency
-- Names use multilingual object for flexible display
+- **JSON is the source of truth** — all content lives in JSON files
+- **Content ≠ Presentation** — no HTML in JSON, no hardcoded content in HTML
+- **Every field is optional** unless marked **REQUIRED**
+- **Missing fields produce no empty UI** — render as `""` or `null`
+- **Tags are English keys** — display names resolved via `taxonomy/tags.json`
+- **Names are multilingual** — `{en, local, zh}` for flexible display
+
+---
+
+## Language Rules
+
+### User-facing content (must be Chinese)
+
+| Field | Language | Example |
+|-------|----------|---------|
+| `experience.summary` | Chinese | 曼谷唯一保有米其林星的街头小吃 |
+| `notes` | Chinese | 排队需2-3小时 |
+| `experience.highlights` | Chinese | 蟹肉蛋卷 |
+
+### Internal system fields (must be English)
+
+| Field | Language | Example |
+|-------|----------|---------|
+| `id` | English | `bangkok-food-001` |
+| `category` | English | `food` |
+| `type` | English | `street-food` |
+| `tags.*` | English | `seafood`, `michelin` |
+| `name.en` | English | `Jay Fai` |
+| `name.local` | Local | `เจ๊ไฝ` |
 
 ---
 
@@ -24,14 +49,20 @@ Each city guide creates its own data files following this exact schema so that t
 
 ```
 data/
-  categories.json        ← Category registry (unchanged from v0)
-  food.json              ← Food & dining entries
-  hotels.json            ← Hotel entries
-  transport.json         ← Transport entries
-  attractions.json       ← Attractions entries
-  cafes.json             ← Cafe entries
-  massage.json           ← Massage/spa entries
-  shopping.json          ← Shopping entries
+  categories.json      ← Category registry (required)
+  food.json            ← Restaurants, street food, buffets
+  hotels.json          ← Hotels, hostels, apartments
+  attractions.json     ← Temples, museums, parks, landmarks
+  shopping.json        ← Malls, markets, shops
+  cafes.json           ← Coffee shops, dessert shops
+  transport.json       ← BTS, MRT, taxis, airport
+  massage.json         ← Massage and SPA
+
+taxonomy/
+  tags.json            ← Global tag dictionary (English → Chinese)
+
+content/
+  {category}/          ← Research notes (not deployed)
 ```
 
 ---
@@ -51,8 +82,6 @@ data/
   "type": "",
 
   "category": "",
-
-  "area": "",
 
   "location": {
     "district": "",
@@ -86,13 +115,14 @@ data/
 
   "rating": {
     "overall": null,
+    "reviewCount": null,
     "source": ""
   },
 
   "links": {
     "googleMaps": "",
-    "website": "",
-    "social": ""
+    "phone": "",
+    "website": ""
   },
 
   "recommendation": {
@@ -102,12 +132,12 @@ data/
     "priority": ""
   },
 
-  "notes": "",
-
   "verification": {
     "status": "",
     "issues": []
-  }
+  },
+
+  "notes": ""
 }
 ```
 
@@ -117,202 +147,182 @@ data/
 
 ### `id` (REQUIRED)
 
-Format: `{city}-{category}-{number}`
+Format: `{city}-{category}-{number}` (zero-padded to 3 digits).
 
 Examples:
 ```
 bangkok-food-001
-bangkok-attraction-001
-tokyo-food-001
+tokyo-attraction-001
 ```
-
-Number is zero-padded to 3 digits for consistent sorting.
-
----
 
 ### `name` (REQUIRED)
 
-Multilingual name object. At minimum `en` should be populated.
+| Subfield | Requirement | Example |
+|----------|-------------|---------|
+| `en` | Required | `Jay Fai` |
+| `local` | If available | `เจ๊ไฝ` |
+| `zh` | If commonly used | `痣姐` |
 
-| Field | Description |
-|-------|-------------|
-| `en` | English name |
-| `local` | Name in local language (e.g. Thai) |
-| `zh` | Chinese name (if applicable) |
-
----
+Frontend displays: English (primary) + Local (secondary). Chinese is stored but not shown on card.
 
 ### `type`
 
-Subcategory within the main category. Uses the taxonomy defined below.
+Subcategory used for filtering and badge display.
 
----
+Examples: `street-food`, `restaurant`, `buffet`, `museum`, `park`, `mall`, `boutique`.
 
 ### `category` (REQUIRED)
 
-Top-level category. Must match a key in `categories.json`.
-
----
-
-### `area`
-
-Neighborhood or district name. Used for filtering and "near me" queries.
-
-Example: `"Bang Kapi"`, `"Talat Phlu"`, `"Siam Square"`
-
----
-
-### `location`
-
-| Field | Description |
-|-------|-------------|
-| `district` | Broader district/area |
-| `address` | Full street address (if known) |
-| `coordinates.lat/lng` | Decimal coordinates for map display |
-
----
+Must match a key in `categories.json`. Current valid values: `food`, `hotels`, `attractions`, `shopping`, `cafes`, `transport`, `massage`.
 
 ### `tags`
 
-Multi-dimensional tagging system for granular filtering.
+Multi-dimensional tagging system. All values are **English keys**; display names come from `taxonomy/tags.json`.
 
-| Dimension | Description | Examples |
-|-----------|-------------|----------|
-| `style` | Culinary/service style | `street-food`, `fine-dining`, `buffet`, `cafe` |
-| `food` | Type of food (for dining) | `seafood`, `noodle`, `grill`, `dessert` |
-| `experience` | What to expect | `queue`, `famous`, `local`, `touristy`, `instagrammable` |
-| `audience` | Who it's for | `solo`, `couple`, `family`, `food-lover`, `group` |
-| `budget` | Cost tier | `cheap`, `mid-range`, `expensive`, `premium` |
-
----
+| Dimension | Purpose | Examples |
+|-----------|---------|----------|
+| `style` | Service style | `street-food`, `fine-dining`, `boutique` |
+| `food` | Type of food | `seafood`, `noodle`, `grill` |
+| `experience` | What to expect | `queue`, `famous`, `instagrammable` |
+| `audience` | Who it's for | `solo`, `family`, `food-lover` |
+| `budget` | Cost tier | `cheap`, `mid-range`, `premium` |
 
 ### `experience`
 
-| Field | Description |
-|-------|-------------|
-| `summary` | Short editorial summary (1-2 sentences) |
-| `bestFor` | Best use cases: `["dinner", "date-night", "group-gathering"]` |
-| `highlights` | Key highlights / must-try items |
-
----
+| Field | Type | Description |
+|-------|------|-------------|
+| `summary` | string | Short Chinese description (≤30 chars preferred) |
+| `bestFor` | string[] | Use cases: `["dinner", "date-night"]` |
+| `highlights` | string[] | Key reasons to visit, signature dishes |
 
 ### `practical`
 
-| Field | Description |
-|-------|-------------|
-| `priceRange` | Price indicator: `$` / `$$` / `$$$` / `$$$$` |
-| `openingHours` | Opening hours text |
-| `reservation` | Reservation policy |
-| `transport` | How to get there (nearest BTS/MRT, etc.) |
-
----
+| Field | Type | Description |
+|-------|------|-------------|
+| `priceRange` | string | `$` / `$$` / `$$$` / `$$$$` |
+| `openingHours` | string | e.g. `10:00-22:00` |
+| `reservation` | string | Policy: `Required`, `Recommended`, `Not needed` |
+| `transport` | string | How to get there |
 
 ### `rating`
 
-| Field | Description |
-|-------|-------------|
-| `overall` | Numeric rating (1.0 - 5.0) |
-| `source` | Source of rating: `personal`, `google`, `michelin`, etc. |
-
----
+| Field | Type | Description |
+|-------|------|-------------|
+| `overall` | number | 1.0 - 5.0 |
+| `reviewCount` | number | Number of Google reviews |
+| `source` | string | `Google Maps`, `personal` |
 
 ### `links`
 
-| Field | Description |
-|-------|-------------|
-| `googleMaps` | Google Maps URL |
-| `website` | Official website |
-| `social` | Social media URL(s) |
-
----
+| Field | Type | Description |
+|-------|------|-------------|
+| `googleMaps` | string | Google Maps URL |
+| `phone` | string | International format: `+66...` |
+| `website` | string | Official website |
 
 ### `recommendation`
 
-Frontend-facing recommendation metadata.
-
-| Field | Description |
-|-------|-------------|
-| `bestTime` | Best time to visit: `"18:00-22:00"`, `"weekday morning"` |
-| `visitDuration` | Expected visit duration: `"1-2 hours"`, `"2-3 hours"` |
-| `nearby` | Nearby places of interest |
-| `priority` | Visit priority: `"must-visit"`, `"if-in-area"`, `"optional"` |
-
----
-
-### `notes`
-
-Free-text personal notes. Content asset from research — not displayed by default but available for reference.
-
----
+| Field | Type | Description |
+|-------|------|-------------|
+| `bestTime` | string | Best time to visit |
+| `visitDuration` | string | Expected visit duration |
+| `nearby` | string[] | Nearby places of interest |
+| `priority` | string | `must-visit`, `if-in-area`, `optional` |
 
 ### `verification`
 
-Data quality tracking.
+| Field | Type | Description |
+|-------|------|-------------|
+| `status` | string | `verified`, `needs-review`, `uncertain` |
+| `issues` | string[] | Specific items to verify |
 
-| Field | Description |
-|-------|-------------|
-| `status` | `"verified"`, `"needs-review"`, `"uncertain"` |
-| `issues` | Array of specific issues to review |
+---
+
+## Tag Dictionary System
+
+Tags are stored as English keys in data files. Display names are resolved via `taxonomy/tags.json`.
+
+### File: `taxonomy/tags.json`
+
+```json
+{
+  "street-food": {
+    "zh": "街头小吃"
+  },
+  "seafood": {
+    "zh": "海鲜"
+  },
+  "michelin": {
+    "zh": "米其林"
+  }
+}
+```
+
+### Resolution Rule
+
+```
+display = tagDictionary[tag]?.zh || tag
+```
+
+If no mapping exists, the English key is displayed as-is (hyphens converted to spaces).
+
+### Maintenance
+
+When adding new tags to data files, also add an entry to `tags.json`. This keeps the display layer consistent across all cities.
 
 ---
 
 ## Category Taxonomy
 
-### Food & Dining (`food`)
-
-| Type | Description | Examples |
-|------|-------------|----------|
-| `restaurant` | Sit-down restaurant | Sorn, Laemcharoen |
-| `street-food` | Street food stall | Jay Fai, Thip Samai |
-| `buffet` | All-you-can-eat buffet | Copper Beyond, GYUMA |
-| `food-court` | Food court / food hall | IT Square, Happyland Center |
-| `market` | Fresh market with food | Thonburi Market Place, Bang Kapi Market |
-| `food-area` | Food street / food district | Yaowarat Road |
-| `night-market` | Night market | Train Night Market, Save One Go |
-| `dessert` | Dessert / ice cream shop | Khanom Wan, Ni-Ang |
-| `cafe` | Coffee shop / cafe | MiVana |
-
-### Attractions (`attractions`)
+### Food
 
 | Type | Description |
 |------|-------------|
-| `temple` | Temple / religious site |
-| `museum` | Museum / gallery |
-| `viewpoint` | Observation deck / viewpoint |
-| `park` | Park / garden |
-| `neighborhood` | Walking district / historic area |
+| `restaurant` | Sit-down restaurant |
+| `street-food` | Street food stall |
+| `buffet` | All-you-can-eat |
+| `food-court` | Food hall |
+| `market` | Fresh market with food |
+| `night-market` | Night market |
+| `dessert` | Dessert / ice cream |
+| `cafe` | Coffee shop |
 
-### Shopping (`shopping`)
+### Hotels
+
+| Type | Description |
+|------|-------------|
+| `boutique` | Boutique hotel |
+| `apartment` | Apartment hotel |
+| `budget` | Budget hotel |
+| `hostel` | Hostel |
+| `transit` | Transit near airport |
+
+### Attractions
+
+| Type | Description |
+|------|-------------|
+| `museum` | Museum |
+| `park` | Park / garden |
+| `landmark` | Landmark / stadium |
+| `neighborhood` | Historic / walking district |
+| `temple` | Temple / religious site |
+| `viewpoint` | Observation deck / viewpoint |
+
+### Shopping
 
 | Type | Description |
 |------|-------------|
 | `mall` | Shopping mall |
 | `market` | Market / bazaar |
-| `local-shop` | Local / independent shop |
-
-### Transport (`transport`)
-
-| Type | Description |
-|------|-------------|
-| `bts` | BTS Skytrain |
-| `mrt` | MRT subway |
-| `taxi` | Taxi / ride-hailing |
-| `airport` | Airport transfer |
 
 ---
 
-## City Replication Guide
+## Content Quality Guidelines
 
-To create a new city guide (e.g. Tokyo):
-
-1. Copy this schema document as reference
-2. Create `data/{city}/` directory
-3. Create `categories.json` with city-specific categories
-4. Create data files following this schema
-5. Copy HTML templates from Bangkok Guide
-6. Update `js/app.js` to point to new data files
-
-No schema changes should be needed — the frontend renders from the schema, not from hardcoded field assumptions.
+- **Summaries must be Chinese** — concise, practical, ≤30 characters preferred
+- **Avoid generic AI descriptions** — no exaggerated marketing language
+- **Prefer practical information** — transport tips, best times, suitable audiences
+- **Do not invent facts** — if information is unavailable, leave as `null` or `""`
 
 ---
 
@@ -321,4 +331,3 @@ No schema changes should be needed — the frontend renders from the schema, not
 | Version | Date | Changes |
 |---------|------|---------|
 | v1.0 | 2026-07-07 | Initial schema design |
-

@@ -1,555 +1,324 @@
 # City Guide Project Workflow
 
-Version: 1.0 （ChatGPT）
+## Overview
 
-
-# Overview
-
-城市旅游指南项目采用：
-
+```
 Research → Data Schema → JSON Database → Frontend → Optimization
+```
 
-流程。
-
-目标：
-
-快速复制不同城市项目，保持统一结构，降低维护成本。
-
+This workflow is designed to be repeated for each new city project.
 
 ---
 
-# Phase 1 — Project Setup & Data Foundation
+## Phases
 
-## Step 1. Create New City Project
+### Phase 0: Project Initialization
 
-复制已有城市项目作为模板。
+**Goal:** Set up the project skeleton.
 
-保留：
+Tasks:
+- Create repository
+- Copy project template
+- Write Project Brief
+- Configure categories
 
-- 项目结构
-- Schema
-- Frontend framework
-- UI system
-- Documentation
-
-
-修改：
-
-- city name
-- project brief
-- data folder
-
-
-参考文档：
-
-- docs/city-project-template.md
-- docs/content-schema.md
-
+**Output:** Ready-to-develop repository with empty data files.
 
 ---
 
-## Step 2. Define City Content Structure
+### Phase 1: UI & Architecture
 
-确定城市需要的数据分类：
+**Goal:** Establish the frontend system.
 
-例如：
+Tasks:
+- Set up HTML pages
+- Configure CSS system
+- Implement JavaScript rendering
+- Verify pages render
 
-```
-
-data/
-
-food.json
-hotel.json
-attractions.json
-shopping.json
-cafes.json
-transport.json
-massage.json
-
-```
-
-
-原则：
-
-不要每个类别创建新的 Schema。
-
-使用：
-
-Common Schema + Category Extension
-
-
-例如：
-
-food:
-
-- cuisine
-- price
-- opening hours
-
-
-hotel:
-
-- room type
-- facilities
-
-
-共用：
-
-- name
-- location
-- rating
-- tags
-- links
-- practical
-
+**Output:** Functional website with static placeholder content.
 
 ---
 
-## Step 3. Research Data Collection
+### Phase 2: Core Development
 
-工具：
+**Goal:** Connect data to frontend.
 
-### Gemini
+Tasks:
+- Implement data loading
+- Create card rendering
+- Add filtering and search
+- Optimize mobile layout
 
-用途：
-
-- 深度搜索
-- Google Maps 信息整理
-- 分类研究
-- 收集电话号码
-- 收集评分
-- 收集价格
-- 总结特色
-
-
-输出：
-
-Markdown research notes
-
-
-重点收集：
-
-```
-
-Name
-English Name
-Local Name
-Location
-Google Rating
-Phone
-Price Range
-Opening Hours
-Category
-Highlights
-Best For
-
-```
-
+**Output:** Data-driven website with real content.
 
 ---
 
-## Step 4. Convert Research → JSON
+### Phase 3: Content Production
 
-工具：
+**Goal:** Populate the website with curated content.
 
-### Claude Code
+Tasks:
+- Research locations (Gemini)
+- Convert research to JSON (Claude Code)
+- Validate schema compliance
+- Review and refine content
+- Add transport, hours, phone, rating
 
+**Output:** Complete city guide with all categories populated.
 
-输入：
-
-- Gemini Markdown
-- content-schema.md
-
-
-任务：
-
-转换为：
-
-```
-
-data/category.json
-
-```
-
-
-要求：
-
-- Schema compliant
-- ID unique
-- fields complete
-- verification status
-
-
-输出：
-
-数据质量报告。
-
+See `docs/content-production-workflow.md` for the detailed SOP.
 
 ---
 
-# Phase 2 — Frontend Integration & Optimization
+### Phase 4: Optimization
 
+**Goal:** Refine content and user experience.
 
-## Step 5. Connect JSON Data
+Tasks:
+- Improve content quality
+- Translate summaries to Chinese
+- Add missing data (phone, hours, etc.)
+- Optimize card layout
+- Polish filtering
 
-工具：
-
-### Claude Code
-
-
-任务：
-
-读取 JSON
-
-更新：
-
-```
-
-renderer.js
-filter.js
-components
-
-```
-
-
-目标：
-
-实现：
-
-- 分类展示
-- 搜索
-- Filter
-- Card rendering
-
+**Output:** Production-ready website.
 
 ---
 
-## Step 6. Data Preview & Validation
+### Phase 5: Deployment & Maintenance
 
-工具：
+**Goal:** Launch and maintain.
 
-浏览器
+Tasks:
+- Deploy to GitHub Pages
+- Tag releases
+- Add new entries over time
+- Fix data issues as discovered
 
-检查：
-
-- JSON 是否正确读取
-- 所有字段是否显示
-- 图片/地图链接
-- 手机端布局
-
-
-辅助：
-
-preview-data.html
-
-
-检查：
-
-- 数据完整性
-- 字段结构
-
+**Output:** Live website at `https://{username}.github.io/{city}-guide/`.
 
 ---
 
-## Step 7. Card UI Optimization
-
-原则：
-
-不要一次展示全部信息。
-
-
-Card 只展示：
-
-1. English Name
-2. Local Name
-3. Rating
-4. Price
-5. Top 3 tags
-6. Short summary
-7. Location
-8. Action buttons
-
-例如：
+## AI-Assisted Development Workflow
 
 ```
-
-[Name]
-
-Thai name
-
-★★★★☆ 4.5   ฿฿
-
-Street Food · Seafood · Local
-
-Short description
-
-📍 Location
-
-[Map] [Phone]
-
+                 ┌─────────────────┐
+                 │  Research (Gemini) │
+                 └────────┬────────┘
+                          │ Markdown notes
+                          ▼
+                 ┌─────────────────┐
+                 │  Data Processing │
+                 │  (Claude Code)   │
+                 └────────┬────────┘
+                          │ JSON files
+                          ▼
+                 ┌─────────────────┐
+                 │  Schema Validation │
+                 └────────┬────────┘
+                          │ Validated JSON
+                          ▼
+                 ┌─────────────────┐
+                 │  Frontend Render │
+                 │  (Browser)       │
+                 └────────┬────────┘
+                          │ Visual feedback
+                          ▼
+                 ┌─────────────────┐
+                 │  Human Review   │
+                 └────────┬────────┘
+                          │ Approved
+                          ▼
+                 ┌─────────────────┐
+                 │  Deploy (GitHub  │
+                 │  Pages)          │
+                 └─────────────────┘
 ```
-
-
-详细内容进入：
-
-Detail Page
-
 
 ---
 
-## Step 8. Complete Category Expansion
+## Key Documents
 
-按照同样流程：
+| Document | Purpose |
+|----------|---------|
+| `docs/content-schema.md` | Data standard and field definitions |
+| `docs/city-project-template.md` | Project structure and replication guide |
+| `docs/city-project-workflow.md` | This document — development lifecycle |
+| `docs/content-production-workflow.md` | Content production SOP |
+| `docs/ai-content-guideline.md` | AI content quality standards |
+
+---
+
+## Tool Assignments
+
+| Tool | Role | Responsibility |
+|------|------|---------------|
+| **Gemini** | Research Layer | Location research, content summarization |
+| **Claude Code** | Execution Layer | JSON generation, frontend dev, validation |
+| **Browser** | QA Layer | Desktop + mobile visual verification |
+| **Project Owner** | Decision Layer | Content approval, product decisions |
+
+---
+
+## Version Tagging Convention
+
+```
+v1.0  — Phase 1 complete (structure + UI)
+v2.0  — Phase 2 complete (data + rendering)
+v3.0  — Phase 2.5 complete (polish + schema)
+v4.0  — Phase 3 complete (full content)
+```
+
+
+可以。我建议不要写得太长，作为 `city-project-workflow.md` 后面的「Future City Project Quick Start」章节即可。重点是让未来自己快速知道**新城市从哪里开始、查哪些文件**。
+
+你可以直接追加：
+
+```md
+# Future City Project Quick Start
+
+When creating a new city guide project, follow this document order:
 
 ```
 
-Research
+city-project-workflow.md
 ↓
-JSON
+city-project-template.md
 ↓
-Frontend
+ProjectBrief.md
 ↓
-Review
+content-schema.md
+↓
+content-production-workflow.md
+↓
+ai-content-guideline.md
+↓
+Development & Content Production
 
 ```
 
+---
 
-顺序建议：
+## Step 1 — Understand the Workflow
 
-1. Food ✅
-2. Attractions
-3. Hotels
-4. Cafes
-5. Shopping
-6. Transport
-7. Massage
+Read:
 
+`city-project-workflow.md`
 
-Food 最复杂。
+Purpose:
 
-其他分类可以复用流程。
-
+- Understand the overall project lifecycle
+- Identify the current development phase
+- Follow the correct sequence of tasks
 
 ---
 
-# Tools Usage
+## Step 2 — Create Project Structure
 
-## Gemini
+Reference:
 
-定位：
+`city-project-template.md`
 
-Research Layer
+Actions:
 
-
-负责：
-
-- 找信息
-- 综合资料
-- Google Maps research
-- 内容整理
-
+- Copy the project template
+- Create a new independent city project
+- Update city name and project configuration
 
 ---
 
-## Claude Code
+## Step 3 — Define City Strategy
 
-定位：
+Create:
 
-Execution Layer
+`docs/ProjectBrief.md`
 
+Define:
 
-负责：
-
-- JSON转换
-- 文件修改
-- 前端开发
-- 自动检查
-- 重构
-
+- City positioning
+- Target users
+- Content scope
+- Design and content direction
 
 ---
 
-## DeepSeek API
+## Step 4 — Follow Data Standards
 
-定位：
+Reference:
 
-Cost-efficient Coding Layer
+`content-schema.md`
 
+Purpose:
 
-适合：
-
-- 大量代码修改
-- 简单重复任务
-- 批量处理
-
+- Keep JSON structure consistent
+- Ensure frontend compatibility
+- Maintain reusable data format
 
 ---
 
-## Browser
+## Step 5 — Produce Content
 
-定位：
+Reference:
 
-QA Layer
+`content-production-workflow.md`
 
-
-负责：
-
-最终验证：
-
-- Desktop
-- Mobile
-- Layout
-- Data display
-
-
----
-
-# Important Documents
-
-每个城市项目必须保留：
-
-
-## 1. Project Brief
-
-说明：
-
-- 城市定位
-- 用户群体
-- 网站目标
-- UI方向
-
-
-位置：
+Process:
 
 ```
 
-docs/ProjectBrief.md
+Information Collection
+↓
+AI Processing
+↓
+JSON Generation
+↓
+Schema Validation
+↓
+Frontend Preview
+↓
+Human Review
+↓
+Publishing
 
 ```
-
 
 ---
 
-## 2. Content Schema
+## Step 6 — Maintain Content Quality
 
-核心文件。
+Reference:
 
-定义：
+`ai-content-guideline.md`
 
-- JSON结构
-- 字段
-- 分类规则
-- 数据标准
+Ensure:
 
-
-位置：
-
-```
-
-docs/content-schema.md
-
-```
-
+- Consistent writing style
+- Practical travel information
+- No invented facts
+- No exaggerated marketing language
 
 ---
 
-## 3. City Project Template
+## Core Principle
 
-复制指南。
+Each city is an independent project.
 
+Reuse:
 
-说明：
-
-- 新城市如何建立
-- 文件结构
-- 开发流程
-
-
-位置：
-
-```
-
-docs/city-project-template.md
-
-```
-
-
----
-
-# Future City Copy Process
-
-新城市：
-
-1. Copy existing project
-
-↓
-
-2. Update Project Brief
-
-↓
-
-3. Gemini research
-
-↓
-
-4. Claude Code generate JSON
-
-↓
-
-5. Run preview
-
-↓
-
-6. Connect frontend
-
-↓
-
-7. Optimize UI
-
-↓
-
-8. Add next category
-
-
----
-
-# Core Principle
-
-不要重新开发。
-
-复制系统。
-
-变化的是：
-
-- 城市
-- 数据
-
-不变的是：
-
-- Schema
+- Framework
 - Workflow
+- Schema
 - UI System
-- Development Process
+
+Customize:
+
+- City data
+- Images
+- Content strategy
+- Local information
 ```
 
----
+这个版本放在 workflow 后面比较合适，因为它相当于一个**项目启动导航页**。
 
-我觉得你现在这个项目的关键成果其实不是 Bangkok Guide，而是已经建立了一个**城市内容生产系统**。
-
-以后做：
-
-* Manila Guide
-* Tokyo Guide
-* Seoul Guide
-
-基本就是：
-
-复制项目 → 换 Project Brief → Gemini 调研 → Claude Code 执行。
-
-其中最值得长期维护的三个文件：
-
-1. `content-schema.md`（数据标准）
-2. `city-project-template.md`（复制规则）
-3. `city-project-workflow.md`（操作流程）
-
-这三个文件以后会比代码本身更重要。代码可以让 Claude Code 重写，但你的数据结构和流程经验才是资产。
+以后你开新城市时，只需要打开 `city-project-workflow.md`，看到最后这一节，就知道下一步该看哪个文件，不需要重新回忆整个系统。

@@ -514,3 +514,265 @@ Attraction
 三个核心 Content Layer 跑通。
 
 然后再设计 Guide Layer 和新版首页结构。
+
+
+你明天可以把下面这个作为 **Phase 3 开始前的工作框架**。我尽量压缩，只保留决策和任务。
+
+```md id="73841"
+# Bangkok Guide Phase 3 Framework
+
+## Core Direction
+
+The project will evolve from a simple category navigation website into a city knowledge guide.
+
+Main principle:
+
+Content determines form.
+
+Structured content and editorial content should be handled differently.
+
+---
+
+# 1. Guide Layer Design
+
+## City Info Page
+
+Create:
+
+```
+
+city-info.md
+
+```
+
+Purpose:
+
+The city's essential travel information page.
+
+It is not a category page or navigation item.
+
+It is the homepage content.
+
+---
+
+## Content Format
+
+Use Markdown, not JSON.
+
+Reason:
+
+The content includes different formats:
+
+- paragraphs
+- bullet lists
+- images
+- external links
+- tables
+
+The structure should be flexible.
+
+---
+
+## Initial Content Sections
+
+Example:
+
+```
+
+# Bangkok Essential Guide
+
+## Weather & Best Time to Visit
+
+## Transportation
+
+## Entry Information
+
+## Emergency & Useful Contacts
+
+## Practical Travel Tips
+
+```
+
+Sections can vary by city.
+
+---
+
+# 2. Homepage Redesign
+
+## Current Problem
+
+Current homepage:
+
+```
+
+Food Card
+Hotel Card
+Attractions Card
+Neighborhood Card
+
+```
+
+These are only navigation buttons.
+
+Problems:
+
+- No actual city information
+- Poor first-time visitor experience
+- Wastes homepage space
+
+
+---
+
+## New Homepage Role
+
+Homepage = City Introduction / Essential Guide
+
+Default page displays:
+
+```
+
+city-info.md
+
+```
+
+First-time visitors immediately see:
+
+- when to visit
+- how to get around
+- important travel information
+- practical tips
+
+---
+
+# 3. Navigation Strategy
+
+## Desktop
+
+Keep sidebar.
+
+Reason:
+
+Large screen has enough space.
+
+Structure:
+
+```
+
+Sidebar
+
+Home
+Food
+Hotel
+Attractions
+Neighborhoods
+...
+
+```
+
+Homepage points to city-info.md.
+
+---
+
+## Mobile
+
+Remove sidebar.
+
+Optimize for mobile interaction.
+
+Need to redesign navigation:
+
+- easy one-click access
+- avoid opening sidebar first
+- follow common mobile app patterns
+
+Food / Hotel / Explore etc. should remain accessible,
+but homepage itself is not a category menu.
+
+---
+
+# 4. Data Architecture
+
+Keep two content systems:
+
+```
+
+Guide Layer
+
+city-info.md
+|
+|
+Editorial content
+
+Content Layer
+
+food.json
+hotel.json
+attraction.json
+|
+|
+Structured data
+
+```
+
+Do not force everything into JSON.
+
+---
+
+# 5. Phase 3 Work Order
+
+Recommended sequence:
+
+## Step 1
+Update UI architecture
+
+- Homepage renders city-info.md
+- Remove homepage category cards
+- Adjust mobile navigation
+
+↓
+
+## Step 2
+Finalize city-info.md structure
+
+↓
+
+## Step 3
+Start Bangkok content production
+
+- Write essential information
+- Collect images
+- Add links
+
+↓
+
+## Step 4
+Expand structured content
+
+- restaurants
+- hotels
+- attractions
+- neighborhoods
+
+
+---
+
+## Final Goal
+
+Create a reusable city guide framework:
+
+Homepage:
+City orientation
+
+Other pages:
+City exploration
+
+Structured data:
+Places database
+
+Markdown:
+Travel knowledge
+```
+
+我建议你明天先做 **Step 1 UI architecture discussion**，不要急着填内容。
+
+因为这个调整会影响主页组件、路由、导航结构。等 UI 框架稳定以后，再大量生产 Bangkok 内容，后面复制 Tokyo / Manila 才不会返工。

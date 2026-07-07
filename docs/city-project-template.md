@@ -1,26 +1,34 @@
 # City Guide Project Template
 
-## Overview
+## Project Philosophy
 
-This document describes how to create a new city guide project (e.g. Tokyo, Seoul, Chiang Mai, Manila) using the same architecture as Bangkok Guide.
+Each city guide is an **independent project/repository**.
 
-Each city guide is an **independent project/repository** — not a subdirectory of Bangkok Guide.
+**Why one city per repo:**
+
+- Easier maintenance — each city has its own issue tracker and CI
+- Easier deployment — independent GitHub Pages sites
+- Clearer content management — no cross-city file conflicts
+- Independent iteration — each city can be at a different version
 
 ---
 
-## Project Structure
+## Standard Folder Structure
 
 ```
 {city}-guide/
 │
-├── index.html
-├── category.html
+├── index.html              ← Landing page
+├── category.html           ← Generic category page
 │
-├── pages/
-│   └── {city-id}/
-│       └── food.html
-│       └── hotels.html
-│       └── ...
+├── pages/                  ← Category pages
+│   ├── food.html
+│   ├── hotels.html
+│   ├── attractions.html
+│   ├── shopping.html
+│   ├── cafes.html
+│   ├── transport.html
+│   └── massage.html
 │
 ├── css/
 │   ├── layout.css
@@ -39,189 +47,96 @@ Each city guide is an **independent project/repository** — not a subdirectory 
 │   ├── categories.json
 │   ├── food.json
 │   ├── hotels.json
-│   └── ...
+│   ├── attractions.json
+│   ├── shopping.json
+│   ├── cafes.json
+│   ├── transport.json
+│   └── massage.json
+│
+├── taxonomy/
+│   └── tags.json           ← Tag dictionary (English → Chinese)
 │
 ├── assets/
-│   └── icons/
-│       ├── food.svg
-│       ├── shopping.svg
-│       ├── home.svg
-│       └── ...
+│   └── icons/              ← SVG icons
+│
+├── content/                ← Research notes (not deployed)
+│   ├── food/
+│   ├── hotels/
+│   └── ...
 │
 └── docs/
     ├── 01-ProjectBrief.md
-    ├── 02-Sitemap.md
-    └── content-schema.md (copy from Bangkok Guide)
+    ├── content-schema.md
+    └── ...
 ```
 
 ---
 
-## Step-by-step Process
+## Reusable Components
 
-### Step 1 — Clone Project Structure
+### Can be copied directly (no changes needed)
 
-Copy the project skeleton from Bangkok Guide. Remove all data files and keep only empty arrays.
+| Component | Files |
+|-----------|-------|
+| CSS system | `css/layout.css`, `css/sidebar.css`, `css/card.css` |
+| JavaScript | `js/loader.js`, `js/renderer.js`, `js/sidebar.js`, `js/filter.js`, `js/icons.js`, `js/app.js` |
+| Icons | `assets/icons/*.svg` |
+| HTML templates | `index.html`, `pages/*.html` |
+| Documentation | `docs/content-schema.md`, `docs/city-project-workflow.md` |
 
-Or create from scratch following the structure above.
+### Must be customized per city
 
-### Step 2 — Write Project Brief
+| Item | Action |
+|------|--------|
+| `data/categories.json` | Update category labels and icons |
+| `data/*.json` | Replace all content with city data |
+| `taxonomy/tags.json` | Translate tags if needed |
+| `docs/01-ProjectBrief.md` | Write city-specific brief |
+| `README.md` | Update project name |
 
-Create `docs/01-ProjectBrief.md` defining:
-- City scope
-- Target content categories
-- Design direction
+---
 
-### Step 3 — Research Content (Gemini)
-
-Use a dedicated Gemini project or conversation to research locations.
-
-For each category, ask Gemini to produce structured research using this format:
+## New City Initialization Process
 
 ```
-# {Place Name}
-
-### Basic Information
-- Name:
-- Thai/Local Name:
-- Category:
-- Area:
-- Transport:
-
-### Summary
-
-### Highlights
-
-### Practical Information
-- Hours:
-- Price Range:
-- Reservation:
-
-### Tags
-- {tag}
-
-### Personal Notes
+Step 1: Clone project template
+Step 2: Write Project Brief
+Step 3: Configure city metadata (categories.json)
+Step 4: Create tag dictionary (taxonomy/tags.json)
+Step 5: Research content (Gemini)
+Step 6: Convert research to JSON (Claude Code)
+Step 7: Validate JSON schema
+Step 8: Preview and test
+Step 9: Deploy to GitHub Pages
 ```
 
-### Step 4 — Convert to JSON
+### Step Details
 
-Map Gemini research into the Content Schema v1.0 defined in `docs/content-schema.md`.
-
-Required fields:
-```json
-{
-  "id": "{city}-{category}-{number}",
-  "name": { "en": "", "local": "", "zh": "" },
-  "type": "",
-  "category": "",
-  "location": { "district": "", "coordinates": { "lat": null, "lng": null } },
-  "tags": { "style":[], "food":[], "experience":[], "audience":[], "budget":[] },
-  "experience": { "summary": "", "highlights": [] },
-  "practical": { "priceRange": "", "openingHours": "" },
-  "links": { "googleMaps": "" },
-  "verification": { "status": "needs-review", "issues": [] }
-}
+**Step 1 — Clone:**
+```
+git clone git@github.com:username/bangkok-guide.git {city}-guide
+cd {city}-guide
+rm -rf data/*.json content/ taxonomy/_tag_scan.txt
+git remote set-url origin git@github.com:username/{city}-guide.git
 ```
 
-### Step 5 — Frontend Setup
+**Step 2-4:** Update project brief, categories, and tag dictionary.
 
-Copy the frontend files from Bangkok Guide:
+**Step 5-6:** See `docs/content-production-workflow.md` for the content pipeline.
 
-| File | Modify? |
-|------|---------|
-| `index.html` | Update title |
-| `pages/` | Update paths if needed |
-| `css/` | Usually no changes |
-| `js/app.js` | Update `dataBase` path if needed |
-| `js/icons.js` | No changes needed |
-| `data/categories.json` | Update with city-specific categories |
+**Step 7:** Validate with:
+```bash
+python -c "import json; json.load(open('data/food.json')); print('OK')"
+```
 
-### Step 6 — Update Navigation
-
-- Update `data/categories.json` with local category names
-- Check sidebar navigation links
-- Verify all page-to-page links
-
-### Step 7 — Test Locally
-
+**Step 8:** Preview with:
 ```bash
 python -m http.server 8000
-# Open http://localhost:8000
 ```
 
-Check:
-- Home page loads
-- Each category page renders
-- Sidebar navigation works
-- Search/filter functions
-- Mobile responsive layout
-
-### Step 8 — Deploy
-
-1. Create GitHub repository: `{username}/{city}-guide`
-2. Push code
-3. Enable GitHub Pages (Settings → Pages → main / root)
-4. Site at: `https://{username}.github.io/{city}-guide/`
-
----
-
-## Files That Stay Identical
-
-These files typically need no changes between city projects:
-
+**Step 9:**
+```bash
+git init && git add . && git commit -m "Initial commit"
+git push -u origin main
+# Enable GitHub Pages in repository Settings
 ```
-css/layout.css
-css/sidebar.css
-css/card.css
-
-js/loader.js
-js/renderer.js
-js/sidebar.js
-js/filter.js
-js/icons.js
-
-assets/icons/*.svg
-```
-
----
-
-## Files That Need City-specific Updates
-
-| File | What to change |
-|------|----------------|
-| `index.html` | Title, description |
-| `data/categories.json` | Category labels in local language |
-| `data/*.json` | All content data |
-| `README.md` | Project name and description |
-
----
-
-## Content Generation Workflow
-
-```
-Gemini Research (Markdown)
-        │
-        ▼
-Data Organization (manual or script)
-        │
-        ▼
-JSON Database (content-schema v1.0)
-        │
-        ▼
-Frontend Rendering (renderer.js)
-        │
-        ▼
-Static Website (GitHub Pages)
-```
-
----
-
-## Design Constraints
-
-All city guides should follow the same design principles:
-
-- **No frameworks** — Vanilla HTML + CSS + JS
-- **No build step** — Files served as-is
-- **Single city per repo** — No multi-city in one project
-- **Data-driven** — All content in JSON
-- **Privacy-first** — Personal notes stay in JSON, never exposed in HTML
-- **"Simple but not cheap"** — Minimal, clean, editorial feel
