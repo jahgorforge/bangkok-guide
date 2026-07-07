@@ -11,7 +11,7 @@
 
 /* --- Variables --- */
 :root {
-  --color-bg: #f5f3f0;
+  --color-bg: #EEE2C6;
   --color-text: #2c2c2c;
   --color-text-light: #6b6b6b;
   --color-card-bg: #ffffff;
@@ -283,7 +283,7 @@ input:focus-visible,
 
 /* Skeleton loading */
 .skeleton {
-  background: linear-gradient(90deg, var(--color-bg) 25%, var(--color-accent-soft) 50%, var(--color-bg) 75%);
+  background: linear-gradient(90deg, #e8ddd0 25%, #f5efe0 50%, #e8ddd0 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
   border-radius: var(--radius);
