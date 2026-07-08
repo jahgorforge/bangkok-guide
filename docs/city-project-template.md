@@ -13,15 +13,28 @@ Each city guide is an **independent project/repository**.
 
 ---
 
+## Two Content Layers
+
+Every city project has two complementary content layers:
+
+| Layer | Format | Location | Purpose |
+|-------|--------|----------|---------|
+| **Guide Layer** | Markdown | `content/essential-guide.md` | Editorial city orientation, homepage content |
+| **Structured Data Layer** | JSON | `data/*.json` | Searchable place database for category pages |
+
+**Guide Layer** is written first — it provides the essential orientation for visitors.
+**Structured Data Layer** is populated second — it provides detailed information about specific places.
+
+---
+
 ## Standard Folder Structure
 
 ```
 {city}-guide/
 │
-├── index.html              ← Landing page
-├── category.html           ← Generic category page
+├── index.html                    ← Homepage (renders essential-guide.md)
 │
-├── pages/                  ← Category pages
+├── pages/                        ← Category pages (one per category)
 │   ├── food.html
 │   ├── hotels.html
 │   ├── attractions.html
@@ -31,44 +44,71 @@ Each city guide is an **independent project/repository**.
 │   └── massage.html
 │
 ├── css/
-│   ├── layout.css
-│   ├── sidebar.css
-│   └── card.css
+│   ├── layout.css                ← App shell, top nav, responsive
+│   ├── sidebar.css               ← Desktop sidebar navigation
+│   ├── card.css                  ← Card grid and card component
+│   └── markdown.css              ← Markdown typography, section cards
 │
 ├── js/
-│   ├── loader.js
-│   ├── renderer.js
-│   ├── sidebar.js
-│   ├── filter.js
-│   ├── icons.js
-│   └── app.js
+│   ├── loader.js                 ← Fetch JSON and text files
+│   ├── renderer.js               ← Build card DOM from data items
+│   ├── sidebar.js                ← Desktop sidebar + mobile top nav
+│   ├── filter.js                 ← Text search and tag filtering
+│   ├── icons.js                  ← SVG icon system
+│   ├── markdown.js               ← Markdown-to-HTML converter
+│   └── app.js                    ← Entry point — routes logic by page
 │
-├── data/
-│   ├── categories.json
-│   ├── food.json
-│   ├── hotels.json
-│   ├── attractions.json
-│   ├── shopping.json
-│   ├── cafes.json
-│   ├── transport.json
-│   └── massage.json
+├── data/                         ← Structured Data Layer (JSON)
+│   ├── categories.json           ← Category registry (required)
+│   ├── food.json                 ← Restaurants, street food
+│   ├── hotels.json               ← Hotels, hostels
+│   ├── attractions.json          ← Temples, museums, parks
+│   ├── shopping.json             ← Malls, markets
+│   ├── cafes.json                ← Coffee shops
+│   ├── transport.json            ← BTS, MRT, taxis
+│   └── massage.json              ← Massage and SPA
+│
+├── content/
+│   └── essential-guide.md        ← Guide Layer (Markdown, homepage content)
 │
 ├── taxonomy/
-│   └── tags.json           ← Tag dictionary (English → Chinese)
+│   └── tags.json                 ← Tag dictionary (English → Chinese)
 │
 ├── assets/
-│   └── icons/              ← SVG icons
-│
-├── content/                ← Research notes (not deployed)
-│   ├── food/
-│   ├── hotels/
-│   └── ...
+│   └── icons/                    ← SVG icons (mirrored in js/icons.js)
 │
 └── docs/
     ├── 01-ProjectBrief.md
     ├── content-schema.md
+    ├── ui-navigation-guideline.md
     └── ...
 ```
+
+---
+
+## Guide Layer Files
+
+These files form the **Guide Layer** — editorial content for the homepage:
+
+| File | Purpose | Required |
+|------|---------|----------|
+| `content/essential-guide.md` | City orientation, practical info | Yes |
+| `css/markdown.css` | Markdown typography and section card styles | Yes |
+| `js/markdown.js` | Markdown-to-HTML converter | Yes |
+
+The Essential Guide is written in Markdown and rendered on the homepage inside white section cards. It covers transport, weather, entry requirements, payment, and other essential city information.
+
+---
+
+## Structured Data Layer Files
+
+These files form the **Structured Data Layer** — searchable place data:
+
+| File | Purpose | Required |
+|------|---------|----------|
+| `data/categories.json` | Category registry (id, label, icon, description) | Yes |
+| `data/*.json` | One JSON file per category | Yes |
+| `taxonomy/tags.json` | Tag dictionary for display names | Yes |
 
 ---
 
@@ -78,16 +118,17 @@ Each city guide is an **independent project/repository**.
 
 | Component | Files |
 |-----------|-------|
-| CSS system | `css/layout.css`, `css/sidebar.css`, `css/card.css` |
-| JavaScript | `js/loader.js`, `js/renderer.js`, `js/sidebar.js`, `js/filter.js`, `js/icons.js`, `js/app.js` |
+| CSS system | `css/layout.css`, `css/sidebar.css`, `css/card.css`, `css/markdown.css` |
+| JavaScript | `js/loader.js`, `js/renderer.js`, `js/sidebar.js`, `js/filter.js`, `js/icons.js`, `js/markdown.js`, `js/app.js` |
 | Icons | `assets/icons/*.svg` |
 | HTML templates | `index.html`, `pages/*.html` |
-| Documentation | `docs/content-schema.md`, `docs/city-project-workflow.md` |
+| Documentation | `docs/content-schema.md`, `docs/city-project-workflow.md`, `docs/ui-navigation-guideline.md` |
 
 ### Must be customized per city
 
 | Item | Action |
 |------|--------|
+| `content/essential-guide.md` | Write city-specific Essential Guide |
 | `data/categories.json` | Update category labels and icons |
 | `data/*.json` | Replace all content with city data |
 | `taxonomy/tags.json` | Translate tags if needed |
@@ -99,42 +140,45 @@ Each city guide is an **independent project/repository**.
 ## New City Initialization Process
 
 ```
-Step 1: Clone project template
-Step 2: Write Project Brief
-Step 3: Configure city metadata (categories.json)
-Step 4: Create tag dictionary (taxonomy/tags.json)
-Step 5: Research content (Gemini)
-Step 6: Convert research to JSON (Claude Code)
-Step 7: Validate JSON schema
-Step 8: Preview and test
-Step 9: Deploy to GitHub Pages
+Step 1:  Clone project template
+Step 2:  Write Project Brief
+Step 3:  Configure city metadata (categories.json)
+Step 4:  Create tag dictionary (taxonomy/tags.json)
+Step 5:  Write Essential Guide (content/essential-guide.md)
+Step 6:  Research structured content (Gemini)
+Step 7:  Convert research to JSON (Claude Code)
+Step 8:  Validate JSON schema
+Step 9:  Preview and test
+Step 10: Deploy to GitHub Pages
 ```
 
 ### Step Details
 
 **Step 1 — Clone:**
 ```
-git clone git@github.com:username/bangkok-guide.git {city}-guide
+git clone git@github.com:username/{source-city}-guide.git {city}-guide
 cd {city}-guide
-rm -rf data/*.json content/ taxonomy/_tag_scan.txt
+rm -rf data/*.json content/
 git remote set-url origin git@github.com:username/{city}-guide.git
 ```
 
-**Step 2-4:** Update project brief, categories, and tag dictionary.
+**Steps 2-4:** Update project brief, categories, and tag dictionary.
 
-**Step 5-6:** See `docs/content-production-workflow.md` for the content pipeline.
+**Step 5:** Write `content/essential-guide.md` with city orientation information.
 
-**Step 7:** Validate with:
+**Step 6-7:** See `docs/content-production-workflow.md` for the content pipeline.
+
+**Step 8:** Validate with:
 ```bash
 python -c "import json; json.load(open('data/food.json')); print('OK')"
 ```
 
-**Step 8:** Preview with:
+**Step 9:** Preview with:
 ```bash
 python -m http.server 8000
 ```
 
-**Step 9:**
+**Step 10:**
 ```bash
 git init && git add . && git commit -m "Initial commit"
 git push -u origin main

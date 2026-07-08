@@ -1,4 +1,4 @@
-# Bangkok Guide — Content Database Schema v1.0
+# City Guide — Content Database Schema v2.0
 
 ## Overview
 
@@ -11,9 +11,35 @@ Each city is an independent repository sharing the same schema so that:
 
 ---
 
+## Two Content Formats
+
+The framework uses two complementary content formats for different purposes:
+
+### Markdown — Guide Layer (`content/essential-guide.md`)
+
+- **Not part of the JSON schema.**
+- The Essential Guide is a plain Markdown file displayed on the homepage.
+- Used for editorial, narrative content: city orientation, practical advice, travel tips.
+- Rendered as white section cards with accordion behavior on mobile.
+- Markdown was chosen because it is human-readable, easy to edit, and perfect for mixed content (text, tables, lists, links).
+- No schema validation needed — content is reviewed visually.
+
+### JSON — Structured Data Layer (`data/*.json`)
+
+- **This schema document applies only to JSON data files.**
+- Used for structured, searchable place data.
+- Each JSON file represents one category (food, hotels, attractions, etc.).
+- Enables filtering, sorting, and consistent card rendering.
+- Schema validation ensures frontend compatibility across all cities.
+
+**Separation rule:** Editorial content lives in Markdown. Structured place data lives in JSON. Never mix the two.
+
+---
+
 ## Principles
 
-- **JSON is the source of truth** — all content lives in JSON files
+- **JSON is the source of truth for structured data** — all place data lives in JSON files
+- **Markdown is the source of truth for editorial content** — the Essential Guide lives in `content/essential-guide.md`
 - **Content ≠ Presentation** — no HTML in JSON, no hardcoded content in HTML
 - **Every field is optional** unless marked **REQUIRED**
 - **Missing fields produce no empty UI** — render as `""` or `null`
@@ -48,21 +74,27 @@ Each city is an independent repository sharing the same schema so that:
 ## File Organization
 
 ```
+content/
+  essential-guide.md        ← Guide Layer (Markdown, not part of JSON schema)
+
 data/
-  categories.json      ← Category registry (required)
-  food.json            ← Restaurants, street food, buffets
-  hotels.json          ← Hotels, hostels, apartments
-  attractions.json     ← Temples, museums, parks, landmarks
-  shopping.json        ← Malls, markets, shops
-  cafes.json           ← Coffee shops, dessert shops
-  transport.json       ← BTS, MRT, taxis, airport
-  massage.json         ← Massage and SPA
+  categories.json           ← Category registry (required)
+  food.json                 ← Restaurants, street food, buffets
+  hotels.json               ← Hotels, hostels, apartments
+  attractions.json          ← Temples, museums, parks, landmarks
+  shopping.json             ← Malls, markets, shops
+  cafes.json                ← Coffee shops, dessert shops
+  transport.json            ← BTS, MRT, taxis, airport
+  massage.json              ← Massage and SPA
 
 taxonomy/
-  tags.json            ← Global tag dictionary (English → Chinese)
+  tags.json                 ← Global tag dictionary (English → Chinese)
 
-content/
-  {category}/          ← Research notes (not deployed)
+css/
+  markdown.css              ← Markdown typography and section card styles
+
+js/
+  markdown.js               ← Markdown-to-HTML converter (used by homepage)
 ```
 
 ---
@@ -330,4 +362,5 @@ When adding new tags to data files, also add an entry to `tags.json`. This keeps
 
 | Version | Date | Changes |
 |---------|------|---------|
+| v2.0 | 2026-07-08 | Added Guide Layer documentation, Markdown vs JSON distinction |
 | v1.0 | 2026-07-07 | Initial schema design |
