@@ -107,7 +107,12 @@ function buildCard(elements) {
   if (rest.length > 0) {
     const body = document.createElement('div');
     body.className = 'markdown-card__body';
-    rest.forEach(el => body.appendChild(el));
+
+    const inner = document.createElement('div');
+    inner.className = 'markdown-card__body-inner';
+    rest.forEach(el => inner.appendChild(el));
+    body.appendChild(inner);
+
     card.appendChild(body);
   }
 

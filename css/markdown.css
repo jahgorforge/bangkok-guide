@@ -192,10 +192,14 @@
 }
 
 .markdown-card__body {
-  padding: 0 var(--space-3) var(--space-2);
-  overflow: hidden;
   max-height: 0;
+  overflow: hidden;
   transition: max-height 0.25s ease;
+}
+
+/* Inner wrapper holds padding so collapsed state is completely empty */
+.markdown-card__body-inner {
+  padding: 0 var(--space-3) var(--space-2);
 }
 
 /* --- Accordion: mobile only --- */
