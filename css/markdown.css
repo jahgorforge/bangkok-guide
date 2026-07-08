@@ -203,10 +203,11 @@
 @media (max-width: 767px) {
   .markdown-card__header {
     cursor: pointer;
+    min-height: 48px;
   }
 
   .markdown-card__header h2 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .markdown-card {
@@ -239,7 +240,11 @@
   }
 
   .markdown-intro {
-    margin-bottom: var(--space-2);
+    margin-bottom: var(--space-1);
+  }
+
+  .markdown-body hr {
+    margin: 16px 0;
   }
 
   .markdown-body table {

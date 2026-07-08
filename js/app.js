@@ -118,8 +118,7 @@ function buildCard(elements) {
  * Initialize mobile accordion behavior on section cards.
  *
  * On mobile only (<768px), cards are collapsible by tapping the header.
- * First section (交通) is expanded by default, all others collapsed.
- * Desktop remains fully expanded via CSS.
+ * All cards start collapsed; desktop remains fully expanded via CSS.
  */
 function initAccordion() {
   const cards = document.querySelectorAll('.markdown-card');
@@ -130,13 +129,8 @@ function initAccordion() {
     const header = card.querySelector('.markdown-card__header');
     if (!body || !header) return;
 
-    // First section expanded by default on mobile
-    if (index === 0) {
-      card.classList.add('markdown-card--expanded');
-      body.style.maxHeight = body.scrollHeight + 'px';
-    } else {
-      body.style.maxHeight = '0';
-    }
+    // All cards start collapsed; accordion only activates on mobile
+    body.style.maxHeight = '0';
 
     header.addEventListener('click', () => {
       if (window.innerWidth >= 768) return;

@@ -160,6 +160,7 @@ input:focus-visible,
 .top-nav__link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   height: var(--topbar-height);
   padding: 0 14px;
   font-size: 14px;
@@ -411,6 +412,13 @@ input:focus-visible,
   /* Show mobile top navigation */
   .top-nav {
     display: flex;
+  }
+
+  /* Exactly 5 tabs visible, rest overflow for scrolling */
+  .top-nav__link {
+    width: 20vw;
+    flex-shrink: 0;
+    text-align: center;
   }
 
   .main-content {
