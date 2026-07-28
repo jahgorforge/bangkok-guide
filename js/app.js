@@ -114,11 +114,12 @@ function initBackToTop() {
   const btn = document.getElementById('back-to-top');
   if (!btn) return;
 
-  // Show after scrolling past the sticky area
   const handleScroll = () => {
-    btn.classList.toggle('back-to-top--visible', window.scrollY > 300);
+    // Show once the first card starts scrolling behind the fixed area
+    const threshold = 100;
+    btn.classList.toggle('back-to-top--visible', window.scrollY > threshold);
   };
-  handleScroll(); // check initial state
+  handleScroll();
 
   window.addEventListener('scroll', handleScroll, { passive: true });
 

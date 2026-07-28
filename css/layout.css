@@ -596,12 +596,19 @@ input:focus-visible,
     display: none;
   }
 
-  /* Sticky chips + map area */
+  /* Fixed chips + map area (always below tab nav) */
   .sticky-top {
-    position: sticky;
+    position: fixed;
     top: calc(48px + 44px);
+    left: 0;
+    right: 0;
     z-index: 49;
     background: #e6dbc9;
-    padding-bottom: 8px;
+    padding: 0 20px 8px;
+  }
+
+  /* Push cards below the fixed chips+map area */
+  .card-grid {
+    margin-top: 300px;
   }
 }
