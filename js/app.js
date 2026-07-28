@@ -78,32 +78,36 @@ async function initCategoryPage(categories, dataBase) {
   }
 
   // Fetch and render data
-  const items = await Loader.fetchJSON(dataBase + catId + '.json');
-  const grid = document.getElementById('card-grid');
-  await Renderer.renderCards(items, grid);
+  try {
+    const items = await Loader.fetchJSON(dataBase + catId + '.json');
+    const grid = document.getElementById('card-grid');
+    await Renderer.renderCards(items, grid);
 
-  // Update entry count
-  const count = items ? items.length : 0;
-  document.getElementById('page-count').textContent = `共 ${count} 条记录`;
-  const searchCount = document.getElementById('top-app-bar-search-count');
-  if (searchCount) searchCount.textContent = `共${count}条记录`;
+    // Update entry count
+    const count = items ? items.length : 0;
+    document.getElementById('page-count').textContent = `共 ${count} 条记录`;
+    const searchCount = document.getElementById('top-app-bar-search-count');
+    if (searchCount) searchCount.textContent = `共${count}条记录`;
 
-  // Initialize search and tag filters
-  if (items && items.length > 0) {
-    await Filter.init(items);
+    // Initialize search and tag filters
+    if (items && items.length > 0) {
+      await Filter.init(items);
+    }
+
+    // Wire TopAppBar search to filter
+    const topSearch = document.getElementById('top-app-bar-search');
+    const inlineSearch = document.getElementById('search-input');
+    if (topSearch && inlineSearch) {
+      topSearch.addEventListener('input', (e) => {
+        inlineSearch.value = e.target.value;
+        inlineSearch.dispatchEvent(new Event('input'));
+      });
+    }
+  } catch (e) {
+    console.error('Category page init error:', e);
   }
 
-  // Wire TopAppBar search to filter
-  const topSearch = document.getElementById('top-app-bar-search');
-  const inlineSearch = document.getElementById('search-input');
-  if (topSearch && inlineSearch) {
-    topSearch.addEventListener('input', (e) => {
-      inlineSearch.value = e.target.value;
-      inlineSearch.dispatchEvent(new Event('input'));
-    });
-  }
-
-  // Back-to-top button
+  // Back-to-top button — always initialize, even if data loading fails
   initBackToTop();
 }
 

@@ -453,9 +453,6 @@ input:focus-visible,
 
 @media (max-width: 767px) {
   /* Prevent page-level horizontal scroll */
-  html {
-    overflow-x: hidden;
-  }
   body {
     width: 100%;
   }
