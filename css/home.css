@@ -1,0 +1,231 @@
+/* ==========================================================================
+   Home Page — Bento Knowledge Sections
+   ========================================================================== */
+
+/* --- Section title --- */
+.home__section-title {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  letter-spacing: -0.32px;
+  padding: 4px 20px 0;
+  line-height: 40px;
+  margin: 0;
+}
+
+/* --- Sections container --- */
+.home__sections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px 20px;
+}
+
+/* --- Knowledge card (expandable) --- */
+.home-card {
+  background: var(--color-card-bg);
+  border-radius: 8px;
+  padding: 9px 13px;
+  width: 100%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.home-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
+
+.home-card__header-left {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.home-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #ebe8e3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.home-card__icon svg {
+  width: 22px;
+  height: 22px;
+  color: #4e4639;
+}
+
+.home-card__icon--emergency {
+  background: rgba(255, 218, 214, 0.2);
+}
+
+.home-card__icon--emergency svg {
+  color: #c93a2b;
+}
+
+.home-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-self: stretch;
+}
+
+.home-card__title {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  letter-spacing: 0.36px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.home-card__subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  color: var(--color-text-light);
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.home-card__arrow {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  margin-top: 6px;
+  transition: transform 0.2s;
+  color: #4e4639;
+}
+
+.home-card--expanded .home-card__arrow {
+  transform: rotate(90deg);
+}
+
+/* --- Expandable content --- */
+.home-card__body {
+  border-top: 1px solid rgba(209, 197, 180, 0.2);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+.home-card--expanded .home-card__body {
+  max-height: 600px;
+}
+
+.home-card__body-inner {
+  padding-top: 9px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* --- Inner item (labeled or text) --- */
+.home-card__item {
+  background: #fcf9f4;
+  border: 1px solid rgba(209, 197, 180, 0.3);
+  border-radius: 4px;
+  padding: 9px 13px;
+}
+
+.home-card__item-label {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--font-sans);
+  color: var(--color-accent);
+  letter-spacing: 0.96px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.home-card__item-text {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: var(--font-sans);
+  color: var(--color-text-light);
+  line-height: 22px;
+}
+
+/* --- Text-only items (no label padding) --- */
+.home-card__item--text-only {
+  padding: 12px 13px;
+}
+
+.home-card__item--text-only .home-card__item-text {
+  font-weight: 500;
+}
+
+/* --- Contact items (emergency) --- */
+.home-card__contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fcf9f4;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.home-card__contact-name {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  line-height: 24px;
+}
+
+.home-card__contact-phone {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--font-sans);
+  color: var(--color-accent);
+  line-height: 24px;
+}
+
+/* --- Footer quote --- */
+.home__quote {
+  text-align: center;
+  opacity: 0.6;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: italic;
+  font-family: var(--font-sans);
+  color: var(--color-text-light);
+  line-height: 24px;
+}
+
+/* ========================================================================
+   Responsive
+   ======================================================================== */
+
+@media (min-width: 768px) {
+  .home__sections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0;
+  }
+
+  .home-card {
+    break-inside: avoid;
+  }
+
+  .home__section-title {
+    padding: 4px 0 0;
+  }
+
+  .home__quote {
+    text-align: left;
+    padding: 20px 0;
+  }
+}

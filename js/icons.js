@@ -87,6 +87,35 @@ const Icons = (() => {
         <path d="M3 12 12 3l9 9"/>
         <path d="M5 10v9h14v-9"/>
         <rect x="10" y="15" width="4" height="4"/>
+      </svg>`,
+
+    /* --- Home section icons --- */
+    weather:
+      `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+      </svg>`,
+
+    immigration:
+      `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 20h16"/>
+        <path d="M12 16v-4"/>
+        <path d="M8 12h8"/>
+        <rect x="3" y="4" width="18" height="14" rx="2"/>
+      </svg>`,
+
+    payment:
+      `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="6" width="20" height="12" rx="2"/>
+        <line x1="2" y1="10" x2="22" y2="10"/>
+        <circle cx="9" cy="15" r="2"/>
+      </svg>`,
+
+    emergency:
+      `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3v12"/>
+        <path d="M9 9h6"/>
+        <rect x="4" y="16" width="16" height="5" rx="1"/>
       </svg>`
   };
 

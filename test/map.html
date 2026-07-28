@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map Prototype — Bangkok Guide</title>
+  <style>
+    /* ==========================================================================
+       Map Prototype — test page only, not for production
+       ========================================================================== */
+
+    /* --- Reset --- */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* --- Variables (matching Bangkok Guide palette) --- */
+    :root {
+      --color-bg: #EEE2C6;
+      --color-text: #2c2c2c;
+      --color-text-light: #6b6b6b;
+      --color-card-bg: #ffffff;
+      --color-border: #e8e6e3;
+      --color-accent: #C5A35A;
+
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-size-title: 18px;
+      --font-size-body: 14px;
+      --font-size-small: 12px;
+
+      --card-width: 358px;
+      --card-padding: 16px;
+      --card-radius: 12px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-bg);
+      color: var(--color-text);
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 24px 0;
+    }
+
+    /* --- Mobile viewport wrapper --- */
+    .phone-frame {
+      width: 390px;
+      min-height: 844px;
+      background: var(--color-bg);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* --- Card --- */
+    .card {
+      width: var(--card-width);
+      background: var(--color-card-bg);
+      border-radius: var(--card-radius);
+      padding: var(--card-padding);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* --- Title --- */
+    .card__title {
+      font-size: var(--font-size-title);
+      font-weight: 700;
+      color: var(--color-text);
+      line-height: 1.3;
+    }
+
+    /* --- Description --- */
+    .card__desc {
+      font-size: var(--font-size-body);
+      color: var(--color-text-light);
+      line-height: 1.5;
+    }
+
+    /* --- Map container --- */
+    .card__map {
+      border-radius: var(--card-radius);
+      overflow: hidden;
+      line-height: 0;   /* remove gap below iframe */
+    }
+
+    .card__map iframe {
+      display: block;
+      width: 100%;
+      height: 220px;
+      border: 0;
+    }
+
+    /* --- Helper text --- */
+    .card__helper {
+      font-size: var(--font-size-small);
+      color: var(--color-text-light);
+      line-height: 1.5;
+      text-align: center;
+      opacity: 0.8;
+    }
+
+    /* --- Prototype badge --- */
+    .badge {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 4px 12px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--color-accent);
+      background: rgba(197, 163, 90, 0.12);
+      border-radius: 12px;
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="phone-frame">
+
+    <div class="card">
+
+      <h2 class="card__title">Overview Map</h2>
+
+      <p class="card__desc">
+        This is a prototype for the Bangkok Guide overview map.
+      </p>
+
+      <div class="card__map">
+        <iframe
+          src="https://www.google.com/maps/d/embed?mid=1Z2RAPEz9FtD96KajI2S9xpHw7mBr2y4&ehbc=2E312F"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <p class="card__helper">
+        Use two fingers to zoom and drag the map on mobile devices.
+      </p>
+
+    </div>
+
+    <span class="badge">Prototype Only</span>
+
+  </div>
+
+</body>
+</html>

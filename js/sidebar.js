@@ -102,12 +102,60 @@ const Sidebar = {
    * @param {string|null} activeCat - ID of the currently active category (or null for home).
    */
   renderMobileNav(categories, activeCat) {
+    // Create TopAppBar (mobile only — shows "曼谷指南")
+    let appBar = document.getElementById('top-app-bar');
+    if (!appBar) {
+      appBar = document.createElement('header');
+      appBar.className = 'top-app-bar';
+      appBar.id = 'top-app-bar';
+      document.body.prepend(appBar);
+    }
+    // Build TopAppBar content
+    const isCategoryPage = activeCat !== null;
+    appBar.innerHTML = '';
+
+    // Title
+    const titleSpan = document.createElement('span');
+    titleSpan.className = 'top-app-bar__title';
+    titleSpan.textContent = '曼谷指南';
+    appBar.appendChild(titleSpan);
+
+    // Search bar (only on category pages)
+    if (isCategoryPage) {
+      const searchWrap = document.createElement('div');
+      searchWrap.className = 'top-app-bar__search';
+
+      const searchIcon = document.createElement('span');
+      searchIcon.className = 'top-app-bar__search-icon';
+      searchIcon.innerHTML = `<svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="8" cy="8" r="6"/><path d="m12 12 4 4"/>
+      </svg>`;
+      searchWrap.appendChild(searchIcon);
+
+      const searchInput = document.createElement('input');
+      searchInput.className = 'top-app-bar__search-input';
+      searchInput.type = 'text';
+      searchInput.placeholder = '搜索我的收藏...';
+      searchInput.autocomplete = 'off';
+      searchInput.id = 'top-app-bar-search';
+      searchWrap.appendChild(searchInput);
+
+      const searchCount = document.createElement('span');
+      searchCount.className = 'top-app-bar__search-count';
+      searchCount.id = 'top-app-bar-search-count';
+      searchWrap.appendChild(searchCount);
+
+      appBar.appendChild(searchWrap);
+    }
+
+    // Create / update horizontal tab nav
     let nav = document.getElementById('top-nav');
     if (!nav) {
       nav = document.createElement('nav');
       nav.className = 'top-nav';
       nav.id = 'top-nav';
-      document.body.prepend(nav);
+      // Insert after TopAppBar (appBar is already first child of body)
+      appBar.after(nav);
     }
 
     nav.innerHTML = '';

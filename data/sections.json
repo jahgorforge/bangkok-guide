@@ -1,0 +1,55 @@
+[
+  {
+    "id": "transportation",
+    "icon": "transport",
+    "title": "交通出行",
+    "subtitle": "BTS 轻轨、MRT 地铁、出租车规范及机场接送。",
+    "type": "labeled",
+    "items": [
+      { "label": "BTS & MRT", "text": "BTS 使用 Rabbit 卡，MRT 可使用信用卡感应支付。高峰时段：07:30-09:30 和 17:00-19:30。" },
+      { "label": "出租车 & Grab", "text": "务必坚持打表。Grab 和 Bolt 是固定价格的可靠替代方案。" }
+    ]
+  },
+  {
+    "id": "weather",
+    "icon": "weather",
+    "title": "天气与空气",
+    "subtitle": "季节性建议、雨季准备及 AQI 指数监测。",
+    "type": "text",
+    "items": [
+      { "text": "热季（3-5月）气温常超过 38°C。雨季（6-10月）多为午后短暂强降雨。AQI 通常在 1-2 月达到峰值；长时间户外活动建议佩戴 N95 口罩。" }
+    ]
+  },
+  {
+    "id": "immigration",
+    "icon": "immigration",
+    "title": "移民局事务",
+    "subtitle": "签证豁免、90天报到及居住证明办理流程。",
+    "type": "text",
+    "items": [
+      { "text": "90天报到可在到期日前 15 天或后 7 天通过官方 APP 办理。前往 Chaeng Watthana 办事处，请至少提前 48 小时在线预约以避免排队。" }
+    ]
+  },
+  {
+    "id": "payment",
+    "icon": "payment",
+    "title": "支付与财务",
+    "subtitle": "PromptPay 二维码、现金使用及外卡兼容性。",
+    "type": "labeled",
+    "items": [
+      { "label": "PROMPTPAY", "text": "首选支付方式。使用本地银行 App 扫描几乎所有摊位或商场的二维码。" },
+      { "label": "ATM 手续费", "text": "外卡取现标准手续费为 220 泰铢。建议每次取现最大额度以降低成本。" }
+    ]
+  },
+  {
+    "id": "emergency",
+    "icon": "emergency",
+    "title": "紧急情况",
+    "subtitle": "旅游警察、医院及领事馆联系方式。",
+    "type": "contact",
+    "items": [
+      { "name": "旅游警察", "phone": "1155" },
+      { "name": "救护车与救援", "phone": "1669" }
+    ]
+  }
+]

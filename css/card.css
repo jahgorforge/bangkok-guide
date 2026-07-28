@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Card Grid & Card Component — City Guide Card v1.0
+   Card Grid & Card Component — City Guide Card v2.0 (Figma Refined)
    ========================================================================== */
 
 .card-grid {
@@ -11,299 +11,301 @@
 /* --- Base Card --- */
 .card {
   background: var(--color-card-bg);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  padding: 16px 20px;
+  border-radius: 4px;
+  padding: 8px 12px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  transition: box-shadow 0.2s, border-color 0.2s;
-  box-shadow: 0 1px 3px var(--color-shadow);
 }
 
-.card:hover {
-  border-color: var(--color-btn-border);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-}
-
-/* --- Name Row --- */
-.card__name-row {
+/* === Header row: name left, rating+price right === */
+.card__header {
   display: flex;
-  align-items: baseline;
-  gap: 8px;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 42px;
+  min-width: 0;         /* allow flex children to shrink */
+}
+
+.card__name-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4px;
+  min-width: 0;         /* allow text truncation */
+  overflow: hidden;
 }
 
 .card__name {
-  font-size: 17px;
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 18px;
   color: var(--color-text);
-  line-height: 1.3;
+  line-height: 22px;
+  word-break: break-word;
 }
 
 .card__name-local {
-  font-size: 13px;
-  color: var(--color-text-light);
-  font-weight: 400;
-  line-height: 1.3;
-}
-
-/* --- Tags Row (max 3 badges) --- */
-.card__tag-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-}
-
-.card__badge {
-  display: inline-block;
-  padding: 2px 9px;
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--color-accent);
-  background: var(--color-accent-soft);
-  border-radius: var(--radius-pill);
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-}
-
-/* --- Location --- */
-.card__location {
-  font-size: 13px;
-  color: var(--color-text-light);
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  line-height: 1.4;
-}
-
-.card__location-icon {
-  width: 13px;
-  height: 13px;
-  flex-shrink: 0;
-  color: var(--color-btn-text);
-  opacity: 0.5;
-}
-
-/* --- Summary (max 2 lines) --- */
-.card__summary {
   font-size: 14px;
-  color: var(--color-text);
-  line-height: 1.5;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  /* Fallback for non-webkit */
-  max-height: 42px;
+  font-weight: 400;
+  font-family: var(--font-sans);
+  color: var(--color-text-light);
+  line-height: 14px;
+  white-space: nowrap;
+  opacity: 0.7;
 }
 
-/* --- Bottom Row: Price + Actions --- */
-.card__bottom {
+/* --- Right column: rating + price + district --- */
+.card__meta {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 8px;
-  margin-top: auto;
-  padding-top: 8px;
-  border-top: 1px solid var(--color-border);
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.card__rating-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.card__rating {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: var(--font-sans);
+  color: var(--color-accent);
+  line-height: 16px;
+  white-space: nowrap;
 }
 
 .card__price {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--color-btn-text);
-  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--font-sans);
+  color: var(--color-accent);
+  letter-spacing: 1.2px;
+  line-height: 16px;
+  white-space: nowrap;
 }
 
+/* --- District row --- */
+.card__district {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.card__district-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: #6b6b6b;
+}
+
+.card__district-text {
+  font-size: 13px;
+  font-weight: 400;
+  font-family: var(--font-sans);
+  color: #6b6b6b;
+  line-height: normal;
+}
+
+/* --- Tags row --- */
+.card__tag-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.card__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: 400;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: #f0ede8;
+  border-radius: 4px;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+/* --- Summary with left accent border --- */
+.card__summary {
+  background: #f6f3ee;
+  border-left: 2px solid var(--color-accent);
+  padding: 12px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  color: var(--color-text-light);
+  line-height: 26px;
+}
+
+/* --- Action buttons row --- */
 .card__actions {
   display: flex;
-  gap: 6px;
-  margin-left: auto;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .card__action-btn {
   display: inline-flex;
   align-items: center;
-  gap: 3px;
-  padding: 5px 12px;
+  gap: 4px;
+  height: 32px;
+  padding: 9px 17px;
   font-size: 12px;
-  font-family: var(--font-sans);
   font-weight: 500;
-  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  color: var(--color-accent);
+  background: transparent;
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
   cursor: pointer;
   text-decoration: none;
-  background: var(--color-card-bg);
-  color: var(--color-btn-text);
-  border: 1px solid var(--color-btn-border);
-  transition: background 0.15s, border-color 0.15s;
-  line-height: 1.3;
+  letter-spacing: 0.96px;
+  line-height: 16px;
+  transition: background 0.15s;
   white-space: nowrap;
 }
 
 .card__action-btn:hover {
-  background: var(--color-accent-soft);
-  border-color: var(--color-accent);
-  color: var(--color-text);
+  background: rgba(119, 90, 25, 0.06);
   text-decoration: none;
+  color: var(--color-accent);
 }
 
-/* Hide card when filtered out */
+.card__action-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* --- Hide card when filtered out --- */
 .card--hidden {
   display: none;
 }
 
 /* ========================================================================
-   Filter Bar
+   Filter Chips
    ======================================================================== */
 
-.filter-bar {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.filter-bar__search {
-  flex: 1;
-  min-width: 160px;
-  padding: 8px 12px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  font-size: 14px;
-  font-family: var(--font-sans);
-  background: var(--color-card-bg);
-  color: var(--color-text);
-  transition: border-color 0.15s;
-}
-
-.filter-bar__search::placeholder {
-  color: var(--color-text-light);
-  opacity: 0.7;
-}
-
-.filter-bar__search:focus {
-  outline: none;
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(197, 163, 90, 0.12);
-}
-
-.filter-bar__tags {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.filter-row {
+.chip-row {
   display: flex;
   gap: 4px;
   flex-wrap: wrap;
   align-items: center;
+  padding: 6px 0;
 }
 
-.filter-bar__tag {
-  padding: 4px 12px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-pill);
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding: 1px 13px;
   font-size: 12px;
-  cursor: pointer;
-  background: var(--color-card-bg);
-  color: var(--color-text-light);
-  transition: all 0.15s;
-  font-family: var(--font-sans);
   font-weight: 500;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: #f0ede8;
+  border: 1px solid #d1c5b4;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.96px;
+  line-height: 16px;
+  transition: all 0.15s;
+  white-space: nowrap;
+  user-select: none;
 }
 
-.filter-bar__tag:hover {
+.chip:hover {
   border-color: var(--color-accent);
-  color: var(--color-text);
 }
 
-.filter-bar__tag--active {
-  background: var(--color-accent-soft);
-  color: var(--color-text);
+.chip--active {
+  background: var(--color-accent);
   border-color: var(--color-accent);
+  color: #ffffff;
+}
+
+.chip--price {
+  letter-spacing: 0.5px;
 }
 
 /* ========================================================================
-   Home Page: Category Grid
+   Filter Bar (legacy / fallback)
    ======================================================================== */
 
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: var(--space-3);
-  margin-top: var(--space-3);
-}
-
-.category-tile {
-  display: block;
-  background: var(--color-card-bg);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  padding: var(--space-4) var(--space-3);
-  text-decoration: none;
-  color: var(--color-text);
-  transition: border-color 0.2s, box-shadow 0.2s;
-  box-shadow: 0 1px 3px var(--color-shadow);
-}
-
-.category-tile:hover {
-  border-color: var(--color-accent);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-  text-decoration: none;
-}
-
-.category-tile__icon {
-  width: 28px;
-  height: 28px;
-  margin-bottom: var(--space-2);
-  color: var(--color-btn-text);
-}
-
-.category-tile:hover .category-tile__icon {
-  color: var(--color-accent);
-}
-
-.category-tile__name {
-  font-size: var(--font-size-card-title);
-  font-weight: 600;
-  margin-bottom: 4px;
-  color: var(--color-text);
-}
-
-.category-tile__desc {
-  font-size: var(--font-size-small);
-  color: var(--color-text-light);
-  line-height: 1.5;
+.filter-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
 }
 
 /* ========================================================================
-   Empty State
+   Map Placeholder
    ======================================================================== */
 
-.empty-state {
-  text-align: center;
-  padding: var(--space-5) var(--space-4);
-  color: var(--color-text-light);
-  font-size: var(--font-size-body);
-  line-height: 1.6;
+.map-placeholder {
+  width: 100%;
+  height: 200px;
+  background: #a7a39c;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  color: #1c1c19;
+  letter-spacing: 0.96px;
+  margin-bottom: 12px;
 }
 
-.empty-state__icon {
-  width: 36px;
-  height: 36px;
-  margin: 0 auto var(--space-2);
-  color: var(--color-btn-text);
-  opacity: 0.5;
+/* ========================================================================
+   Back to Top
+   ======================================================================== */
+
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  z-index: 50;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-.empty-state__text {
-  color: var(--color-text-light);
+.back-to-top--visible {
+  opacity: 0.85;
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  opacity: 1;
+}
+
+.back-to-top svg {
+  width: 20px;
+  height: 20px;
 }
 
 /* ========================================================================
@@ -324,29 +326,19 @@
   }
 
   .card {
-    padding: 14px 16px;
+    min-width: 0;
   }
 
-  .card__name {
-    font-size: 16px;
+  .chip-row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 0;
   }
 
-  .card__summary {
-    font-size: 13px;
-    max-height: 39px;
-  }
-
-  .card__bottom {
-    flex-direction: row;
-  }
-
-  .card__action-btn {
-    font-size: 11px;
-    padding: 4px 10px;
-  }
-
-  .filter-bar__search {
-    min-width: 120px;
-    font-size: 13px;
+  .chip-row::-webkit-scrollbar {
+    display: none;
   }
 }

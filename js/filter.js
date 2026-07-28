@@ -1,9 +1,8 @@
 /*
- * filter.js — Simple category filtering for City Guide Cards.
+ * filter.js — Category filtering with chip-style UI.
  *
- * Filter dimensions: type + budget + text search.
- * Displays Chinese labels using taxonomy/tags.json.
- * Internal filtering still uses English values.
+ * Two chip rows: category type + price level.
+ * Uses new `chip` / `chip--active` classes from card.css v2.
  */
 
 const Filter = {
@@ -11,9 +10,6 @@ const Filter = {
   searchText: '',
   _tagDict: null,
 
-  /**
-   * Load tag dictionary for Chinese display names.
-   */
   async _loadTagDict() {
     if (this._tagDict) return;
     try {
@@ -26,9 +22,6 @@ const Filter = {
     }
   },
 
-  /**
-   * Look up Chinese display name for a tag/type value.
-   */
   _displayName(val) {
     const lower = val.toLowerCase().replace(/ /g, '-');
     if (this._tagDict && this._tagDict[lower]) {
@@ -99,49 +92,52 @@ const Filter = {
     container.innerHTML = '';
 
     if (types.size > 0) {
-      const typeRow = document.createElement('div');
-      typeRow.className = 'filter-row';
+      const row = document.createElement('div');
+      row.className = 'chip-row';
 
-      const allBtn = this._createChip('All', 'type', null, true);
-      typeRow.appendChild(allBtn);
+      const allChip = this._createChip('全部', 'type', null, true);
+      row.appendChild(allChip);
 
       types.forEach(t => {
         const label = this._displayName(t);
-        const btn = this._createChip(label, 'type', t, false);
-        typeRow.appendChild(btn);
+        const chip = this._createChip(label, 'type', t, false);
+        row.appendChild(chip);
       });
 
-      container.appendChild(typeRow);
+      container.appendChild(row);
     }
 
     if (budgets.size > 0) {
-      const budgetRow = document.createElement('div');
-      budgetRow.className = 'filter-row';
+      const row = document.createElement('div');
+      row.className = 'chip-row';
 
-      const allBtn = this._createChip('All', 'budget', null, true);
-      budgetRow.appendChild(allBtn);
+      const allChip = this._createChip('全部', 'budget', null, true);
+      row.appendChild(allChip);
 
-      budgets.forEach(b => {
-        const btn = this._createChip(b, 'budget', b, false);
-        budgetRow.appendChild(btn);
+      // Sort budgets by length: $ → $$ → $$$ → $$$$ → $$$$$
+      const sorted = Array.from(budgets).sort((a, b) => a.length - b.length);
+      sorted.forEach(b => {
+        const chip = this._createChip(b, 'budget', b, false);
+        chip.classList.add('chip--price');
+        row.appendChild(chip);
       });
 
-      container.appendChild(budgetRow);
+      container.appendChild(row);
     }
   },
 
   _createChip(label, dim, value, isActive) {
     const chip = document.createElement('span');
-    chip.className = 'filter-bar__tag';
-    if (isActive) chip.classList.add('filter-bar__tag--active');
+    chip.className = 'chip';
+    if (isActive) chip.classList.add('chip--active');
     chip.textContent = label;
     chip.dataset.dim = dim;
     chip.dataset.value = value || '';
 
     chip.addEventListener('click', () => {
-      const siblingChips = chip.parentElement.querySelectorAll('.filter-bar__tag');
-      siblingChips.forEach(c => c.classList.remove('filter-bar__tag--active'));
-      chip.classList.add('filter-bar__tag--active');
+      const siblingChips = chip.parentElement.querySelectorAll('.chip');
+      siblingChips.forEach(c => c.classList.remove('chip--active'));
+      chip.classList.add('chip--active');
 
       this.activeFilters[dim] = value;
       this.apply();

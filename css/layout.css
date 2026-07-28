@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap');
+
 /* ==========================================================================
    Layout — Top Bar, Sidebar + Main Content, Footer
    ========================================================================== */
@@ -11,27 +13,28 @@
 
 /* --- Variables --- */
 :root {
-  --color-bg: #EEE2C6;
-  --color-text: #2c2c2c;
-  --color-text-light: #6b6b6b;
+  --color-bg: #fcf9f4;
+  --color-text: #1c1c19;
+  --color-text-light: #4e4639;
   --color-card-bg: #ffffff;
-  --color-border: #e8e6e3;
-  --color-accent: #C5A35A;
-  --color-accent-hover: #b8924a;
-  --color-accent-soft: #EEE2C6;
-  --color-accent-light: #EEE2C6;
-  --color-sidebar-hover: #EEE2C6;
-  --color-topbar-bg: #ffffff;
-  --color-star: #C5A35A;
-  --color-shadow: rgba(0, 0, 0, 0.06);
-  --color-btn-border: #CFC7B8;
-  --color-btn-text: #555555;
+  --color-border: #d1c5b4;
+  --color-accent: #775a19;
+  --color-accent-hover: #5f4412;
+  --color-accent-soft: #f0ede8;
+  --color-accent-light: #e6dbc9;
+  --color-sidebar-hover: #f0ede8;
+  --color-topbar-bg: #e6dbc9;
+  --color-star: #775a19;
+  --color-shadow: rgba(0, 0, 0, 0.04);
+  --color-btn-border: #d1c5b4;
+  --color-btn-text: #4e4639;
 
   --sidebar-width: 240px;
   --sidebar-width-tablet: 200px;
   --topbar-height: 56px;
 
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
   --font-size-page-title: 26px;
   --font-size-section-title: 22px;
   --font-size-card-title: 18px;
@@ -125,6 +128,62 @@ input:focus-visible,
   padding: var(--space-1);
   margin-right: var(--space-2);
   color: var(--color-text);
+}
+
+/* ========================================================================
+   Mobile TopAppBar — "曼谷指南" title bar
+   Hidden on desktop, shown on mobile below.
+   ======================================================================== */
+
+.top-app-bar {
+  display: none;  /* hidden on desktop */
+}
+
+/* --- TopAppBar search (category pages only) --- */
+.top-app-bar__search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 32px;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 0 8px;
+  flex: 1;
+  max-width: 214px;
+  margin-left: auto;
+}
+
+.top-app-bar__search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.top-app-bar__search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 11px;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: transparent;
+  min-width: 0;
+}
+
+.top-app-bar__search-input::placeholder {
+  color: #6b7280;
+}
+
+.top-app-bar__search-count {
+  font-size: 11px;
+  font-family: var(--font-sans);
+  color: #6b7280;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* ========================================================================
@@ -290,42 +349,42 @@ input:focus-visible,
 /* --- Filter Bar --- */
 .filter-bar {
   display: flex;
-  gap: var(--space-2);
-  margin-bottom: var(--space-3);
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 4px;
 }
 
 .filter-bar__search {
-  flex: 1;
-  min-width: 200px;
-  padding: 10px var(--space-2);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  font-size: var(--font-size-body);
+  width: 100%;
+  height: 32px;
+  padding: 0 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 11px;
   font-family: var(--font-sans);
-  background: var(--color-card-bg);
+  background: #ffffff;
   color: var(--color-text);
   transition: border-color 0.15s;
+  outline: none;
 }
 
 .filter-bar__search::placeholder {
-  color: var(--color-text-light);
-  opacity: 0.7;
+  color: #6b7280;
+  opacity: 1;
 }
 
 .filter-bar__search:focus {
   outline: none;
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(197, 163, 90, 0.12);
+  box-shadow: 0 0 0 2px rgba(119, 90, 25, 0.15);
 }
 
 .filter-bar__tags {
   display: flex;
-  gap: var(--space-1);
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2px;
 }
 
+/* Legacy tag styles (replaced by .chip in card.css) */
 .filter-bar__tag {
   padding: 4px 12px;
   border: 1px solid var(--color-border);
@@ -393,6 +452,15 @@ input:focus-visible,
 }
 
 @media (max-width: 767px) {
+  /* Prevent page-level horizontal scroll */
+  html {
+    overflow-x: hidden;
+  }
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
   /* Hide old mobile UI components */
   .top-bar {
     display: none !important;
@@ -409,21 +477,131 @@ input:focus-visible,
     display: none;
   }
 
-  /* Show mobile top navigation */
-  .top-nav {
+  /* ==========================================
+     Mobile TopAppBar
+     ========================================== */
+  .top-app-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: #e6dbc9;
+    border-bottom: 1px solid #d1c5b4;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 101;
     display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 20px;
   }
 
-  /* Exactly 5 tabs visible, rest overflow for scrolling */
-  .top-nav__link {
-    width: 20vw;
+  .top-app-bar__title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #775a19;
+    letter-spacing: -0.6px;
+    line-height: 32px;
     flex-shrink: 0;
-    text-align: center;
   }
 
+  /* ==========================================
+     Mobile Tab Navigation (below TopAppBar)
+     ========================================== */
+  .top-nav {
+    position: fixed;
+    top: 48px;
+    left: 0;
+    right: 0;
+    height: 44px;
+    background: #e6dbc9;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid #d1c5b4;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 0 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .top-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .top-nav__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: auto;              /* remove 20vw */
+    padding: 0 4px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: var(--font-sans);
+    color: #4e4639;
+    letter-spacing: 0.96px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+    flex-shrink: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .top-nav__link:hover {
+    color: #775a19;
+    text-decoration: none;
+  }
+
+  .top-nav__link--active {
+    color: #775a19;
+    border-bottom-color: #775a19;
+    background: none;         /* remove desktop active bg */
+    border-radius: 0;
+    font-weight: 500;
+  }
+
+  /* ==========================================
+     Main content offset
+     ========================================== */
   .main-content {
     margin-left: 0;
-    padding: var(--space-2);
-    padding-top: calc(var(--topbar-height) + var(--space-2));
+    padding: 0 20px;
+    padding-top: calc(48px + 44px + 8px); /* TopAppBar + TabNav + 8px */
+    background: #e6dbc9;
+  }
+
+  /* Hide page header on mobile (title/desc/count) */
+  .main-content__header {
+    display: none;
+  }
+
+  /* Tighten filter area */
+  .filter-bar {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 4px;
+  }
+
+  /* Use TopAppBar search instead of inline search */
+  #search-input {
+    display: none;
+  }
+
+  /* Sticky chips + map area (match main-content padding-top) */
+  .sticky-top {
+    position: sticky;
+    top: calc(48px + 44px + 8px);
+    z-index: 49;
+    background: #e6dbc9;
+    padding-bottom: 8px;
   }
 }
