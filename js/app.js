@@ -114,9 +114,11 @@ function initBackToTop() {
   const btn = document.getElementById('back-to-top');
   if (!btn) return;
 
+  // Show after scrolling past the sticky area
   const handleScroll = () => {
-    btn.classList.toggle('back-to-top--visible', window.scrollY > 400);
+    btn.classList.toggle('back-to-top--visible', window.scrollY > 300);
   };
+  handleScroll(); // check initial state
 
   window.addEventListener('scroll', handleScroll, { passive: true });
 

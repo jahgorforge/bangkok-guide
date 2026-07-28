@@ -575,7 +575,7 @@ input:focus-visible,
   .main-content {
     margin-left: 0;
     padding: 0 20px;
-    padding-top: calc(48px + 44px + 8px); /* TopAppBar + TabNav + 8px */
+    padding-top: calc(48px + 44px); /* TopAppBar + TabNav, no extra gap */
     background: #e6dbc9;
   }
 
@@ -596,10 +596,10 @@ input:focus-visible,
     display: none;
   }
 
-  /* Sticky chips + map area (match main-content padding-top) */
+  /* Sticky chips + map area */
   .sticky-top {
     position: sticky;
-    top: calc(48px + 44px + 8px);
+    top: calc(48px + 44px);
     z-index: 49;
     background: #e6dbc9;
     padding-bottom: 8px;
