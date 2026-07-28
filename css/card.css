@@ -286,16 +286,21 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s;
-  z-index: 60;
+  z-index: 9999;
   border: none;
   box-shadow: 0 3px 10px rgba(0,0,0,0.25);
   touch-action: manipulation;
+  transition: transform 0.2s, opacity 0.2s;
+  will-change: transform;
+  /* Hidden state */
+  transform: translateY(80px);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .back-to-top--visible {
+  /* Visible state */
+  transform: translateY(0);
   opacity: 1;
   pointer-events: auto;
 }

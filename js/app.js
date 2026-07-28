@@ -115,10 +115,10 @@ function initBackToTop() {
   if (!btn) return;
 
   const handleScroll = () => {
-    // Show once the first card starts scrolling behind the fixed area
-    const threshold = 100;
-    btn.classList.toggle('back-to-top--visible', window.scrollY > threshold);
+    const show = window.scrollY > 50;
+    btn.classList.toggle('back-to-top--visible', show);
   };
+  // Check on load and on every scroll
   handleScroll();
 
   window.addEventListener('scroll', handleScroll, { passive: true });

@@ -457,7 +457,6 @@ input:focus-visible,
     overflow-x: hidden;
   }
   body {
-    overflow-x: hidden;
     width: 100%;
   }
 
