@@ -604,7 +604,12 @@ input:focus-visible,
     right: 0;
     z-index: 49;
     background: #e6dbc9;
-    padding: 0 20px 8px;
+    padding: 6px 20px 0;
+  }
+
+  /* 6px gap between chips and map */
+  .filter-bar {
+    padding-bottom: 6px;
   }
 
   /* Push cards below the fixed chips+map area */
