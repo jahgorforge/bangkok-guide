@@ -51,14 +51,14 @@
     <footer class="footer">
       <p>Bangkok Guide &mdash; Personal travel knowledge base</p>
     </footer>
-
-    <!-- Back to top -->
-    <button class="back-to-top" id="back-to-top" aria-label="回到顶部">
-      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 16V4M4 10l6-6 6 6"/>
-      </svg>
-    </button>
   </main>
+
+  <!-- Back to top (outside main to avoid any parent fixed-position clipping) -->
+  <button class="back-to-top" id="back-to-top" aria-label="回到顶部">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 16V4M4 10l6-6 6 6"/>
+    </svg>
+  </button>
 
   <script src="../js/loader.js"></script>
   <script src="../js/icons.js"></script>
