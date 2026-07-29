@@ -1,6 +1,6 @@
-/* Bangkok Guide — Service Worker v1.0 */
+/* Bangkok Guide — Service Worker v1.1 */
 
-const CACHE_NAME = 'bangkok-guide-v1';
+const CACHE_NAME = 'bangkok-guide-v2';
 
 // Assets to pre-cache on install
 const PRECACHE_URLS = [
