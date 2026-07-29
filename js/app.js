@@ -81,8 +81,9 @@ async function initCategoryPage(categories, dataBase) {
   }
 
   // Fetch and render data
+  let items = null;
   try {
-    const items = await Loader.fetchJSON(dataBase + catId + '.json');
+    items = await Loader.fetchJSON(dataBase + catId + '.json');
     const grid = document.getElementById('card-grid');
     await Renderer.renderCards(items, grid);
 
@@ -108,6 +109,11 @@ async function initCategoryPage(categories, dataBase) {
     }
   } catch (e) {
     console.error('Category page init error:', e);
+  }
+
+  // Initialize interactive map (mobile only)
+  if (typeof MapModule !== 'undefined' && items) {
+    MapModule.init(items);
   }
 
   // Back-to-top button — always initialize, even if data loading fails

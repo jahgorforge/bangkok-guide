@@ -1,31 +1,3 @@
-我建议这份不要放在 `UI Framework`，因为它不是通用 UI 规则，而是 **Bangkok Guide 特有的交互设计决策**。
-
-更适合放：
-
-```
-02_Project/
-└── Bangkok_Guide/
-    └── 07-interaction-design.md
-```
-
-或者以后如果增加更多：
-
-```
-02_Project/
-└── Bangkok_Guide/
-    ├── 06-data-schema.md
-    └── 07-interaction-patterns.md
-```
-
-它的作用是：
-
-> 给 Claude Code 解释“为什么这样设计”和“需要实现什么行为”。
-
-下面是 MD 文档。
-
----
-
-```md
 # Bangkok Guide - Map & Restaurant Card Interaction Design
 
 ## Overview
