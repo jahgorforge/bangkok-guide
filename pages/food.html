@@ -27,8 +27,17 @@
     <ul class="sidebar-nav" id="sidebar-nav"></ul>
   </aside>
 
-  <!-- Fixed header container (mobile): top-app-bar + top-nav + sticky-top -->
-  <div id="fixed-header">
+  <!-- Fixed header container (mobile): top-app-bar + top-nav -->
+  <div id="fixed-header"></div>
+
+  <main class="main-content">
+    <div class="main-content__header">
+      <h1 class="main-content__title" id="page-title">Category</h1>
+      <p class="main-content__description" id="page-desc"></p>
+      <p class="main-content__count" id="page-count"></p>
+    </div>
+
+    <!-- Sticky area: chips + map (moved inside main-content for desktop) -->
     <div class="sticky-top" id="sticky-top">
       <div class="filter-bar" id="filter-bar">
         <input type="text" class="filter-bar__search" id="search-input" placeholder="搜索我的收藏..." autocomplete="off">
@@ -39,14 +48,6 @@
       <div class="map-placeholder" id="map-placeholder">
         <span>🗺 地图</span>
       </div>
-    </div>
-  </div>
-
-  <main class="main-content">
-    <div class="main-content__header">
-      <h1 class="main-content__title" id="page-title">Category</h1>
-      <p class="main-content__description" id="page-desc"></p>
-      <p class="main-content__count" id="page-count"></p>
     </div>
 
     <div class="card-grid" id="card-grid"></div>

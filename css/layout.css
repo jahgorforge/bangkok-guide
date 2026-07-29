@@ -605,11 +605,13 @@ input:focus-visible,
     display: none;
   }
 
-  /* Sticky-top: static inside fixed-header */
+  /* Sticky-top: sticks right below fixed-header, measured by JS */
   .sticky-top {
-    position: static;
+    position: sticky;
+    top: var(--fixed-header-height, 92px);
+    z-index: 49;
     background: #e6dbc9;
-    padding: 8px 20px;   /* 8px top (tabnav↔chips), 8px bottom (map↔cards) */
+    padding: 8px 0;
     display: flex;
     flex-direction: column;
   }
@@ -619,26 +621,19 @@ input:focus-visible,
     padding-bottom: 8px;
   }
 
-  /* Map has no rounded corners on mobile */
+  /* Map */
   .map-placeholder {
     margin-bottom: 0;
     border-radius: 0;
   }
 
-  /* Main-content offset: uses JS-measured fixed-header height */
+  /* Main-content offset: measured fixed-header height */
   .main-content {
-    padding-top: var(--fixed-header-height, 340px);
+    padding-top: var(--fixed-header-height, 92px);
   }
 
-  /* No extra margin on card-grid (offset handled by main-content) */
+  /* Cards start naturally below sticky-top */
   .card-grid {
     margin-top: 0;
-  }
-}
-
-/* Hide fixed-header on desktop */
-@media (min-width: 768px) {
-  #fixed-header {
-    display: none;
   }
 }
