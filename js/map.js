@@ -119,10 +119,15 @@ const MapModule = (() => {
         setActiveCard(item.id);
         updateActiveDistance(item.id);
 
-        // Scroll card into view
+        // Scroll card below the sticky-top area (don't let it hide behind map)
         const card = document.querySelector(`.card[data-id="${item.id}"]`);
         if (card) {
-          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          const headerH = document.getElementById('fixed-header')?.offsetHeight || 92;
+          const stickyEl = document.getElementById('sticky-top');
+          const stickyH = stickyEl ? stickyEl.offsetHeight : 280;
+          const offset = headerH + stickyH + 8; // 8px gap
+          const cardTop = card.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({ top: cardTop - offset, behavior: 'smooth' });
         }
       });
 
