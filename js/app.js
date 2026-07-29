@@ -129,6 +129,7 @@ function syncFixedHeaderHeight() {
 
   const update = () => {
     const h = header.getBoundingClientRect().height;
+    console.log('syncFixedHeaderHeight update fired', h, Date.now());
     document.documentElement.style.setProperty('--fixed-header-height', h + 'px');
   };
 
