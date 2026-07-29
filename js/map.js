@@ -3,15 +3,14 @@
  *
  * Mobile only. Features:
  *   - Leaflet map with CARTO light tiles (free, no API key)
- *   - Restaurant location markers with clustering
+ *   - Restaurant location markers (no clustering, active state visible)
  *   - User location (Geolocation API, fallback to Bangkok center)
  *   - Card ↔ Map synchronization via IntersectionObserver
- *   - Active card distance display
+ *   - Active card gets #775a19 border + distance display
  */
 
 const MapModule = (() => {
   let map = null;
-  let markersLayer = null;
   let activeMarker = null;
   let userLatLng = null;
   let markerMap = {};
@@ -20,42 +19,38 @@ const MapModule = (() => {
   const BANGKOK_CENTER = [13.7563, 100.5018];
   const USER_MARKER_COLOR = '#4285F4';
 
+  const MARKER_DEFAULT = { radius: 5, color: '#775a19', fillOpacity: 0.7, weight: 1.5 };
+  const MARKER_ACTIVE = { radius: 9, color: '#c93a2b', fillOpacity: 1, weight: 2.5 };
+
   /**
    * Initialize the map inside #map-placeholder (mobile only).
-   * Called from app.js after category data loads.
    */
   function init(items) {
     _items = items || [];
-    // Mobile only
     if (window.innerWidth >= 768) return;
 
     const container = document.getElementById('map-placeholder');
     if (!container) return;
 
-    // Clear placeholder content & reset styling for Leaflet
+    // Clear placeholder
     container.innerHTML = '';
     container.style.background = 'none';
-    container.style.display = 'block';
     container.style.borderRadius = '0';
-    container.style.display = 'flex';   // keep any needed layout
+    container.style.display = 'flex';
     container.style.alignItems = 'stretch';
 
-    // Create Leaflet map (minimal controls)
+    // Create Leaflet map
     map = L.map(container, {
       zoomControl: false,
       attributionControl: false,
     }).setView(BANGKOK_CENTER, 12);
 
-    // CARTO light tile layer — free, no API key
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
       maxZoom: 19,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>, &copy; CARTO'
     }).addTo(map);
 
-    // Force map to recalculate size (container may be in sticky area)
     setTimeout(() => map.invalidateSize(), 150);
 
-    // Get user location, then add markers
     getUserLocation(() => {
       addMarkers();
       setupScrollDetection();
@@ -87,135 +82,90 @@ const MapModule = (() => {
   function addUserMarker(latlng) {
     if (!map) return;
     L.circleMarker(latlng, {
-      radius: 7,
-      color: USER_MARKER_COLOR,
-      fillColor: USER_MARKER_COLOR,
-      fillOpacity: 0.3,
-      weight: 2,
+      radius: 7, color: USER_MARKER_COLOR, fillColor: USER_MARKER_COLOR,
+      fillOpacity: 0.3, weight: 2,
     }).addTo(map).bindTooltip('我的位置', { permanent: false, direction: 'top' });
 
-    // Draw a small radius indicator (300m)
     L.circle(latlng, {
-      radius: 300,
-      color: USER_MARKER_COLOR,
-      fillColor: USER_MARKER_COLOR,
-      fillOpacity: 0.06,
-      weight: 1,
-      dashArray: '3 6',
+      radius: 300, color: USER_MARKER_COLOR, fillColor: USER_MARKER_COLOR,
+      fillOpacity: 0.06, weight: 1, dashArray: '3 6',
     }).addTo(map);
   }
 
-  // ——— Restaurant Markers ———
+  // ——— Restaurant Markers (no clustering) ———
 
   function addMarkers() {
     if (!map) return;
     markerMap = {};
-
-    const markers = [];
 
     _items.forEach(item => {
       const coords = item.location?.coordinates;
       if (!coords?.lat || !coords?.lng) return;
 
       const latlng = [coords.lat, coords.lng];
-
-      // Custom circle marker
-      const marker = L.circleMarker(latlng, {
-        radius: 5,
-        color: '#775a19',
-        fillColor: '#775a19',
-        fillOpacity: 0.7,
-        weight: 1.5,
-        id: item.id,
-      });
+      const marker = L.circleMarker(latlng, { ...MARKER_DEFAULT, id: item.id });
 
       marker.itemId = item.id;
       markerMap[item.id] = marker;
 
-      // Tooltip
       marker.bindTooltip(item.name?.en || item.id, {
-        permanent: false,
-        direction: 'top',
-        offset: [0, -6],
+        permanent: false, direction: 'top', offset: [0, -6],
       });
 
-      // Click marker → scroll to card
+      // Click marker → highlight + scroll to card + show distance
       marker.on('click', () => {
+        // Immediately highlight marker and card
+        setActiveMarker(item.id);
+        setActiveCard(item.id);
+        updateActiveDistance(item.id);
+
+        // Scroll card into view
         const card = document.querySelector(`.card[data-id="${item.id}"]`);
         if (card) {
           card.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       });
 
-      markers.push(marker);
+      marker.addTo(map);
     });
 
-    // Add markers with clustering (avoids overlap when zoomed out)
-    if (markers.length > 0 && window.L && L.markerClusterGroup) {
-      markersLayer = L.markerClusterGroup({
-        maxClusterRadius: 40,
-        spiderfyOnMaxZoom: true,
-        showCoverageOnHover: false,
-        iconCreateFunction: (cluster) => {
-          const count = cluster.getChildCount();
-          return L.divIcon({
-            html: `<div style="
-              background:#775a19;color:#fff;border-radius:50%;
-              width:32px;height:32px;display:flex;align-items:center;
-              justify-content:center;font-size:11px;font-weight:600;
-              box-shadow:0 1px 4px rgba(0,0,0,0.2);
-            ">${count}</div>`,
-            className: '',
-            iconSize: [32, 32],
-            iconAnchor: [16, 16],
-          });
-        }
-      });
-      markers.forEach(m => markersLayer.addLayer(m));
-      map.addLayer(markersLayer);
-    } else {
-      markers.forEach(m => m.addTo(map));
-    }
-
-    // Fit bounds to show all markers
-    if (markers.length > 0) {
-      const group = L.featureGroup(markers);
-      setTimeout(() => {
-        map.fitBounds(group.getBounds().pad(0.15));
-      }, 200);
+    // Fit bounds
+    const allMarkers = Object.values(markerMap);
+    if (allMarkers.length > 0) {
+      const group = L.featureGroup(allMarkers);
+      setTimeout(() => map.fitBounds(group.getBounds().pad(0.15)), 200);
     }
   }
 
   // ——— Active Marker Highlight ———
 
   function setActiveMarker(itemId) {
-    // Reset previous marker
     if (activeMarker) {
-      activeMarker.setStyle({
-        radius: 5,
-        color: '#775a19',
-        fillOpacity: 0.7,
-        weight: 1.5,
-      });
+      activeMarker.setStyle(MARKER_DEFAULT);
     }
-
-    // Highlight new marker
     const marker = markerMap[itemId];
     if (marker) {
-      marker.setStyle({
-        radius: 9,
-        color: '#c93a2b',
-        fillOpacity: 1,
-        weight: 2.5,
-      });
-      // Bring to front
-      if (markersLayer) {
-        markersLayer.removeLayer(marker);
-        markersLayer.addLayer(marker);
-      } else {
-        marker.bringToFront();
-      }
+      marker.setStyle(MARKER_ACTIVE);
+      marker.bringToFront();
       activeMarker = marker;
+    }
+  }
+
+  // ——— Active Card Border Toggle ———
+
+  let _prevActiveCard = null;
+
+  function setActiveCard(itemId) {
+    // Remove border from previous card
+    if (_prevActiveCard) {
+      _prevActiveCard.classList.remove('card--active');
+    }
+
+    // Add border to new card
+    const card = document.querySelector(`.card[data-id="${itemId}"]`);
+    if (card) {
+      card.classList.add('card--active');
+      _prevActiveCard = card;
     }
   }
 
@@ -225,7 +175,6 @@ const MapModule = (() => {
     const cards = document.querySelectorAll('.card');
     if (!cards.length) return;
 
-    // Keep track of which card is currently being "distance-displayed"
     let distanceCardId = null;
 
     const observer = new IntersectionObserver((entries) => {
@@ -234,11 +183,11 @@ const MapModule = (() => {
         if (!itemId) return;
 
         if (entry.isIntersecting) {
-          // Card entered viewport → highlight marker, show distance
+          // Card visible → highlight marker, show distance, add border
           setActiveMarker(itemId);
+          setActiveCard(itemId);
           updateActiveDistance(itemId);
 
-          // Restore previous card's district text
           if (distanceCardId && distanceCardId !== itemId) {
             restoreDistrictText(distanceCardId);
           }
@@ -246,7 +195,6 @@ const MapModule = (() => {
         }
       });
     }, {
-      // Account for fixed header (92px) plus some overshoot
       rootMargin: '-100px 0px -40% 0px',
       threshold: 0.2,
     });
@@ -254,7 +202,7 @@ const MapModule = (() => {
     cards.forEach(card => observer.observe(card));
   }
 
-  // ——— Distance Display on Active Card ———
+  // ——— Distance Display ———
 
   function updateActiveDistance(itemId) {
     if (!userLatLng) return;
@@ -265,7 +213,6 @@ const MapModule = (() => {
     const districtEl = card.querySelector('.card__district-text');
     if (!districtEl) return;
 
-    // Save original text once
     if (!districtEl.dataset.originalText) {
       districtEl.dataset.originalText = districtEl.textContent;
     }
@@ -276,11 +223,7 @@ const MapModule = (() => {
     const coords = item.location?.coordinates;
     if (!coords?.lat || !coords?.lng) return;
 
-    const distKm = _haversine(
-      userLatLng[0], userLatLng[1],
-      coords.lat, coords.lng
-    );
-
+    const distKm = _haversine(userLatLng[0], userLatLng[1], coords.lat, coords.lng);
     districtEl.textContent = distKm < 1
       ? `距你 ${Math.round(distKm * 1000)}m`
       : `距你 ${distKm.toFixed(1)}km`;
@@ -289,13 +232,13 @@ const MapModule = (() => {
   function restoreDistrictText(itemId) {
     const card = document.querySelector(`.card[data-id="${itemId}"]`);
     if (!card) return;
-    const districtEl = card.querySelector('.card__district-text');
-    if (districtEl && districtEl.dataset.originalText) {
-      districtEl.textContent = districtEl.dataset.originalText;
+    const el = card.querySelector('.card__district-text');
+    if (el && el.dataset.originalText) {
+      el.textContent = el.dataset.originalText;
     }
   }
 
-  // ——— Haversine distance (km) ———
+  // ——— Haversine ———
 
   function _haversine(lat1, lng1, lat2, lng2) {
     const R = 6371;

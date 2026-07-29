@@ -190,6 +190,11 @@
   margin-left: auto;
 }
 
+/* --- Active card border (map sync) --- */
+.card--active {
+  border: 1px solid #775a19;
+}
+
 /* --- Hide card when filtered out --- */
 .card--hidden {
   display: none;
