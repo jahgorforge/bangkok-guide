@@ -210,6 +210,16 @@
    Responsive
    ======================================================================== */
 
+@media (max-width: 767px) {
+  /* On mobile, padding comes from .main-content (20px), not from these elements */
+  .home__section-title {
+    padding: 4px 0 0;
+  }
+  .home__sections {
+    padding: 0 0 20px;
+  }
+}
+
 @media (min-width: 768px) {
   .home__sections {
     display: grid;
