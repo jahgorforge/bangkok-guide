@@ -21,3 +21,6 @@ desktop.ini
 
 # Archive (keep folder, ignore contents if needed)
 archive/*
+
+# Dependencies
+node_modules/
