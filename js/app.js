@@ -36,6 +36,9 @@ async function initHomePage(categories) {
 
   // Render bento knowledge sections
   await Home.init();
+
+  // Sync fixed-header height
+  syncFixedHeaderHeight();
 }
 
 /**
@@ -109,6 +112,35 @@ async function initCategoryPage(categories, dataBase) {
 
   // Back-to-top button — always initialize, even if data loading fails
   initBackToTop();
+
+  // Sync fixed-header height to CSS custom property
+  syncFixedHeaderHeight();
+}
+
+/**
+ * Measure the fixed-header's actual rendered height and set it as
+ * --fixed-header-height on :root so .main-content's padding-top stays
+ * in sync regardless of chip count or font size.
+ * Uses ResizeObserver for automatic recalculation when content changes.
+ */
+function syncFixedHeaderHeight() {
+  const header = document.getElementById('fixed-header');
+  if (!header) return;
+
+  const update = () => {
+    const h = header.getBoundingClientRect().height;
+    document.documentElement.style.setProperty('--fixed-header-height', h + 'px');
+  };
+
+  // Measure initially and on every resize
+  update();
+  window.addEventListener('resize', update);
+
+  // Watch for dynamic content changes (chip rows, etc.)
+  if (window.ResizeObserver) {
+    const ro = new ResizeObserver(update);
+    ro.observe(header);
+  }
 }
 
 /**

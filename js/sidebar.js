@@ -102,13 +102,21 @@ const Sidebar = {
    * @param {string|null} activeCat - ID of the currently active category (or null for home).
    */
   renderMobileNav(categories, activeCat) {
+    // Ensure fixed-header wrapper exists (mobile only)
+    let fixedHeader = document.getElementById('fixed-header');
+    if (!fixedHeader) {
+      fixedHeader = document.createElement('div');
+      fixedHeader.id = 'fixed-header';
+      document.body.prepend(fixedHeader);
+    }
+
     // Create TopAppBar (mobile only — shows "曼谷指南")
     let appBar = document.getElementById('top-app-bar');
     if (!appBar) {
       appBar = document.createElement('header');
       appBar.className = 'top-app-bar';
       appBar.id = 'top-app-bar';
-      document.body.prepend(appBar);
+      fixedHeader.prepend(appBar);
     }
     // Build TopAppBar content
     const isCategoryPage = activeCat !== null;
@@ -154,7 +162,7 @@ const Sidebar = {
       nav = document.createElement('nav');
       nav.className = 'top-nav';
       nav.id = 'top-nav';
-      // Insert after TopAppBar (appBar is already first child of body)
+      // Insert after TopAppBar (inside fixed-header)
       appBar.after(nav);
     }
 
