@@ -31,6 +31,7 @@
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
+  overflow: hidden;
 }
 
 .home-card__header {
@@ -76,6 +77,8 @@
   flex-direction: column;
   gap: 4px;
   align-self: stretch;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .home-card__title {
@@ -86,6 +89,8 @@
   letter-spacing: 0.36px;
   line-height: 24px;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .home-card__subtitle {
@@ -95,6 +100,8 @@
   color: var(--color-text-light);
   line-height: 22px;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .home-card__arrow {
@@ -107,7 +114,7 @@
 }
 
 .home-card--expanded .home-card__arrow {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
 }
 
 /* --- Expandable content --- */

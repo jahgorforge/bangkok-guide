@@ -260,7 +260,7 @@ const Renderer = {
 
       if (mapsLink) {
         const btn = document.createElement('a');
-        btn.className = 'card__action-btn';
+        btn.className = 'card__action-btn card__action-btn--map';
         btn.href = mapsLink;
         btn.target = '_blank';
         btn.rel = 'noopener';

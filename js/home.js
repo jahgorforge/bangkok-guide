@@ -67,10 +67,10 @@ const Home = (() => {
     left.appendChild(info);
     header.appendChild(left);
 
-    // Arrow
+    // Arrow (down when collapsed, up when expanded)
     const arrow = document.createElement('div');
     arrow.className = 'home-card__arrow';
-    arrow.innerHTML = `<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 2.5 8 6 4.5 9.5"/></svg>`;
+    arrow.innerHTML = `<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 4.5 6 8 9.5 4.5"/></svg>`;
     header.appendChild(arrow);
 
     card.appendChild(header);
@@ -134,8 +134,7 @@ const Home = (() => {
 
   /**
    * Initialize expand/collapse behavior.
-   * On mobile (<768px), cards start collapsed and expand on tap.
-   * On desktop, all cards are expanded by default (set max-height via CSS).
+   * All cards start collapsed. Tap/click toggles expand/collapse.
    */
   function initExpand() {
     const cards = document.querySelectorAll('.home-card');
@@ -144,18 +143,10 @@ const Home = (() => {
       const body = card.querySelector('.home-card__body');
       if (!body) return;
 
-      // On mobile, start collapsed
-      if (window.innerWidth < 768) {
-        body.style.maxHeight = '0';
-      } else {
-        // Desktop: show expanded
-        body.style.maxHeight = body.scrollHeight + 'px';
-        card.classList.add('home-card--expanded');
-      }
+      // All cards start collapsed
+      body.style.maxHeight = '0';
 
       card.addEventListener('click', () => {
-        if (window.innerWidth >= 768) return; // no toggle on desktop
-
         const isExpanded = card.classList.contains('home-card--expanded');
         if (isExpanded) {
           body.style.maxHeight = '0';

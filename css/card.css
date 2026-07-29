@@ -186,6 +186,10 @@
   height: 16px;
 }
 
+.card__action-btn--map {
+  margin-left: auto;
+}
+
 /* --- Hide card when filtered out --- */
 .card--hidden {
   display: none;
@@ -301,7 +305,7 @@
 .back-to-top--visible {
   /* Visible state */
   transform: translateY(0);
-  opacity: 1;
+  opacity: 0.6;
   pointer-events: auto;
 }
 
