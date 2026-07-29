@@ -192,7 +192,7 @@
 
 /* --- Active card border (map sync) --- */
 .card--active {
-  border: 2px solid #775a19;
+  border: 4px solid #775a19;
 }
 
 /* --- Hide card when filtered out --- */
