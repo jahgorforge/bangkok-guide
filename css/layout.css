@@ -580,6 +580,13 @@ input:focus-visible,
     display: none;
   }
 
+  /* Home page: remove double padding (main-content already has 20px) */
+  .home__section-title,
+  .home__sections {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   /* Tighten filter area */
   .filter-bar {
     margin-bottom: 0;
