@@ -342,7 +342,7 @@
   .chip-row {
     overflow-x: auto;
     flex-wrap: nowrap;
-    -webkit-overflow-scrolling: touch;
+    /* -webkit-overflow-scrolling: touch; — removed: may cause compositing conflict with sticky parent */
     scrollbar-width: none;
     -ms-overflow-style: none;
     padding: 0;
