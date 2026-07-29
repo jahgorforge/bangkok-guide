@@ -495,8 +495,8 @@ input:focus-visible,
     height: 48px;
     background: #e6dbc9;
     border-bottom: 1px solid #d1c5b4;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    /* backdrop-filter: blur(12px); — removed: hidden behind solid sticky-top */
+    /* -webkit-backdrop-filter: blur(12px); */
     display: flex;
     align-items: center;
     gap: 12px;
@@ -519,8 +519,8 @@ input:focus-visible,
     position: static;
     height: 44px;
     background: #e6dbc9;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    /* backdrop-filter: blur(12px); — removed: hidden behind solid sticky-top */
+    /* -webkit-backdrop-filter: blur(12px); */
     border-bottom: 1px solid #d1c5b4;
     display: flex;
     align-items: center;
