@@ -132,9 +132,17 @@ function syncFixedHeaderHeight() {
     document.documentElement.style.setProperty('--fixed-header-height', h + 'px');
   };
 
-  // Measure initially and on every resize
+  // Measure initially
   update();
-  window.addEventListener('resize', update);
+
+  // Only re-measure on width change (ignore address-bar show/hide on mobile)
+  let lastWidth = window.innerWidth;
+  window.addEventListener('resize', () => {
+    if (window.innerWidth !== lastWidth) {
+      lastWidth = window.innerWidth;
+      update();
+    }
+  });
 
   // Watch for dynamic content changes (chip rows, etc.)
   if (window.ResizeObserver) {

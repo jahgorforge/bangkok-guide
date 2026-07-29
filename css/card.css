@@ -351,4 +351,12 @@
   .chip-row::-webkit-scrollbar {
     display: none;
   }
+
+  /* Clear global margins that conflict with sticky-top's unified padding */
+  .filter-bar {
+    margin-bottom: 0;
+  }
+  .map-placeholder {
+    margin-bottom: 0;
+  }
 }
