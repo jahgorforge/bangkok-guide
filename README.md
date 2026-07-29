@@ -4,6 +4,8 @@ A personal travel knowledge base for Bangkok, Thailand — covering food, shoppi
 
 Built with vanilla HTML + CSS + JavaScript. Data-driven JSON content. No frameworks, no build step.
 
+> **Version 4.0** — PWA-enabled, Leaflet interactive map, Figma-refined mobile UI.
+
 ## Project Goal
 
 Provide a curated, structured, and easy-to-navigate personal guide to Bangkok. This project is intentionally a **single-city knowledge base**. Future city guides (Tokyo, Seoul, etc.) will be developed as independent repositories using the same architecture.

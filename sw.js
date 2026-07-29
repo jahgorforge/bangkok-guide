@@ -1,4 +1,4 @@
-/* Bangkok Guide — Service Worker v1.1 */
+/* Bangkok Guide — Service Worker v4.0 */
 
 const CACHE_NAME = 'bangkok-guide-v2';
 
