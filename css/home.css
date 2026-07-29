@@ -45,6 +45,7 @@
   display: flex;
   gap: 24px;
   align-items: flex-start;
+  min-width: 0;       /* allow flex-item to shrink */
 }
 
 .home-card__icon {
@@ -88,9 +89,6 @@
   color: var(--color-text);
   letter-spacing: 0.36px;
   line-height: 24px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .home-card__subtitle {
@@ -99,9 +97,6 @@
   font-family: var(--font-sans);
   color: var(--color-text-light);
   line-height: 22px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .home-card__arrow {

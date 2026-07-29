@@ -600,7 +600,7 @@ input:focus-visible,
     right: 0;
     z-index: 49;
     background: #e6dbc9;
-    padding: 8px 20px 0;
+    padding: 8px 20px 8px;   /* 8px bottom = fixed gap to first card */
   }
 
   /* 8px gap between chips and map */
@@ -608,13 +608,14 @@ input:focus-visible,
     padding-bottom: 8px;
   }
 
-  /* Map has no bottom margin — gap is in card-grid margin-top */
+  /* Map has no rounded corners on mobile */
   .map-placeholder {
     margin-bottom: 0;
+    border-radius: 0;
   }
 
-  /* Push cards below the fixed chips+map area, with 8px gap */
+  /* Push cards to start exactly at the bottom of the fixed area */
   .card-grid {
-    margin-top: 280px;
+    margin-top: 270px;
   }
 }
