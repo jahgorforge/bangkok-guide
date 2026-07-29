@@ -111,8 +111,8 @@ async function initCategoryPage(categories, dataBase) {
     console.error('Category page init error:', e);
   }
 
-  // Initialize interactive map (mobile only)
-  if (typeof MapModule !== 'undefined' && items) {
+  // Initialize interactive map (mobile only, skip transport page)
+  if (typeof MapModule !== 'undefined' && items && catId !== 'transport') {
     MapModule.init(items);
   }
 
